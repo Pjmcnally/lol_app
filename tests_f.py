@@ -23,7 +23,7 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn("Patrick's LoL App", header_text)
 
         # He is invited to enter a summoner name
-        inputbox = self.browser.find_element_by_id('summoner_name')
+        inputbox = self.browser.find_element_by_id('sum_name_input')
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
             'Enter a summoner name'
