@@ -5,7 +5,8 @@ from django.template.loader import render_to_string
 
 from api_query.views import home_page
 
-class SmokeTest(TestCase):
+
+class NewVisitorTest(TestCase):
 
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
@@ -25,7 +26,15 @@ class SmokeTest(TestCase):
         response = home_page(request)
 
         self.assertIn('Pjmcnally', response.content.decode())
-        expected_html = render_to_string('home.html',
-            {'new_summoner_name': 'Pjmcnally'}
+        self.assertIn('45764164', response.content.decode())
+
+        expected_html = render_to_string(
+            'home.html',
+            {'sum_name': 'Pjmcnally',
+             'sum_id': '45764164',}
         )
-        self.assertEqual(response.content.decode(), expected_html)
+
+    # def test_home_page_only_saves_items_when_necessary(self):
+    #     request = HttpRequest()
+    #     home_page(request)
+    #     self.assertEqual(Item.objects.count(), 0)

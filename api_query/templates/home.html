@@ -6,6 +6,7 @@
             <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
             {% csrf_token %}
         </form>
-        <p id='name_result'> {{ new_summoner_name }} </p>
+        <p id='name_result'>Summoner name = {{ sum_name }}</p>
+        <p id='summoner_id'>Summoner id = {{ sum_id }}</p>
     </body>
 </html> 
