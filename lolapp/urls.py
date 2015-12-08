@@ -20,5 +20,7 @@ from api_query import views
 
 urlpatterns = [
     url(r'^$', views.home_page, name='home'),
+    url(r'^get/game$', views.get_game, name='get_game'),
+    url(r'^dashboard/', views.dashboard, name='dashboard'),
     # url(r'^admin/', include(admin.site.urls)),
 ]

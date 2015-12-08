@@ -2,11 +2,10 @@
     <title>Patrick's LoL App</title>
     <body>
         <h1>Patrick's LoL App</h1> 
-        <form method='POST'>
+        <form method='POST' action='get/game'>
             <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
             {% csrf_token %}
         </form>
-        <p id='name_result'>Summoner name = {{ sum_name }}</p>
-        <p id='summoner_id'>Summoner id = {{ sum_id }}</p>
     </body>
 </html> 
+

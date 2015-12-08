@@ -1,0 +1,20 @@
+<html>
+    <title>Patrick's LoL App</title>
+    <body>
+        <h1>Your Game Info</h1>
+            <p id='summoner_id'>Query Summoner Id = {{ sum_id }}</p>
+            <table>
+                <tr>
+                    {% for item in blue_team %}
+                        <td>Blue {{ forloop.counter }} = {{ item }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for item in red_team %}
+                        <td>Red {{ forloop.counter }} = {{ item }}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </form>
+    </body>
+</html> 

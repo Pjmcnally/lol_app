@@ -4,6 +4,7 @@ from django.http import HttpRequest
 from django.template.loader import render_to_string
 
 from api_query.views import home_page
+# from lists.models import Item
 
 
 class NewVisitorTest(TestCase):
@@ -34,7 +35,15 @@ class NewVisitorTest(TestCase):
              'sum_id': '45764164',}
         )
 
+        self.assertEqual(expected_html, response.content.decode())
+
     # def test_home_page_only_saves_items_when_necessary(self):
     #     request = HttpRequest()
     #     home_page(request)
     #     self.assertEqual(Item.objects.count(), 0)
+
+
+# class ItemModelTest(TestCase):
+
+#     def test_saving_and_retrieving_items(self):
+#         sum_name = Item()
