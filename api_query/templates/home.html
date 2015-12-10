@@ -1,11 +1,20 @@
 <html>
-    <title>Patrick's LoL App</title>
     <body>
-        <h1>Patrick's LoL App</h1> 
-        <form method='POST' action='get/game'>
-            <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
+        <head>
+            <title>Patrick's LoL App</title>
+        </head>
+        <body>
+            <h1>Patrick's LoL App</h1> 
+            <p>{{error_msg}}</p>
+            <form method='POST' action='get/game' id='summonerName'>
+                <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
+                {% csrf_token %}
+            </form>
+            <form method='POST' action='get/game' id='tryItNow'>
+                <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
+            <p>Try it out on a live game now!  <input type="submit" value='{{player}}' /> is playing now.</p>
             {% csrf_token %}
-        </form>
-    </body>
+            </form>
+        </body>
 </html> 
 

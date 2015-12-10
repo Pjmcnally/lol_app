@@ -2,19 +2,56 @@
     <title>Patrick's LoL App</title>
     <body>
         <h1>Your Game Info</h1>
-            <p id='summoner_id'>Query Summoner Id = {{ sum_id }}</p>
-            <table>
-                <tr>
-                    {% for item in blue_team %}
-                        <td>Blue {{ forloop.counter }} = {{ item }}</td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for item in red_team %}
-                        <td>Red {{ forloop.counter }} = {{ item }}</td>
-                    {% endfor %}
-                </tr>
-            </table>
+            <h3>Blue Team</h3>
+            <ul>
+                {% for item in blue_team %}
+                <li>Summoner: {{ item.summonerName }}</li>
+                <ul>
+                    <li>Champion = {{item.championId}}</li>
+                    <li>Spell 1 = {{item.spell1Id}}</li>
+                    <li>Spell 2 = {{item.spell2Id}}</li>
+                    <li>Masteries: </li>
+                        <ul>
+                            {% for mast in item.masteries %}
+                            <li>Rank = {{mast.rank}}</li>
+                            <li>Id = {{mast.masteryId}}</li>
+                            {% endfor %}
+                        </ul>
+                    <li>Runes:</li>
+                        <ul>
+                            {% for rune in item.runes %}
+                            <li>Id = {{rune.runeId}}</li>
+                            <li>Count = {{rune.count}}</li>
+                            {% endfor %}
+                        </ul>
+                </ul>
+                {% endfor %}
+            </ul>
+            <h3>Red Team</h3>
+            <ul>
+                {% for item in red_team %}
+                <li>Summoner: {{ item.summonerName }}</li>
+                <ul>
+                    <li>Champion = {{item.championId}}</li>
+                    <li>Spell 1 = {{item.spell1Id}}</li>
+                    <li>Spell 2 = {{item.spell2Id}}</li>
+                    <li>Masteries: </li>
+                        <ul>
+                            {% for mast in item.masteries %}
+                            <li>Rank = {{mast.rank}}</li>
+                            <li>Id = {{mast.masteryId}}</li>
+                            {% endfor %}
+                        </ul>
+                    <li>Runes:</li>
+                        <ul>
+                            {% for rune in item.runes %}
+                            <li>Id = {{rune.runeId}}</li>
+                            <li>Count = {{rune.count}}</li>
+                            {% endfor %}
+                        </ul>
+                </ul>
+                {% endfor %}
+            </ul>
         </form>
     </body>
 </html> 
