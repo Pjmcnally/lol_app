@@ -1,12 +1,15 @@
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from api_query.models import Champion
+
+from secrets import API_KEY
 
 import requests
 from random import choice
 
 pre_url = 'https://na.api.pvp.net/'
-payload = {'api_key': 'c57f551f-be34-4afc-829c-bd45dc4123c8'}
+payload = {'api_key': API_KEY}
 
 # Create your views here.
 def home_page(request, error_msg=""):  
@@ -26,6 +29,7 @@ def home_page(request, error_msg=""):
         'player': choice(player_list),
         'error_msg': error_msg,
         })
+    
 
 def get_game(request):
     if request.POST:
@@ -80,8 +84,19 @@ def dashboard(request):
     else:
         stuff = r.json()
 
+        # test = Champion.objects.get(id=36)
+        # print(test.name)
+
+        for x in stuff['participants']:
+            x['champName'] = Champion.objects.get(id=x['championId']).name
+            x['champImage'] = Champion.objects.get(id=x['championId']).key
+            x['champTitle'] = Champion.objects.get(id=x['championId']).title
+
         blue = [x for x in stuff['participants'] if x["teamId"]==100]
         red = [x for x in stuff['participants'] if x["teamId"]==200]
+
+
+
 
         return render(request, 'dashboard.html', {
             'sum_id': sum_id,

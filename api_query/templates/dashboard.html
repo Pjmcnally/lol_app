@@ -7,7 +7,7 @@
                 {% for item in blue_team %}
                 <li>Summoner: {{ item.summonerName }}</li>
                 <ul>
-                    <li>Champion = {{item.championId}}</li>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" /></li>
                     <li>Spell 1 = {{item.spell1Id}}</li>
                     <li>Spell 2 = {{item.spell2Id}}</li>
                     <li>Masteries: </li>
@@ -31,8 +31,8 @@
             <ul>
                 {% for item in red_team %}
                 <li>Summoner: {{ item.summonerName }}</li>
+                <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}" title="{{item.champName}}: {{item.champTitle}}" /></li>
                 <ul>
-                    <li>Champion = {{item.championId}}</li>
                     <li>Spell 1 = {{item.spell1Id}}</li>
                     <li>Spell 2 = {{item.spell2Id}}</li>
                     <li>Masteries: </li>
