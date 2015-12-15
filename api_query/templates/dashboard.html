@@ -1,52 +1,47 @@
 <html>
-    <title>Patrick's LoL App</title>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
+        <title>Patrick's LoL App</title>
+        <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
     <body>
-        <h1>Your Game Info</h1>
-            <h3>Blue Team</h3>
+        <h1>Game Info</h1>
+            <h2>Blue Team</h2>
             <ul>
                 {% for item in blue_team %}
-                <li>Summoner: {{ item.summonerName }}</li>
+                <li><h3>{{ item.summonerName }}</h3></li>
                 <ul>
                     <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" /></li>
-                    <li>Spell 1 = {{item.spell1Id}}</li>
-                    <li>Spell 2 = {{item.spell2Id}}</li>
-                    <li>Masteries: </li>
-                        <ul>
-                            {% for mast in item.masteries %}
-                            <li>Rank = {{mast.rank}}</li>
-                            <li>Id = {{mast.masteryId}}</li>
-                            {% endfor %}
-                        </ul>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}"/></li>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}"/></li>
+                    <li>Masteries: {{ item.masteryTotal }}</li>
                     <li>Runes:</li>
                         <ul>
                             {% for rune in item.runes %}
-                            <li>Id = {{rune.runeId}}</li>
-                            <li>Count = {{rune.count}}</li>
+                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}"/></li>
                             {% endfor %}
                         </ul>
                 </ul>
                 {% endfor %}
             </ul>
-            <h3>Red Team</h3>
+            <h2>Red Team</h2>
             <ul>
                 {% for item in red_team %}
-                <li>Summoner: {{ item.summonerName }}</li>
-                <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}" title="{{item.champName}}: {{item.champTitle}}" /></li>
+                <li><h3>{{ item.summonerName }}</h3></li>
                 <ul>
-                    <li>Spell 1 = {{item.spell1Id}}</li>
-                    <li>Spell 2 = {{item.spell2Id}}</li>
-                    <li>Masteries: </li>
-                        <ul>
-                            {% for mast in item.masteries %}
-                            <li>Rank = {{mast.rank}}</li>
-                            <li>Id = {{mast.masteryId}}</li>
-                            {% endfor %}
-                        </ul>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" /></li>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}"/></li>
+                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}"/></li>
+                    <li>Masteries: {{ item.masteryTotal }}</li>
                     <li>Runes:</li>
                         <ul>
                             {% for rune in item.runes %}
-                            <li>Id = {{rune.runeId}}</li>
-                            <li>Count = {{rune.count}}</li>
+                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}"/></li>
                             {% endfor %}
                         </ul>
                 </ul>

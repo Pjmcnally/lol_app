@@ -1,20 +1,36 @@
-<html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
+        <title>Patrick's LoL App</title>
+        <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/home.css" rel="stylesheet">
+    </head>
+
     <body>
-        <head>
-            <title>Patrick's LoL App</title>
-        </head>
-        <body>
-            <h1>Patrick's LoL App</h1> 
-            <p>{{error_msg}}</p>
-            <form method='POST' action='get/game' id='summonerName'>
-                <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
-                {% csrf_token %}
-            </form>
-            <form method='POST' action='get/game' id='tryItNow'>
-                <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
-            <p>Try it out on a live game now!  <input type="submit" value='{{player}}' /> is playing now.</p>
-            {% csrf_token %}
-            </form>
-        </body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 jumbotron">
+                    <div class="text-center">
+                        <h1>Patrick's LoL App</h1> 
+                        <form method='POST' action='get/game' id='summonerName'>
+                            <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
+                            {% csrf_token %}
+                        </form>
+                        <form method='POST' action='get/game' id='tryItNow'>
+                            <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
+                        <p>Try it out on a live game now!</p>
+                        <p>Enter your summoner name or <input type="submit" value='{{player}}' /> is playing now.</p>
+                        {% csrf_token %}
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </body>
+
 </html> 
 

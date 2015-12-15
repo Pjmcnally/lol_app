@@ -1,7 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from api_query.models import Champion
+from api_query.models import Champion, Spell, Mastery, Rune
 
 from secrets import API_KEY
 
@@ -87,10 +87,34 @@ def dashboard(request):
         # test = Champion.objects.get(id=36)
         # print(test.name)
 
-        for x in stuff['participants']:
-            x['champName'] = Champion.objects.get(id=x['championId']).name
-            x['champImage'] = Champion.objects.get(id=x['championId']).image
-            x['champTitle'] = Champion.objects.get(id=x['championId']).descript
+        for summ in stuff['participants']:
+            summ['champName'] = Champion.objects.get(id=summ['championId']).name
+            summ['champImage'] = Champion.objects.get(id=summ['championId']).image
+            summ['champTitle'] = Champion.objects.get(id=summ['championId']).descript
+            summ['spell1Image'] = Spell.objects.get(id=summ['spell1Id']).image
+            summ['spell1Name'] = Spell.objects.get(id=summ['spell1Id']).name
+            summ['spell1Descript'] = Spell.objects.get(id=summ['spell1Id']).descript
+            summ['spell2Image'] = Spell.objects.get(id=summ['spell2Id']).image
+            summ['spell2Name'] = Spell.objects.get(id=summ['spell2Id']).name
+            summ['spell2Descript'] = Spell.objects.get(id=summ['spell2Id']).descript
+            
+            ferocity, cunning, resolve = 0, 0, 0
+            for mast in summ['masteries']:
+                if Mastery.objects.get(id=mast['masteryId']).tree == "Ferocity":
+                    ferocity += mast['rank']
+                if Mastery.objects.get(id=mast['masteryId']).tree == "Cunning":
+                    cunning += mast['rank']
+                if Mastery.objects.get(id=mast['masteryId']).tree == "Resolve":
+                    resolve += mast['rank']
+
+            summ['masteryTotal'] = str(ferocity) + "/" + str(cunning) +"/" + str(resolve)
+
+            for rune in summ['runes']:
+                rune['image'] = Rune.objects.get(id=rune['runeId']).image
+                rune['descript'] = Rune.objects.get(id=rune['runeId']).descript
+                rune['name'] = Rune.objects.get(id=rune['runeId']).name
+
+
 
         blue = [x for x in stuff['participants'] if x["teamId"]==100]
         red = [x for x in stuff['participants'] if x["teamId"]==200]
