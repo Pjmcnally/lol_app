@@ -13,7 +13,43 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Champion',
             fields=[
-                ('id', models.AutoField(primary_key=True, verbose_name='ID', serialize=False, auto_created=True)),
+                ('id', models.IntegerField(serialize=False, primary_key=True)),
+                ('name', models.CharField(default='', max_length=500)),
+                ('descript', models.CharField(default='', max_length=500)),
+                ('image', models.CharField(default='', max_length=500)),
+                ('version', models.CharField(default='', max_length=500)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Mastery',
+            fields=[
+                ('id', models.IntegerField(serialize=False, primary_key=True)),
+                ('name', models.CharField(default='', max_length=500)),
+                ('descript', models.CharField(default='', max_length=500)),
+                ('tree', models.CharField(default='', max_length=500)),
+                ('ranks', models.CharField(default='', max_length=500)),
+                ('image', models.CharField(default='', max_length=500)),
+                ('version', models.CharField(default='', max_length=500)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Rune',
+            fields=[
+                ('id', models.IntegerField(serialize=False, primary_key=True)),
+                ('name', models.CharField(default='', max_length=500)),
+                ('descript', models.CharField(default='', max_length=500)),
+                ('image', models.CharField(default='', max_length=500)),
+                ('version', models.CharField(default='', max_length=500)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Spell',
+            fields=[
+                ('id', models.IntegerField(serialize=False, primary_key=True)),
+                ('name', models.CharField(default='', max_length=500)),
+                ('descript', models.CharField(default='', max_length=500)),
+                ('image', models.CharField(default='', max_length=500)),
+                ('version', models.CharField(default='', max_length=500)),
             ],
         ),
     ]
