@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
     <head>
         <meta charset="utf-8">
@@ -7,46 +7,63 @@
         <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
         <title>Patrick's LoL App</title>
         <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/dashboard.css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Game Info</h1>
-            <h2>Blue Team</h2>
-            <ul>
-                {% for item in blue_team %}
-                <li><h3>{{ item.summonerName }}</h3></li>
-                <ul>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" /></li>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}"/></li>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}"/></li>
-                    <li>Masteries: {{ item.masteryTotal }}</li>
-                    <li>Runes:</li>
-                        <ul>
-                            {% for rune in item.runes %}
-                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}"/></li>
-                            {% endfor %}
-                        </ul>
+        <div class="container">
+            <h1>Game Info</h1>
+            <div class="row">
+                <h2>Blue Team</h2>
+                    {% for item in blue_team %}
+                    <div class="col-md-2">
+                    <h4>{{ item.summonerName }}</h4>
+                        <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="42" width="42"/>
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="42" width="42"/>
+                            </div>  
+                        </div>
+                        <p>Masteries: {{ item.masteryTotal }}</p>
+                        <p>Runes:</p>
+                            <ul>
+                                {% for rune in item.runes %}
+                                <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/></li>
+                                {% endfor %}
+                            </ul>
+                    </ul>
+                    </div>
+                    {% endfor %}
+            </div>
+            <div class="row">
+                <h2>Red Team</h2>
+                    {% for item in red_team %}
+                                        <div class="col-md-2">
+                    <h4>{{ item.summonerName }}</h4>
+                        <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="42" width="42"/>
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="42" width="42"/>
+                            </div>  
+                        </div>
+                        <p>Masteries: {{ item.masteryTotal }}</p>
+                        <p>Runes:</p>
+                            <ul>
+                                {% for rune in item.runes %}
+                                <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/></li>
+                                {% endfor %}
+                            </ul>
+                    </ul>
+                    </div>
+                    {% endfor %}
                 </ul>
-                {% endfor %}
-            </ul>
-            <h2>Red Team</h2>
-            <ul>
-                {% for item in red_team %}
-                <li><h3>{{ item.summonerName }}</h3></li>
-                <ul>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" /></li>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}"/></li>
-                    <li><img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}"/></li>
-                    <li>Masteries: {{ item.masteryTotal }}</li>
-                    <li>Runes:</li>
-                        <ul>
-                            {% for rune in item.runes %}
-                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}"/></li>
-                            {% endfor %}
-                        </ul>
-                </ul>
-                {% endfor %}
-            </ul>
-        </form>
+            </div>  
+        </div> 
     </body>
 </html> 
