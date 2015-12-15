@@ -89,8 +89,8 @@ def dashboard(request):
 
         for x in stuff['participants']:
             x['champName'] = Champion.objects.get(id=x['championId']).name
-            x['champImage'] = Champion.objects.get(id=x['championId']).key
-            x['champTitle'] = Champion.objects.get(id=x['championId']).title
+            x['champImage'] = Champion.objects.get(id=x['championId']).image
+            x['champTitle'] = Champion.objects.get(id=x['championId']).descript
 
         blue = [x for x in stuff['participants'] if x["teamId"]==100]
         red = [x for x in stuff['participants'] if x["teamId"]==200]
