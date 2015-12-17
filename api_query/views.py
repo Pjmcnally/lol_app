@@ -19,14 +19,20 @@ def home_page(request, error_msg=""):
 
     player_list = []
 
-    for x in r.json()['gameList']:
-        for y in x['participants']:
-            player_list.append(y['summonerName'])
+    if r.status_code == 200:
+        for x in r.json()['gameList']:
+            for y in x['participants']:
+                player_list.append(y['summonerName'])
 
-    return render(request, 'home.html', {
-        'player': choice(player_list),
-        'error_msg': error_msg,
-        })
+        return render(request, 'home.html', {
+            'player': choice(player_list),
+            'error_msg': error_msg,
+            })
+    else:
+        return render(request, 'home.html', {
+            'player': "Featured game API is not working",
+            'error_msg': error_msg,
+            })
     
 
 def get_game(request):
