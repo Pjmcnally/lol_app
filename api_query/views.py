@@ -12,6 +12,7 @@ payload = {'api_key': API_KEY}
 
 # Create your views here.
 def home_page(request, error_msg=""):
+    """ Renders home page with random featured game participant """
     featured_url = 'https://na.api.pvp.net/observer-mode/rest/featured'
 
     r = requests.get(featured_url, params=payload)
@@ -19,6 +20,7 @@ def home_page(request, error_msg=""):
     player_list = []
 
     if r.status_code == 200:
+        # name variable
         for x in r.json()['gameList']:
             for y in x['participants']:
                 player_list.append(y['summonerName'])
@@ -35,6 +37,7 @@ def home_page(request, error_msg=""):
 
 
 def get_game(request):
+    """ gets summoner ID and passes info to dashboard """
     if request.POST:
         sum_name = request.POST.get('summoner_name', '')
         sum_id = get_id(sum_name)
@@ -50,6 +53,7 @@ def get_game(request):
 
 
 def get_id(sum_name):
+    """ Makes API call to get player ID from summoner name and returns it """
     name_to_id_url = 'api/lol/{region}/v1.4/summoner/by-name/{summonerNames}'
     region = 'na'
 
@@ -69,6 +73,7 @@ def get_id(sum_name):
 
 
 def mode_name_func(info):
+    """ converts mode id into human readable string """
     mode_dict = {2: "Normal 5v5 (Blind Pick)",
                  4: "Ranked 5v5 (Solo Queue)",
                  8: "Normal 3v3 (Draft Pick)",
@@ -81,12 +86,14 @@ def mode_name_func(info):
 
 
 def map_name_func(info):
+    """ converts map id into human readable string """
     map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
                 12: "Howling Abyss"}
     return map_dict[info.get('mapId', '')]
 
 
 def dashboard(request):
+    """ renders dashboard """
     sum_id = request.GET.get('sum_id', '')
 
     game_url = '/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}'
@@ -94,6 +101,7 @@ def dashboard(request):
 
     full_url = pre_url + game_url
 
+    # switch to format (not replace)
     full_url = full_url.replace('{platformId}', platform)
     full_url = full_url.replace('{summonerId}', sum_id)
 
