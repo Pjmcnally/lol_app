@@ -9,13 +9,18 @@ body {
     border-style: solid;
     border-width: 5px;
     border-radius: 25px;
+    background-color: rgba(96, 96, 96, 0.4);
 }
-
+h4 {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
 .red {
     color: #CB2124;
     border-style: solid;
     border-width: 5px;
     border-radius: 25px;
+    background-color: rgba(96, 96, 96, 0.4);
 }
 
 .row-centered {
@@ -33,7 +38,7 @@ body {
 .champ_image {
     border-style: solid;
     border-width:4px;
-    border-color: grey;
+    border-color: gray;
 }
 
 .nav-search{
@@ -42,15 +47,7 @@ body {
 }
 
 .champ {
-    text-decoration: none;
-    }
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-
+  cursor: pointer;
 }
 
 
@@ -242,8 +239,8 @@ html, body {
 .cd-panel-header {
   position: fixed;
   width: 90%;
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 70px;
   background: rgba(255, 255, 255, 0.96);
   z-index: 2;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
@@ -251,7 +248,7 @@ html, body {
   -moz-transition: top 0.3s 0s;
   transition: top 0.3s 0s;
 }
-.cd-panel-header h1 {
+.cd-panel-header h2 {
   font-weight: bold;
   color: black;
   padding-left: 5%;

@@ -17,11 +17,9 @@ def home_page(request, error_msg=""):
 
     r = requests.get(featured_url, params=payload)
 
-    stuff = r.json()
-
     player_list = []
 
-    for x in stuff['gameList']:
+    for x in r.json()['gameList']:
         for y in x['participants']:
             player_list.append(y['summonerName'])
 
@@ -69,7 +67,6 @@ def dashboard(request):
 
     game_url = '/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}'
     platform = 'NA1'
-    summonerId = sum_id
 
     full_url = pre_url + game_url
 
@@ -83,9 +80,6 @@ def dashboard(request):
         return redirect('/')
     else:
         stuff = r.json()
-
-        # test = Champion.objects.get(id=36)
-        # print(test.name)
 
         for summ in stuff['participants']:
             summ['champName'] = Champion.objects.get(id=summ['championId']).name

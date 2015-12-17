@@ -29,8 +29,7 @@
             <div class="row row-centered blue">
                 <h2>Blue Team</h2>
                     {% for item in blue_team %}
-                    <div class="col-xs-2 col-centered">
-                        <a href="#0" class="cd-btnb{{forloop.counter}} champ">
+                    <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
                         <h4>{{ item.summonerName }}</h4>
                         <div class="test">
                             <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
@@ -44,15 +43,13 @@
                                 <p>Masteries: {{ item.masteryTotal }}</p>
                             </div>
                         </div>
-                        </a>
                     </div> 
                     {% endfor %} 
             </div>     
             <div class="row row-centered red">
                 <h2>Red Team</h2>
                     {% for item in red_team %}
-                    <div class="col-xs-2 col-centered">
-                        <a href="#0" class="cd-btnr{{forloop.counter}} champ">
+                    <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
                         <h4>{{ item.summonerName }}</h4>
                             <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
                             <div class="row row-centered">
@@ -64,7 +61,6 @@
                                 </div>
                                 <p>Masteries: {{ item.masteryTotal }}</p>
                             </div>
-                        </a>
                     </div> 
                     {% endfor %} 
             </div>     
