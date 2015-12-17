@@ -1,6 +1,4 @@
-from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from api_query.models import Champion, Spell, Mastery, Rune
 
 from secrets import API_KEY
@@ -11,8 +9,9 @@ from random import choice
 pre_url = 'https://na.api.pvp.net/'
 payload = {'api_key': API_KEY}
 
+
 # Create your views here.
-def home_page(request, error_msg=""):  
+def home_page(request, error_msg=""):
     featured_url = 'https://na.api.pvp.net/observer-mode/rest/featured'
 
     r = requests.get(featured_url, params=payload)
@@ -33,7 +32,7 @@ def home_page(request, error_msg=""):
             'player': "Featured game API is not working",
             'error_msg': error_msg,
             })
-    
+
 
 def get_game(request):
     if request.POST:
@@ -44,7 +43,8 @@ def get_game(request):
             # Find out how to enter error message here
             return redirect('/')
         else:
-            return redirect('/dashboard?sum_id={sum_id}'.format(sum_id=str(sum_id)))
+            return redirect('/dashboard?sum_id={sum_id}'.format(
+                            sum_id=str(sum_id)))
     else:
         return redirect('/')
 
@@ -52,7 +52,7 @@ def get_game(request):
 def get_id(sum_name):
     name_to_id_url = 'api/lol/{region}/v1.4/summoner/by-name/{summonerNames}'
     region = 'na'
-    
+
     sum_name = sum_name.replace(" ", "")
 
     full_url = pre_url + name_to_id_url
@@ -66,6 +66,24 @@ def get_id(sum_name):
         return r.json()[sum_name.lower()]['id']
     else:
         return "error"
+
+
+def mode_name_func(info):
+    mode_dict = {2: "Normal 5v5 (Blind Pick)",
+                 4: "Ranked 5v5 (Solo Queue)",
+                 8: "Normal 3v3 (Draft Pick)",
+                 14: "Normal 5v5 (Draft Pick)",
+                 41: "Ranked Team 3v3",
+                 42: "Ranked Team 5v5",
+                 61: "Team Builder Game",
+                 41: "ARAM"}
+    return mode_dict[info.get('gameQueueConfigId', '')]
+
+
+def map_name_func(info):
+    map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
+                12: "Howling Abyss"}
+    return map_dict[info.get('mapId', '')]
 
 
 def dashboard(request):
@@ -85,9 +103,9 @@ def dashboard(request):
         # Find out how to enter error message here
         return redirect('/')
     else:
-        stuff = r.json()
+        info = r.json()
 
-        for summ in stuff['participants']:
+        for summ in info['participants']:
             summ['champName'] = Champion.objects.get(id=summ['championId']).name
             summ['champImage'] = Champion.objects.get(id=summ['championId']).image
             summ['champTitle'] = Champion.objects.get(id=summ['championId']).descript
@@ -97,7 +115,7 @@ def dashboard(request):
             summ['spell2Image'] = Spell.objects.get(id=summ['spell2Id']).image
             summ['spell2Name'] = Spell.objects.get(id=summ['spell2Id']).name
             summ['spell2Descript'] = Spell.objects.get(id=summ['spell2Id']).descript
-            
+
             ferocity, cunning, resolve = 0, 0, 0
             for mast in summ['masteries']:
                 if Mastery.objects.get(id=mast['masteryId']).tree == "Ferocity":
@@ -114,47 +132,9 @@ def dashboard(request):
                 rune['descript'] = Rune.objects.get(id=rune['runeId']).descript
                 rune['name'] = Rune.objects.get(id=rune['runeId']).name
 
-
-
-        blue = [x for x in stuff['participants'] if x["teamId"]==100]
-        red = [x for x in stuff['participants'] if x["teamId"]==200]
-
-        map_name = ""
-        if stuff['mapId'] == 10:
-            map_name = "Twisted Treeline"
-        elif stuff['mapId'] == 11:
-            map_name = "Summoner's Rift"
-        elif stuff['mapId'] == 12:
-            map_name = "Howling Abyss"
-
-        mode_name = ""
-        if stuff['gameQueueConfigId'] == 2:
-            mode_name = "Normal 5v5 (Blind Pick)"
-        elif stuff['gameQueueConfigId'] == 4:
-            mode_name = "Ranked 5v5 (Solo Queue)"
-        elif stuff['gameQueueConfigId'] == 8:
-            mode_name = "Normal 3v3 (Draft Pick)"
-        elif stuff['gameQueueConfigId'] == 14:
-            mode_name = "Normal 5v5 (Draft Pick)"
-        elif stuff['gameQueueConfigId'] == 41:
-            mode_name = "Ranked Team 3v3"
-        elif stuff['gameQueueConfigId'] == 42:
-            mode_name = "Ranked Team 5v5"
-        elif stuff['gameQueueConfigId'] == 61:
-            mode_name = "Team Builder Game"
-        elif stuff['gameQueueConfigId'] == 41:
-            mode_name = "ARAM"
-
-
-
-
-
-        return render(request, 'dashboard.html', {
-            'sum_id': sum_id,
-            'blue_team': blue,
-            'red_team': red,
-            'map': map_name,
-            'mode': mode_name,
-        })
-
-
+    return render(request, 'dashboard.html', {
+        'blue_team': [x for x in info['participants'] if x["teamId"]==100],
+        'red_team': [x for x in info['participants'] if x["teamId"]==200],
+        'map': map_name_func(info),
+        'mode': mode_name_func(info),
+    })
