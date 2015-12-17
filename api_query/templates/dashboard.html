@@ -8,62 +8,108 @@
         <title>Patrick's LoL App</title>
         <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="/static/dashboard.css" rel="stylesheet">
+        <!-- not using at the moment. <script src="js/modernizr.js"></script>  -->
     </head>
 
     <body>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">Home</a>
+            </div>
+              <form class="navbar-right" method='POST' action='/get/game' id='summonerName'>
+                  <input class='nav-search' name='summoner_name' id='sum_name_input' placeholder='Search again: Enter a summoner name'/>
+                  {% csrf_token %}
+              </form>
+          </div><!-- /.container-fluid -->
+        </nav>
         <div class="container">
-            <h1>Game Info</h1>
-            <div class="row">
+            <h2>{{mode}} on {{map}} </h2>
+            <div class="row row-centered blue">
                 <h2>Blue Team</h2>
                     {% for item in blue_team %}
-                    <div class="col-md-2">
-                    <h4>{{ item.summonerName }}</h4>
-                        <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="42" width="42"/>
+                    <div class="col-xs-2 col-centered">
+                        <a href="#0" class="cd-btnb{{forloop.counter}} champ">
+                        <h4>{{ item.summonerName }}</h4>
+                        <div class="test">
+                            <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
+                            <div class="row row-centered">
+                                <div class="col-xs-6 col-centered">
+                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="48" width="48"/>
+                                </div>
+                                <div class="col-xs-6 col-centered">
+                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="48" width="48"/> 
+                                </div>
+                                <p>Masteries: {{ item.masteryTotal }}</p>
                             </div>
-                            <div class="col-sm-5">
-                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="42" width="42"/>
-                            </div>  
                         </div>
-                        <p>Masteries: {{ item.masteryTotal }}</p>
-                        <p>Runes:</p>
-                            <ul>
-                                {% for rune in item.runes %}
-                                <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/></li>
-                                {% endfor %}
-                            </ul>
-                    </ul>
-                    </div>
-                    {% endfor %}
-            </div>
-            <div class="row">
+                        </a>
+                    </div> 
+                    {% endfor %} 
+            </div>     
+            <div class="row row-centered red">
                 <h2>Red Team</h2>
                     {% for item in red_team %}
-                                        <div class="col-md-2">
-                    <h4>{{ item.summonerName }}</h4>
-                        <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="42" width="42"/>
+                    <div class="col-xs-2 col-centered">
+                        <a href="#0" class="cd-btnr{{forloop.counter}} champ">
+                        <h4>{{ item.summonerName }}</h4>
+                            <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
+                            <div class="row row-centered">
+                                <div class="col-xs-6 col-centered">
+                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="48" width="48"/>
+                                </div>
+                                <div class="col-xs-6 col-centered">
+                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="48" width="48"/> 
+                                </div>
+                                <p>Masteries: {{ item.masteryTotal }}</p>
                             </div>
-                            <div class="col-sm-5">
-                                <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="42" width="42"/>
-                            </div>  
-                        </div>
-                        <p>Masteries: {{ item.masteryTotal }}</p>
-                        <p>Runes:</p>
-                            <ul>
-                                {% for rune in item.runes %}
-                                <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/></li>
-                                {% endfor %}
-                            </ul>
-                    </ul>
-                    </div>
-                    {% endfor %}
-                </ul>
-            </div>  
+                        </a>
+                    </div> 
+                    {% endfor %} 
+            </div>     
         </div> 
+        {% for item in blue_team %}
+        <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
+            <header class="cd-panel-header">
+                <h2>{{item.champName}}: {{item.champTitle}}</h2>
+                <a href="#0" class="cd-panel-close">Close</a>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <h3>Masteries: {{ item.masteryTotal }}</h2>
+                    <h3>Runes:</h2>
+                        <ul>
+                            {% for rune in item.runes %}
+                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
+                            {% endfor %}
+                        </ul>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
+        {% endfor %}
+        {% for item in red_team %}
+        <div class="cd-panel cd-panelr{{forloop.counter}} from-left">
+            <header class="cd-panel-header">
+                <h2>{{item.champName}}: {{item.champTitle}}</h2>
+                <a href="#0" class="cd-panel-close">Close</a>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <h3>Masteries: {{ item.masteryTotal }}</h3>
+                    <h3>Runes:</h3>
+                        <ul>
+                            {% for rune in item.runes %}
+                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
+                            {% endfor %}
+                        </ul>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
+        {% endfor %}
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/main.js"></script> <!-- Resource jQuery -->
     </body>
 </html> 

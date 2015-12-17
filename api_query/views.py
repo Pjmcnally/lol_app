@@ -119,6 +119,33 @@ def dashboard(request):
         blue = [x for x in stuff['participants'] if x["teamId"]==100]
         red = [x for x in stuff['participants'] if x["teamId"]==200]
 
+        map_name = ""
+        if stuff['mapId'] == 10:
+            map_name = "Twisted Treeline"
+        elif stuff['mapId'] == 11:
+            map_name = "Summoner's Rift"
+        elif stuff['mapId'] == 12:
+            map_name = "Howling Abyss"
+
+        mode_name = ""
+        if stuff['gameQueueConfigId'] == 2:
+            mode_name = "Normal 5v5 (Blind Pick)"
+        elif stuff['gameQueueConfigId'] == 4:
+            mode_name = "Ranked 5v5 (Solo Queue)"
+        elif stuff['gameQueueConfigId'] == 8:
+            mode_name = "Normal 3v3 (Draft Pick)"
+        elif stuff['gameQueueConfigId'] == 14:
+            mode_name = "Normal 5v5 (Draft Pick)"
+        elif stuff['gameQueueConfigId'] == 41:
+            mode_name = "Ranked Team 3v3"
+        elif stuff['gameQueueConfigId'] == 42:
+            mode_name = "Ranked Team 5v5"
+        elif stuff['gameQueueConfigId'] == 61:
+            mode_name = "Team Builder Game"
+        elif stuff['gameQueueConfigId'] == 41:
+            mode_name = "ARAM"
+
+
 
 
 
@@ -126,6 +153,8 @@ def dashboard(request):
             'sum_id': sum_id,
             'blue_team': blue,
             'red_team': red,
+            'map': map_name,
+            'mode': mode_name,
         })
 
 
