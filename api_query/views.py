@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from api_query.models import Champion, Spell, Mastery, Rune
+from api_query.models import ChampStatic, SpellStatic, MastStatic, RuneStatic
 
 from secrets import API_KEY
 
@@ -113,32 +113,34 @@ def dashboard(request):
     else:
         info = r.json()
 
+        print(info)
+
         for summ in info['participants']:
-            summ['champName'] = Champion.objects.get(id=summ['championId']).name
-            summ['champImage'] = Champion.objects.get(id=summ['championId']).image
-            summ['champTitle'] = Champion.objects.get(id=summ['championId']).descript
-            summ['spell1Image'] = Spell.objects.get(id=summ['spell1Id']).image
-            summ['spell1Name'] = Spell.objects.get(id=summ['spell1Id']).name
-            summ['spell1Descript'] = Spell.objects.get(id=summ['spell1Id']).descript
-            summ['spell2Image'] = Spell.objects.get(id=summ['spell2Id']).image
-            summ['spell2Name'] = Spell.objects.get(id=summ['spell2Id']).name
-            summ['spell2Descript'] = Spell.objects.get(id=summ['spell2Id']).descript
+            summ['champName'] = ChampStatic.objects.get(id=summ['championId']).name
+            summ['champImage'] = ChampStatic.objects.get(id=summ['championId']).image
+            summ['champTitle'] = ChampStatic.objects.get(id=summ['championId']).descript
+            summ['spell1Image'] = SpellStatic.objects.get(id=summ['spell1Id']).image
+            summ['spell1Name'] = SpellStatic.objects.get(id=summ['spell1Id']).name
+            summ['spell1Descript'] = SpellStatic.objects.get(id=summ['spell1Id']).descript
+            summ['spell2Image'] = SpellStatic.objects.get(id=summ['spell2Id']).image
+            summ['spell2Name'] = SpellStatic.objects.get(id=summ['spell2Id']).name
+            summ['spell2Descript'] = SpellStatic.objects.get(id=summ['spell2Id']).descript
 
             ferocity, cunning, resolve = 0, 0, 0
             for mast in summ['masteries']:
-                if Mastery.objects.get(id=mast['masteryId']).tree == "Ferocity":
+                if MastStatic.objects.get(id=mast['masteryId']).tree == "Ferocity":
                     ferocity += mast['rank']
-                if Mastery.objects.get(id=mast['masteryId']).tree == "Cunning":
+                if MastStatic.objects.get(id=mast['masteryId']).tree == "Cunning":
                     cunning += mast['rank']
-                if Mastery.objects.get(id=mast['masteryId']).tree == "Resolve":
+                if MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
                     resolve += mast['rank']
 
             summ['masteryTotal'] = str(ferocity) + "/" + str(cunning) +"/" + str(resolve)
 
             for rune in summ['runes']:
-                rune['image'] = Rune.objects.get(id=rune['runeId']).image
-                rune['descript'] = Rune.objects.get(id=rune['runeId']).descript
-                rune['name'] = Rune.objects.get(id=rune['runeId']).name
+                rune['image'] = RuneStatic.objects.get(id=rune['runeId']).image
+                rune['descript'] = RuneStatic.objects.get(id=rune['runeId']).descript
+                rune['name'] = RuneStatic.objects.get(id=rune['runeId']).name
 
     return render(request, 'dashboard.html', {
         'blue_team': [x for x in info['participants'] if x["teamId"]==100],
@@ -146,3 +148,19 @@ def dashboard(request):
         'map': map_name_func(info),
         'mode': mode_name_func(info),
     })
+
+
+class Game():
+    def __init__(self, game_json):
+        self.game_length = game_json[gameLength]
+
+class Player():
+    pass
+
+class Champs():
+    pass
+
+class map():
+    pass
+
+

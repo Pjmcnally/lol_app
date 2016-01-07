@@ -1,14 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class Champion(models.Model):
+class ChampStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
 
-class Mastery(models.Model):
+class MastStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     # descript = models.CharField(max_length=500, default='')
@@ -17,14 +17,14 @@ class Mastery(models.Model):
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
 
-class Rune(models.Model):
+class RuneStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
 
-class Spell(models.Model):
+class SpellStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
