@@ -71,27 +71,6 @@ def get_id(sum_name):
     else:
         return "error"
 
-
-def mode_name_func(info):
-    """ converts mode id into human readable string """
-    mode_dict = {2: "Normal 5v5 (Blind Pick)",
-                 4: "Ranked 5v5 (Solo Queue)",
-                 8: "Normal 3v3 (Draft Pick)",
-                 14: "Normal 5v5 (Draft Pick)",
-                 41: "Ranked Team 3v3",
-                 42: "Ranked Team 5v5",
-                 61: "Team Builder Game",
-                 41: "ARAM"}
-    return mode_dict[info.get('gameQueueConfigId', '')]
-
-
-def map_name_func(info):
-    """ converts map id into human readable string """
-    map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
-                12: "Howling Abyss"}
-    return map_dict[info.get('mapId', '')]
-
-
 def dashboard(request):
     """ renders dashboard """
     sum_id = request.GET.get('sum_id', '')
@@ -113,9 +92,20 @@ def dashboard(request):
     else:
         info = r.json()
 
-        print(info)
+        this_game = Game(info)
+
+        # Test Area begins
+        test_player_json = {'profileIconId': 982, 'teamId': 100, 'runes': [{'count': 9, 'runeId': 5273}, {'count': 9, 'runeId': 5290}, {'count': 9, 'runeId': 5316}, {'count': 1, 'runeId': 5365}, {'count': 2, 'runeId': 8022}], 'summonerId': 24137629, 'spell1Id': 4, 'championId': 27, 'bot': False, 'summonerName': 'Doublestop', 'masteries': [{'rank': 5, 'masteryId': 6114}, {'rank': 1, 'masteryId': 6122}, {'rank': 5, 'masteryId': 6134}, {'rank': 1, 'masteryId': 6142}, {'rank': 5, 'masteryId': 6211}, {'rank': 1, 'masteryId': 6223}, {'rank': 5, 'masteryId': 6232}, {'rank': 1, 'masteryId': 6242}, {'rank': 5, 'masteryId': 6251}, {'rank': 1, 'masteryId': 6263}], 'spell2Id': 12}
+        test_player = Player(test_player_json)
+
+        print(test_player)
+
+
+
+        # Test area ends
 
         for summ in info['participants']:
+            print(summ)
             summ['champName'] = ChampStatic.objects.get(id=summ['championId']).name
             summ['champImage'] = ChampStatic.objects.get(id=summ['championId']).image
             summ['champTitle'] = ChampStatic.objects.get(id=summ['championId']).descript
@@ -145,22 +135,67 @@ def dashboard(request):
     return render(request, 'dashboard.html', {
         'blue_team': [x for x in info['participants'] if x["teamId"]==100],
         'red_team': [x for x in info['participants'] if x["teamId"]==200],
-        'map': map_name_func(info),
-        'mode': mode_name_func(info),
+        'map': this_game.map,
+        'mode': this_game.mode,
     })
+
 
 
 class Game():
     def __init__(self, game_json):
-        self.game_length = game_json[gameLength]
+        self.length = game_json['gameLength']
+        self.id = game_json['gameId']
+        self.start_time = game_json['gameStartTime']
+        self.mode = self.mode_name(game_json['gameQueueConfigId'])
+        self.map = self.map_name(game_json['mapId'])
+        self.blue_bans = []
+        self.red_bans = []
+        self.blue_team = []
+        self.red_team = []
+
+
+    def __str__(self):
+        return "Game length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
+            self.length, self.id, self.start_time, self.mode, self.map)
+
+    def mode_name(self, info):
+        """ converts mode id into human readable string """
+        mode_dict = {2: "Normal 5v5 (Blind Pick)",
+                     4: "Ranked 5v5 (Solo Queue)",
+                     8: "Normal 3v3 (Draft Pick)",
+                     14: "Normal 5v5 (Draft Pick)",
+                     41: "Ranked Team 3v3",
+                     42: "Ranked Team 5v5",
+                     61: "Team Builder Game",
+                     41: "ARAM"}
+        return mode_dict[info]
+
+    def map_name(self, info):
+        """ converts map id into human readable string """
+        map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
+                    12: "Howling Abyss"}
+        return map_dict[info]
 
 class Player():
-    pass
+    def __init__(self, summ):
+        self.name = summ["summonerName"]
+        self.champion = Champion(summ['championId'])
 
-class Champs():
-    pass
+    def __str__(self):
+        return "{} is playing {}".format(self.name, self.champion.name)
 
-class map():
-    pass
+class Champion():
+    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{n}.png"
 
+    def __init__(self, champ_id):
+        self.name = ChampStatic.objects.get(id=champ_id).name
+        self.descript = ChampStatic.objects.get(id=champ_id).descript
+        self.image = ChampStatic.objects.get(id=champ_id).image
+        self.version = ChampStatic.objects.get(id=champ_id).version
+        self.image_link = self.dd_link.format(v = self.version, n = self.image)
 
+    def __str__(self):
+        return "Name = {}\nImage = {}\nDescript = {}\n{}".format(self.name, self.image, self.descript, self.image_link)
+
+class Spell():
+    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/spell/{n}"
