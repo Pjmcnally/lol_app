@@ -71,6 +71,7 @@ def get_id(sum_name):
     else:
         return "error"
 
+
 def dashboard(request):
     """ renders dashboard """
     sum_id = request.GET.get('sum_id', '')
@@ -94,51 +95,18 @@ def dashboard(request):
 
         this_game = Game(info)
 
-        # Test Area begins
-        test_player_json = {'profileIconId': 982, 'teamId': 100, 'runes': [{'count': 9, 'runeId': 5273}, {'count': 9, 'runeId': 5290}, {'count': 9, 'runeId': 5316}, {'count': 1, 'runeId': 5365}, {'count': 2, 'runeId': 8022}], 'summonerId': 24137629, 'spell1Id': 4, 'championId': 27, 'bot': False, 'summonerName': 'Doublestop', 'masteries': [{'rank': 5, 'masteryId': 6114}, {'rank': 1, 'masteryId': 6122}, {'rank': 5, 'masteryId': 6134}, {'rank': 1, 'masteryId': 6142}, {'rank': 5, 'masteryId': 6211}, {'rank': 1, 'masteryId': 6223}, {'rank': 5, 'masteryId': 6232}, {'rank': 1, 'masteryId': 6242}, {'rank': 5, 'masteryId': 6251}, {'rank': 1, 'masteryId': 6263}], 'spell2Id': 12}
-        test_player = Player(test_player_json)
-
-        print(test_player)
-
-
-
-        # Test area ends
-
-        for summ in info['participants']:
-            print(summ)
-            summ['champName'] = ChampStatic.objects.get(id=summ['championId']).name
-            summ['champImage'] = ChampStatic.objects.get(id=summ['championId']).image
-            summ['champTitle'] = ChampStatic.objects.get(id=summ['championId']).descript
-            summ['spell1Image'] = SpellStatic.objects.get(id=summ['spell1Id']).image
-            summ['spell1Name'] = SpellStatic.objects.get(id=summ['spell1Id']).name
-            summ['spell1Descript'] = SpellStatic.objects.get(id=summ['spell1Id']).descript
-            summ['spell2Image'] = SpellStatic.objects.get(id=summ['spell2Id']).image
-            summ['spell2Name'] = SpellStatic.objects.get(id=summ['spell2Id']).name
-            summ['spell2Descript'] = SpellStatic.objects.get(id=summ['spell2Id']).descript
-
-            ferocity, cunning, resolve = 0, 0, 0
-            for mast in summ['masteries']:
-                if MastStatic.objects.get(id=mast['masteryId']).tree == "Ferocity":
-                    ferocity += mast['rank']
-                if MastStatic.objects.get(id=mast['masteryId']).tree == "Cunning":
-                    cunning += mast['rank']
-                if MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
-                    resolve += mast['rank']
-
-            summ['masteryTotal'] = str(ferocity) + "/" + str(cunning) +"/" + str(resolve)
-
+        for num, summ in enumerate(info['participants']):
             for rune in summ['runes']:
                 rune['image'] = RuneStatic.objects.get(id=rune['runeId']).image
                 rune['descript'] = RuneStatic.objects.get(id=rune['runeId']).descript
                 rune['name'] = RuneStatic.objects.get(id=rune['runeId']).name
 
     return render(request, 'dashboard.html', {
-        'blue_team': [x for x in info['participants'] if x["teamId"]==100],
-        'red_team': [x for x in info['participants'] if x["teamId"]==200],
+        'blue_team': [x for x in this_game.players if x.team == "blue"],
+        'red_team': [x for x in this_game.players if x.team == "red"],
         'map': this_game.map,
         'mode': this_game.mode,
     })
-
 
 
 class Game():
@@ -148,11 +116,8 @@ class Game():
         self.start_time = game_json['gameStartTime']
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
-        self.blue_bans = []
-        self.red_bans = []
-        self.blue_team = []
-        self.red_team = []
-
+        self.bans = []
+        self.players = [Player(summ) for summ in game_json['participants']]
 
     def __str__(self):
         return "Game length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
@@ -175,14 +140,37 @@ class Game():
         map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
                     12: "Howling Abyss"}
         return map_dict[info]
+        
 
 class Player():
     def __init__(self, summ):
         self.name = summ["summonerName"]
+        self.team = self.team_func(summ["teamId"])
         self.champion = Champion(summ['championId'])
+        self.spell1 = Spell(summ['spell1Id'])
+        self.spell2 = Spell(summ['spell2Id'])
+        self.masteries = self.masteries_func(summ["masteries"])
 
     def __str__(self):
-        return "{} is playing {}".format(self.name, self.champion.name)
+        return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
+
+    def masteries_func(self, raw_mast):
+        masteries = {'ferocity': 0, 'cunning': 0, 'resolve': 0}
+        for mast in raw_mast:
+            if MastStatic.objects.get(id=mast['masteryId']).tree == "Ferocity":
+                masteries['ferocity'] += mast['rank']
+            if MastStatic.objects.get(id=mast['masteryId']).tree == "Cunning":
+                masteries['cunning'] += mast['rank']
+            if MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
+                masteries['resolve'] += mast['rank']
+        return "{f}/{c}/{r}".format(f=masteries['ferocity'], c=masteries['cunning'], r=masteries['resolve'])
+
+    def team_func(self, team):
+        if team == 100:
+            return "blue"
+        elif team == 200:
+            return "red"
+
 
 class Champion():
     dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{n}.png"
@@ -192,10 +180,24 @@ class Champion():
         self.descript = ChampStatic.objects.get(id=champ_id).descript
         self.image = ChampStatic.objects.get(id=champ_id).image
         self.version = ChampStatic.objects.get(id=champ_id).version
-        self.image_link = self.dd_link.format(v = self.version, n = self.image)
+        self.image_link = self.dd_link.format(v=self.version, n=self.image)
 
     def __str__(self):
         return "Name = {}\nImage = {}\nDescript = {}\n{}".format(self.name, self.image, self.descript, self.image_link)
 
+
 class Spell():
     dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/spell/{n}"
+
+    def __init__(self, spell_id):
+        self.name = SpellStatic.objects.get(id=spell_id).name
+        self.descript = SpellStatic.objects.get(id=spell_id).descript
+        self.image = SpellStatic.objects.get(id=spell_id).image
+        self.version = SpellStatic.objects.get(id=spell_id).version
+        self.image_link = self.dd_link.format(v=self.version, n=self.image)
+
+    def __str__(self):
+        return "{n} : {d}".format(n=self.name, d=self.descript)
+
+# class Masteries():
+

@@ -28,53 +28,55 @@
             <h2>{{mode}} on {{map}} </h2>
             <div class="row row-centered blue">
                 <h2>Blue Team</h2>
-                    {% for item in blue_team %}
-                    <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
-                        <h4>{{ item.summonerName }}</h4>
-                        <div class="test">
-                            <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
-                            <div class="row row-centered">
-                                <div class="col-xs-6 col-centered">
-                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="48" width="48"/>
-                                </div>
-                                <div class="col-xs-6 col-centered">
-                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="48" width="48"/> 
-                                </div>
-                                <p>Masteries: {{ item.masteryTotal }}</p>
+                {% for player in blue_team %}
+                <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
+                    <h4>{{ player.name }}</h4>
+                    <div class="test">
+                        <img class="champ_image" src="{{player.champion.image_link}}" alt="{{player.champion.name}}"  title="{{player.champion.name}}: {{player.champion.descript}}" />
+                        <div class="row row-centered">
+                            <div class="col-xs-6 col-centered">
+                                <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48"/>
                             </div>
+                            <div class="col-xs-6 col-centered">
+                                <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48"/> 
+                            </div>
+                            <p>Masteries: {{ player.masteries }}</p>
                         </div>
-                    </div> 
-                    {% endfor %} 
+                    </div>
+                </div> 
+                {% endfor %} 
             </div>     
             <div class="row row-centered red">
                 <h2>Red Team</h2>
-                    {% for item in red_team %}
-                    <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
-                        <h4>{{ item.summonerName }}</h4>
-                            <img class="champ_image" src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{item.champImage}}.png" alt="{{item.champName}}"  title="{{item.champName}}: {{item.champTitle}}" />
-                            <div class="row row-centered">
-                                <div class="col-xs-6 col-centered">
-                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell1Image}}" title="{{item.spell1Name}}: {{item.spell1Descript}}" height="48" width="48"/>
-                                </div>
-                                <div class="col-xs-6 col-centered">
-                                    <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/spell/{{item.spell2Image}}" title="{{item.spell2Name}}: {{item.spell2Descript}}" height="48" width="48"/> 
-                                </div>
-                                <p>Masteries: {{ item.masteryTotal }}</p>
+                {% for player in red_team %}
+                <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
+                    <h4>{{ player.name }}</h4>
+                    <div class="test">
+                        <img class="champ_image" src="{{player.champion.image_link}}" alt="{{player.champion.name}}"  title="{{player.champion.name}}: {{player.champion.descript}}" />
+                        <div class="row row-centered">
+                            <div class="col-xs-6 col-centered">
+                                <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48"/>
                             </div>
+                            <div class="col-xs-6 col-centered">
+                                <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48"/> 
+                            </div>
+                            <p>Masteries: {{ player.masteries }}</p>
+                        </div>
                     </div> 
-                    {% endfor %} 
+                </div>
+                {% endfor %} 
             </div>     
         </div> 
-        {% for item in blue_team %}
+        {% for player in blue_team %}
         <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
             <header class="cd-panel-header">
-                <h2>{{item.champName}}: {{item.champTitle}}</h2>
+                <h2>{{player.champion.name}}: {{player.champion.descript}}</h2>
                 <a href="#0" class="cd-panel-close">Close</a>
             </header>
 
             <div class="cd-panel-container">
                 <div class="cd-panel-content">
-                    <h3>Masteries: {{ item.masteryTotal }}</h2>
+                    <h3>Masteries: {{ player.masteries }}</h2>
                     <h3>Runes:</h2>
                         <ul>
                             {% for rune in item.runes %}
@@ -85,16 +87,16 @@
             </div> <!-- cd-panel-container -->
         </div> <!-- cd-panel -->
         {% endfor %}
-        {% for item in red_team %}
+        {% for player in red_team %}
         <div class="cd-panel cd-panelr{{forloop.counter}} from-left">
             <header class="cd-panel-header">
-                <h2>{{item.champName}}: {{item.champTitle}}</h2>
+                <h2>{{player.champion.name}}: {{player.champion.descript}}</h2>
                 <a href="#0" class="cd-panel-close">Close</a>
             </header>
 
             <div class="cd-panel-container">
                 <div class="cd-panel-content">
-                    <h3>Masteries: {{ item.masteryTotal }}</h3>
+                    <h3>Masteries: {{ player.masteries }}</h3>
                     <h3>Runes:</h3>
                         <ul>
                             {% for rune in item.runes %}
