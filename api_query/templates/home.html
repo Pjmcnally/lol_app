@@ -20,12 +20,30 @@
                             <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
                             {% csrf_token %}
                         </form>
-                        <form method='POST' action='get/game' id='tryItNow'>
-                            <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
+                        {% if messages %}
+                            {% for message in messages %}
+                                {% if "search" in message.extra_tags %}
+                                    <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                         <p>Try it out on a live game now!</p>
-                        <p>Enter your summoner name or <input type="submit" value='{{player}}' /> is playing now.</p>
-                        {% csrf_token %}
-                        </form>
+                        <p>Enter your summoner name</p>
+                        <p>Or check out a featured game.</p>
+                        {% if messages %}
+                            {% for message in messages %}
+                                {% if "api_down" in message.extra_tags %}
+                                    <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if player != "" %} 
+                            <form method='POST' action='get/game' id='tryItNow'>
+                                <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
+                            <p> <input type="submit" value='{{player}}' /> is playing now!</p>
+                            {% csrf_token %}
+                            </form>
+                        {% endif %}
                     </div>  
                 </div>
             </div>

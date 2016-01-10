@@ -79,8 +79,8 @@
                     <h3>Masteries: {{ player.masteries }}</h2>
                     <h3>Runes:</h2>
                         <ul>
-                            {% for rune in item.runes %}
-                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
+                            {% for rune in player.runes %}
+                            <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
                             {% endfor %}
                         </ul>
                 </div> <!-- cd-panel-content -->
@@ -99,8 +99,8 @@
                     <h3>Masteries: {{ player.masteries }}</h3>
                     <h3>Runes:</h3>
                         <ul>
-                            {% for rune in item.runes %}
-                            <li>{{rune.count}} x <img src="https://ddragon.leagueoflegends.com/cdn/5.24.2/img/rune/{{rune.image}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
+                            {% for rune in player.runes %}
+                            <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42"/>{{rune.name}}: {{rune.descript}}</li>
                             {% endfor %}
                         </ul>
                 </div> <!-- cd-panel-content -->

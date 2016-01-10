@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from api_query.models import ChampStatic, SpellStatic, MastStatic, RuneStatic
 
 from secrets import API_KEY
@@ -18,22 +19,19 @@ def home_page(request, error_msg=""):
     r = requests.get(featured_url, params=payload)
 
     player_list = []
+    player = ""
 
     if r.status_code == 200:
-        # name variable
-        for x in r.json()['gameList']:
-            for y in x['participants']:
-                player_list.append(y['summonerName'])
-
-        return render(request, 'home.html', {
-            'player': choice(player_list),
-            'error_msg': error_msg,
-            })
+        for game in r.json()['gameList']:
+            for summ in game['participants']:
+                player_list.append(summ['summonerName'])
+            player = choice(player_list)   
     else:
-        return render(request, 'home.html', {
-            'player': "Featured game API is not working",
-            'error_msg': error_msg,
-            })
+        messages.error(request, 'Featured game API is down at the moment.',
+            extra_tags='api_down')
+    return render(request, 'home.html', {
+        'player': player,
+        })
 
 
 def get_game(request):
@@ -43,7 +41,7 @@ def get_game(request):
         sum_id = get_id(sum_name)
 
         if sum_id == "error":
-            # Find out how to enter error message here
+            messages.error(request, 'That is either not a valid summoner name or that summoner is not currently playing a game. Please try again', extra_tags='search')
             return redirect('/')
         else:
             return redirect('/dashboard?sum_id={sum_id}'.format(
@@ -95,12 +93,6 @@ def dashboard(request):
 
         this_game = Game(info)
 
-        for num, summ in enumerate(info['participants']):
-            for rune in summ['runes']:
-                rune['image'] = RuneStatic.objects.get(id=rune['runeId']).image
-                rune['descript'] = RuneStatic.objects.get(id=rune['runeId']).descript
-                rune['name'] = RuneStatic.objects.get(id=rune['runeId']).name
-
     return render(request, 'dashboard.html', {
         'blue_team': [x for x in this_game.players if x.team == "blue"],
         'red_team': [x for x in this_game.players if x.team == "red"],
@@ -150,6 +142,7 @@ class Player():
         self.spell1 = Spell(summ['spell1Id'])
         self.spell2 = Spell(summ['spell2Id'])
         self.masteries = self.masteries_func(summ["masteries"])
+        self.runes = self.runes_func(summ["runes"])
 
     def __str__(self):
         return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
@@ -164,6 +157,13 @@ class Player():
             if MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
                 masteries['resolve'] += mast['rank']
         return "{f}/{c}/{r}".format(f=masteries['ferocity'], c=masteries['cunning'], r=masteries['resolve'])
+
+    def runes_func(self, raw_runes):
+        print(raw_runes)
+        runes = []
+        for rune in raw_runes:
+            runes.append(Rune(rune["runeId"], rune["count"]))
+        return runes
 
     def team_func(self, team):
         if team == 100:
@@ -199,5 +199,15 @@ class Spell():
     def __str__(self):
         return "{n} : {d}".format(n=self.name, d=self.descript)
 
-# class Masteries():
+class Rune():
+    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/rune/{n}"
 
+    def __init__(self, rune_id, count):
+        self.name = RuneStatic.objects.get(id=rune_id).name
+        self.descript = RuneStatic.objects.get(id=rune_id).descript
+        self.image = RuneStatic.objects.get(id=rune_id).image
+        self.version = RuneStatic.objects.get(id=rune_id).version
+        self.image_link = self.dd_link.format(v=self.version, n=self.image)
+        self.count = count
+
+# class Masteries():  (Not sure what to do here.)
