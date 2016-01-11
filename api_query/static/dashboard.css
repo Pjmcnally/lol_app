@@ -37,11 +37,11 @@ h4 {
     margin-right:-4px;
 }
 
-/*.champ_image {
+.searched {
     border-style: solid;
-    border-width:4px;
-    border-color: gray;
-}*/
+    border-width: 4px;
+    border-color: yellow;
+}
 
 .nav-search{
   width: 250px;

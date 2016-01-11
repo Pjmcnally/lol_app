@@ -27,7 +27,7 @@ def home_page(request, error_msg=""):
                 player_list.append(summ['summonerName'])
             player = choice(player_list)   
     else:
-        messages.error(request, 'Featured game API is down at the moment.',
+        messages.error(request, 'Featured game API is down at the moment. Sorry.',
             extra_tags='api_down')
     return render(request, 'home.html', {
         'player': player,
@@ -41,7 +41,7 @@ def get_game(request):
         sum_id = get_id(sum_name)
 
         if sum_id == "error":
-            messages.error(request, 'That is either not a valid summoner name or that summoner is not currently playing a game. Please try again', extra_tags='search')
+            messages.error(request, 'That does not appear to be a valid summoner name. Please try again', extra_tags='search')
             return redirect('/')
         else:
             return redirect('/dashboard?sum_id={sum_id}'.format(
@@ -86,7 +86,7 @@ def dashboard(request):
     r = requests.get(full_url, params=payload)
 
     if r.status_code != 200:
-        # Find out how to enter error message here
+        messages.error(request, 'That summoner is not currently playing a game. Please try again', extra_tags='search')
         return redirect('/')
     else:
         info = r.json()
@@ -94,6 +94,7 @@ def dashboard(request):
         this_game = Game(info)
 
     return render(request, 'dashboard.html', {
+        'id_searched': int(sum_id),
         'blue_team': [x for x in this_game.players if x.team == "blue"],
         'red_team': [x for x in this_game.players if x.team == "red"],
         'map': this_game.map,
@@ -124,7 +125,7 @@ class Game():
                      41: "Ranked Team 3v3",
                      42: "Ranked Team 5v5",
                      61: "Team Builder Game",
-                     41: "ARAM"}
+                     65: "ARAM"}
         return mode_dict[info]
 
     def map_name(self, info):
@@ -136,13 +137,14 @@ class Game():
 
 class Player():
     def __init__(self, summ):
-        self.name = summ["summonerName"]
-        self.team = self.team_func(summ["teamId"])
+        self.id = summ['summonerId']
+        self.name = summ['summonerName']
+        self.team = self.team_func(summ['teamId'])
         self.champion = Champion(summ['championId'])
         self.spell1 = Spell(summ['spell1Id'])
         self.spell2 = Spell(summ['spell2Id'])
-        self.masteries = self.masteries_func(summ["masteries"])
-        self.runes = self.runes_func(summ["runes"])
+        self.masteries = self.masteries_func(summ['masteries'])
+        self.runes = self.runes_func(summ['runes'])
 
     def __str__(self):
         return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
@@ -159,7 +161,6 @@ class Player():
         return "{f}/{c}/{r}".format(f=masteries['ferocity'], c=masteries['cunning'], r=masteries['resolve'])
 
     def runes_func(self, raw_runes):
-        print(raw_runes)
         runes = []
         for rune in raw_runes:
             runes.append(Rune(rune["runeId"], rune["count"]))

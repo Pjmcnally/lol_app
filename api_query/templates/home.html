@@ -1,54 +1,71 @@
+<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
-        <title>Patrick's LoL App</title>
-        <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/static/home.css" rel="stylesheet">
-    </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>Patrick's LoL App</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/jumbotron-narrow.css" rel="stylesheet">
+</head>
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 jumbotron">
-                    <div class="text-center">
-                        <h1>Patrick's LoL App</h1> 
-                        <form method='POST' action='get/game' id='summonerName'>
-                            <input name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name'/>
-                            {% csrf_token %}
-                        </form>
-                        {% if messages %}
-                            {% for message in messages %}
-                                {% if "search" in message.extra_tags %}
-                                    <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</p>
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                        <p>Try it out on a live game now!</p>
-                        <p>Enter your summoner name</p>
-                        <p>Or check out a featured game.</p>
-                        {% if messages %}
-                            {% for message in messages %}
-                                {% if "api_down" in message.extra_tags %}
-                                    <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</p>
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                        {% if player != "" %} 
-                            <form method='POST' action='get/game' id='tryItNow'>
-                                <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />  
-                            <p> <input type="submit" value='{{player}}' /> is playing now!</p>
-                            {% csrf_token %}
-                            </form>
-                        {% endif %}
-                    </div>  
-                </div>
-            </div>
-        </div>
-    </body>
+<body>
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation" class="active"><a href="/">Home</a></li>
+          <li role="presentation"><a href="#">About</a></li>
+          <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
+        </ul>
+      </nav>
+      <h3 class="text-muted">Patrick's LoL App</h3>
+    </div> <!-- /header -->
 
-</html> 
+    <div class="jumbotron">
+        <h1>Live Game Stats:</h1>
+        <p>Go in to battle armed with knowldge about you and your opponents!</p>
+        <form method='POST' action='get/game' id='summonerName'>
+          <div class="form-group">
+            <lable class="sr-only" for="summonerName">Summoner Name</lable>
+            <input type="search" class="form-control text-center input-lg" name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name' /> {% csrf_token %}
+          </div>
+        </form>
+        {% if messages %} 
+          {% for message in messages %} 
+            {% if "search" in message.extra_tags %}
+              <p class="alert alert-danger">{{message}}</p>
+            {% endif %} 
+          {% endfor %} 
+        {% endif %}
+        <p>Or check out a featured game:</p>
+        {% if messages %} 
+          {% for message in messages %} 
+            {% if "api_down" in message.extra_tags %}
+              <p class="alert alert-danger">{{message}}</p>
+            {% endif %} 
+          {% endfor %}
+        {% endif %} 
+        {% if player != "" %}
+          <form method='POST' action='get/game' id='tryItNow'>
+            <input style="display:none;" name='summoner_name' id='sum_name_input' value='{{player}}' />
+            <p>
+            <input type="submit" value='{{player}}' /> is playing now!</p>
+            {% csrf_token %}
+          </form>
+        {% endif %}
+      </div> <!-- /Jumbotron -->
+    <footer class="footer">
+      <p>&copy; 2016 Patrick McNally</p>
+    </footer>
+  </div> <!-- /container -->
+</body>
 
+</html>
