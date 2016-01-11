@@ -1,118 +1,135 @@
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
-  <title>Patrick's LoL App</title>
-  <link href="/static/slide_in_panel.css" rel="stylesheet">
-  <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/static/base.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The 3 tags above must come first in the head!  Do not put anything before them. -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Patrick's LoL App</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slide in panel CSS -->
+    <link href="/static/slide_in_panel.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/base.css" rel="stylesheet"> <!-- Shared styling -->
+    <link href="/static/dashboard.css" rel="stylesheet"> <!-- Unique styling -->
+    <!-- not using at the moment. <script src="js/modernizr.js"></script>  -->
+  </head>
 
-  <link href="/static/dashboard.css" rel="stylesheet">
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
+            <form class="nav-form navbar-right" method='POST' action='/get/game' id='summonerName'>
+              <input type="text" class="form-control" name='summoner_name' id='sum_name_input' placeholder="Search again...">
+              {% csrf_token %}
+            </form>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Patrick's LoL App</h3>
+      </div> <!-- /header -->
 
-  <!-- not using at the moment. <script src="js/modernizr.js"></script>  -->
-</head>
 
-<body>
-  <div class="container">
 
-    <div class="header clearfix">
-      <nav>
-        <ul class="nav nav-pills pull-right">
-          <li role="presentation"><a href="/">Home</a></li>
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
-        </ul>
-      </nav>
-      <h3 class="text-muted">Patrick's LoL App</h3>
-    </div> <!-- /header -->
 
-  
-    <h2 class="mode_text">{{mode}} on {{map}} </h2>
-    <div class="row row-centered blue">
-      <h2>Blue Team</h2> 
-      {% for player in blue_team %}
-        <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
-          <h4>{{ player.name }}</h4>
-          <div class="test">
-            <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
-            <div class="row row-centered">
-              <div class="col-xs-6 col-centered">
-                <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
+    
+      <h2 class="mode_text">{{mode}} on {{map}} </h2>
+      <div class="row row-centered blue">
+        <h2>Blue Team</h2> 
+        {% for player in blue_team %}
+          <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
+            <h4>{{ player.name }}</h4>
+            <div class="test">
+              <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
+              <div class="row row-centered">
+                <div class="col-xs-6 col-centered">
+                  <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
+                </div>
+                <div class="col-xs-6 col-centered">
+                  <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
+                </div>
+                <p>Masteries: {{ player.masteries }}</p>
               </div>
-              <div class="col-xs-6 col-centered">
-                <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
-              </div>
-              <p>Masteries: {{ player.masteries }}</p>
             </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="row row-centered red">
-      <h2>Red Team</h2> 
-      {% for player in red_team %}
-        <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
-          <h4>{{ player.name }}</h4>
-          <div class="test">
-            <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
-            <div class="row row-centered">
-              <div class="col-xs-6 col-centered">
-                <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
+        {% endfor %}
+      </div>
+      <div class="row row-centered red">
+        <h2>Red Team</h2> 
+        {% for player in red_team %}
+          <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
+            <h4>{{ player.name }}</h4>
+            <div class="test">
+              <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
+              <div class="row row-centered">
+                <div class="col-xs-6 col-centered">
+                  <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
+                </div>
+                <div class="col-xs-6 col-centered">
+                  <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
+                </div>
+                <p>Masteries: {{ player.masteries }}</p>
               </div>
-              <div class="col-xs-6 col-centered">
-                <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
-              </div>
-              <p>Masteries: {{ player.masteries }}</p>
             </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% for player in blue_team %}
-    <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
-      <header class="cd-panel-header">
-        <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
-        <a href="#0" class="cd-panel-close">Close</a>
-      </header>
-      <div class="cd-panel-container">
-        <div class="cd-panel-content">
-          <h3>Masteries: {{ player.masteries }}</h3>
-          <h3>Runes:</h3>
-          <ul>
-            {% for rune in player.runes %}
-            <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
-            {% endfor %}
-          </ul>
-        </div> <!-- cd-panel-content -->
-      </div> <!-- cd-panel-container -->
-    </div> <!-- cd-panel -->
-  {% endfor %} 
-  {% for player in red_team %}
-    <div class="cd-panel cd-panelr{{forloop.counter}} from-left">
-      <header class="cd-panel-header">
-        <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
-        <a href="#0" class="cd-panel-close">Close</a>
-      </header>
-      <div class="cd-panel-container">
-        <div class="cd-panel-content">
-          <h3>Masteries: {{ player.masteries }}</h3>
-          <h3>Runes:</h3>
-          <ul>
-            {% for rune in player.runes %}
-            <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
-            {% endfor %}
-          </ul>
-        </div> <!-- cd-panel-content -->
-      </div> <!-- cd-panel-container -->
-    </div> <!-- cd-panel -->
-  {% endfor %}
-  <script src="/static/js/jquery-2.1.1.js"></script>
-  <script src="/static/js/main.js"></script>
-  <!-- Resource jQuery -->
-</body>
+        {% endfor %}
+      </div>
+
+        <footer class="footer">
+          <p>&copy; 2016 Patrick McNally</p>
+        </footer>
+      </body>
+
+    </div> <!-- /container -->
+
+    {% for player in blue_team %}
+      <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
+        <header class="cd-panel-header">
+          <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
+          <a href="#0" class="cd-panel-close">Close</a>
+        </header>
+        <div class="cd-panel-container">
+          <div class="cd-panel-content">
+            <h3>Masteries: {{ player.masteries }}</h3>
+            <h3>Runes:</h3>
+            <ul>
+              {% for rune in player.runes %}
+              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
+              {% endfor %}
+            </ul>
+          </div> <!-- cd-panel-content -->
+        </div> <!-- cd-panel-container -->
+      </div> <!-- cd-panel -->
+    {% endfor %} 
+    {% for player in red_team %}
+      <div class="cd-panel cd-panelr{{forloop.counter}} from-left">
+        <header class="cd-panel-header">
+          <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
+          <a href="#0" class="cd-panel-close">Close</a>
+        </header>
+        <div class="cd-panel-container">
+          <div class="cd-panel-content">
+            <h3>Masteries: {{ player.masteries }}</h3>
+            <h3>Runes:</h3>
+            <ul>
+              {% for rune in player.runes %}
+              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
+              {% endfor %}
+            </ul>
+          </div> <!-- cd-panel-content -->
+        </div> <!-- cd-panel-container -->
+      </div> <!-- cd-panel -->
+    {% endfor %}
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/main.js"></script>
+    <!-- Resource jQuery -->
 
 </html>
