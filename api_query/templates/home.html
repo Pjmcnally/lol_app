@@ -33,11 +33,11 @@
 
       <div class="jumbotron">
         <h1>Live Game Stats:</h1>
-        <p>Go in to battle armed with knowldge about you and your opponents!</p>
+        <p>Join the battle on Summoner's Rift fully armed with knowldge about your team and your opponents!</p>
         <form method='POST' action='get/game' id='summonerName'>
           <div class="form-group">
             <lable class="sr-only" for="summonerName">Summoner Name</lable>
-            <input type="search" class="form-control text-center input-lg" name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name' /> {% csrf_token %}
+            <input type="text" class="form-control text-center input-lg" name='summoner_name' id='sum_name_input' placeholder='Enter a summoner name' /> {% csrf_token %}
           </div>
         </form>
         {% if messages %} 

@@ -12,6 +12,9 @@
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  box-shadow: -5px 5px 10px 0px #00B6DC, 5px -5px 10px 0px #D94A38;
+  color: white;
+  background-color: rgba(0, 0, 0, .4);
 }
 .jumbotron .btn {
 /*  padding: 14px 24px;*/
@@ -43,4 +46,11 @@
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+input[type="text"], textarea {
+  border-color: white;
+  border-width: 1px;
+  color: white;
+  background-color: black; 
 }

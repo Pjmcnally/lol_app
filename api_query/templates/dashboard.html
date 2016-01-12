@@ -51,7 +51,7 @@
         <div class="col-sm-1"></div> <!-- empty column to center --> 
         {% for player in blue_team %}
           <div class="col-sm-2 col-xs-4 cd-btnb{{forloop.counter}} placeholder">
-            <div class="wrapper blue">
+            <div class="wrapper {% if player.id == id_searched %} searched {% else %} blue {% endif %}">
               <div class="player-name">
                 <h4 class="mode_text">{{ player.name }}</h4>
               </div>  
@@ -64,8 +64,8 @@
       <div class="row placeholders">
         <div class="col-sm-1"></div> <!-- empty column to center --> 
         {% for player in red_team %}
-          <div class="col-sm-2 cd-btnr{{forloop.counter}} placeholder">
-            <div class="wrapper red">
+          <div class="col-sm-2 col-xs-4 cd-btnr{{forloop.counter}} placeholder">
+            <div class="wrapper {% if player.id == id_searched %} searched {% else %} red {% endif %}">
               <div class="player-name">
                 <h4 class="mode_text">{{ player.name }}</h4>
               </div>  
