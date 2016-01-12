@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+
     <title>Patrick's LoL App</title>
 
     <!-- Bootstrap core CSS -->
@@ -26,6 +27,7 @@
   </head>
 
   <body>
+    
     <div class="container">
       <div class="header clearfix">
         <nav>
@@ -40,49 +42,35 @@
           </ul>
         </nav>
         <h3 class="text-muted">Patrick's LoL App</h3>
-      </div> <!-- /header -->
+      </div>
+    </div> <!-- /header -->
 
-
-
-
-    
-      <h2 class="mode_text">{{mode}} on {{map}} </h2>
-      <div class="row row-centered blue">
-        <h2>Blue Team</h2> 
+  <div class="container">  
+    <h1 class="game_text">{{mode}} on {{map}}</h1>
+      <div class="row placeholders">
+        <div class="col-sm-1"></div> <!-- empty column to center --> 
         {% for player in blue_team %}
-          <div class="col-xs-2 col-centered cd-btnb{{forloop.counter}} champ">
-            <h4>{{ player.name }}</h4>
-            <div class="test">
-              <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
-              <div class="row row-centered">
-                <div class="col-xs-6 col-centered">
-                  <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
-                </div>
-                <div class="col-xs-6 col-centered">
-                  <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
-                </div>
-                <p>Masteries: {{ player.masteries }}</p>
-              </div>
+          <div class="col-sm-2 col-xs-4 cd-btnb{{forloop.counter}} placeholder">
+            <div class="wrapper blue">
+              <div class="player-name">
+                <h4 class="mode_text">{{ player.name }}</h4>
+              </div>  
+              <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
+              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/>
             </div>
           </div>
         {% endfor %}
       </div>
-      <div class="row row-centered red">
-        <h2>Red Team</h2> 
+      <div class="row placeholders">
+        <div class="col-sm-1"></div> <!-- empty column to center --> 
         {% for player in red_team %}
-          <div class="col-xs-2 col-centered cd-btnr{{forloop.counter}} champ">
-            <h4>{{ player.name }}</h4>
-            <div class="test">
-              <img {% if player.id == id_searched %} class="searched" {% endif %} src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}" />
-              <div class="row row-centered">
-                <div class="col-xs-6 col-centered">
-                  <img src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}" height="48" width="48" />
-                </div>
-                <div class="col-xs-6 col-centered">
-                  <img src={{player.spell1.image_link}} title="{{player.spell1.name}}: {{player.spell1.descript}}" height="48" width="48" />
-                </div>
-                <p>Masteries: {{ player.masteries }}</p>
-              </div>
+          <div class="col-sm-2 cd-btnr{{forloop.counter}} placeholder">
+            <div class="wrapper red">
+              <div class="player-name">
+                <h4 class="mode_text">{{ player.name }}</h4>
+              </div>  
+              <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
+              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/>
             </div>
           </div>
         {% endfor %}
@@ -138,3 +126,6 @@
     <!-- Resource jQuery -->
 
 </html>
+
+
+<!-- {% if player.id == id_searched %} class="img-responsive searched" {% endif %}  -->
