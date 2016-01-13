@@ -3,6 +3,12 @@ import requests
 
 from secrets import API_KEY
 
+def list_check(stuff):
+    if type(stuff) == list:
+        return stuff.pop()
+    else:
+        return stuff
+
 
 def get_all_data():
     output = []
@@ -19,7 +25,7 @@ def get_all_data():
         for val in data["data"].values():
             champ = {}
             champ["pk"] = val["id"]
-            champ["model"] = "api_query.Champion"
+            champ["model"] = "api_query.ChampStatic"
             champ["fields"] = {}
             champ["fields"]["name"] = val["name"]
             champ["fields"]["descript"] = val["title"]
@@ -43,10 +49,10 @@ def get_all_data():
         for val in data["data"].values():
             mast = {}
             mast["pk"] = val["id"]
-            mast["model"] = "api_query.Mastery"
+            mast["model"] = "api_query.MastStatic"
             mast["fields"] = {}
             mast["fields"]["name"] = val["name"]
-            # mast["fields"]["descript"] = val["sanitizedDescription"]
+            mast["fields"]["descript"] = list_check(val["sanitizedDescription"])
             mast["fields"]["tree"] = val["masteryTree"]
             mast["fields"]["ranks"] = val["ranks"]
             mast["fields"]["image"] = val["image"]["full"]
@@ -69,7 +75,7 @@ def get_all_data():
         for val in data["data"].values():
             rune = {}
             rune["pk"] = val["id"]
-            rune["model"] = "api_query.Rune"
+            rune["model"] = "api_query.RuneStatic"
             rune["fields"] = {}
             rune["fields"]["name"] = val["name"]
             rune["fields"]["descript"] = val["sanitizedDescription"]
@@ -92,7 +98,7 @@ def get_all_data():
         for val in data["data"].values():
             spell = {}
             spell["pk"] = val["id"]
-            spell["model"] = "api_query.Spell"
+            spell["model"] = "api_query.SpellStatic"
             spell["fields"] = {}
             spell["fields"]["name"] = val["name"]
             spell["fields"]["descript"] = val["sanitizedDescription"]

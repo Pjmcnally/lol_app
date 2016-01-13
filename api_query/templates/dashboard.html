@@ -57,7 +57,7 @@
                 <h4 class="mode_text">{{ player.name }}</h4>
               </div>  
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
-              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/>
+              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
           </div>
         {% endfor %}
@@ -71,7 +71,7 @@
                 <h4 class="mode_text">{{ player.name }}</h4>
               </div>  
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
-              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/>
+              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
           </div>
         {% endfor %}
@@ -84,6 +84,25 @@
 
     </div> <!-- /container -->
 
+    {% for player in red_team %}
+      <div class="cd-panel cd-panelr{{forloop.counter}} from-right">
+        <header class="cd-panel-header">
+          <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
+          <a href="#0" class="cd-panel-close">Close</a>
+        </header>
+        <div class="cd-panel-container">
+          <div class="cd-panel-content">
+            <h3>Masteries: {{ player.masteries }}</h3>
+            <h3>Runes:</h3>
+            <ul>
+              {% for rune in player.runes %}
+              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
+              {% endfor %}
+            </ul>
+          </div> <!-- cd-panel-content -->
+        </div> <!-- cd-panel-container -->
+      </div> <!-- cd-panel -->
+    {% endfor %}
     {% for player in blue_team %}
       <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
         <header class="cd-panel-header">
@@ -103,25 +122,6 @@
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
     {% endfor %} 
-    {% for player in red_team %}
-      <div class="cd-panel cd-panelr{{forloop.counter}} from-left">
-        <header class="cd-panel-header">
-          <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
-          <a href="#0" class="cd-panel-close">Close</a>
-        </header>
-        <div class="cd-panel-container">
-          <div class="cd-panel-content">
-            <h3>Masteries: {{ player.masteries }}</h3>
-            <h3>Runes:</h3>
-            <ul>
-              {% for rune in player.runes %}
-              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
-              {% endfor %}
-            </ul>
-          </div> <!-- cd-panel-content -->
-        </div> <!-- cd-panel-container -->
-      </div> <!-- cd-panel -->
-    {% endfor %}
     <script src="/static/js/jquery-2.1.1.js"></script>
     <script src="/static/js/main.js"></script>
     <!-- Resource jQuery -->

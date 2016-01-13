@@ -11,7 +11,7 @@ class ChampStatic(models.Model):
 class MastStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
-    # descript = models.CharField(max_length=500, default='')
+    descript = models.CharField(max_length=500, default='')
     tree = models.CharField(max_length=500, default='')
     ranks = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')

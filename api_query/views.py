@@ -145,20 +145,27 @@ class Player():
         self.champion = Champion(summ['championId'])
         self.spell1 = Spell(summ['spell1Id'])
         self.spell2 = Spell(summ['spell2Id'])
-        self.masteries = self.masteries_func(summ['masteries'])
         self.runes = self.runes_func(summ['runes'])
-
+        self.masteries = self.masteries_func(summ['masteries'])
+        self.keystone = self.find_keystone(summ['masteries'])
+        
     def __str__(self):
         return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
+
+    def find_keystone(self, raw_mast):
+        for mast in raw_mast:
+            if 6160 <= mast['masteryId'] <= 6169 or 6260 <= mast['masteryId'] <= 6269 or 6360 <= mast['masteryId'] <= 6369:
+                return  Mastery(mast['masteryId'], mast['rank'])
+
 
     def masteries_func(self, raw_mast):
         masteries = {'ferocity': 0, 'cunning': 0, 'resolve': 0}
         for mast in raw_mast:
             if MastStatic.objects.get(id=mast['masteryId']).tree == "Ferocity":
                 masteries['ferocity'] += mast['rank']
-            if MastStatic.objects.get(id=mast['masteryId']).tree == "Cunning":
+            elif MastStatic.objects.get(id=mast['masteryId']).tree == "Cunning":
                 masteries['cunning'] += mast['rank']
-            if MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
+            elif MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
                 masteries['resolve'] += mast['rank']
         return "{f}/{c}/{r}".format(f=masteries['ferocity'], c=masteries['cunning'], r=masteries['resolve'])
 
@@ -213,4 +220,14 @@ class Rune():
         self.image_link = self.dd_link.format(v=self.version, n=self.image)
         self.count = count
 
-# class Masteries():  (Not sure what to do here.)
+class Mastery():
+    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/mastery/{n}"
+
+    def __init__(self, mast_id, rank):
+        self.name = MastStatic.objects.get(id=mast_id).name
+        self.descript = MastStatic.objects.get(id=mast_id).descript
+        self.image = MastStatic.objects.get(id=mast_id).image
+        self.version = MastStatic.objects.get(id=mast_id).version
+        self.image_link = self.dd_link.format(v=self.version, n=self.image)
+        self.rank = rank
+
