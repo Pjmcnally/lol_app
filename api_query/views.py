@@ -5,6 +5,7 @@ from api_query.models import ChampStatic, SpellStatic, MastStatic, RuneStatic
 from secrets import API_KEY
 
 import requests
+from datetime import timedelta
 from random import choice
 
 pre_url = 'https://na.api.pvp.net/'
@@ -99,6 +100,7 @@ def dashboard(request):
         'red_team': [x for x in this_game.players if x.team == "red"],
         'map': this_game.map,
         'mode': this_game.mode,
+        'duration': timedelta(seconds=this_game.length),
     })
 
 

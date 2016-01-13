@@ -93,6 +93,9 @@ h4 {
   background-color: rgba(0, 0, 0, 1);
 }
 
+.game_text {
+  font-size: 2.5vw;
+}
 
 /* All of this below is to adjust the font size for player names
 it was done by trial and error and needs to be abstracted/refactored*/
@@ -104,6 +107,9 @@ it was done by trial and error and needs to be abstracted/refactored*/
   .player-name {
     font-size: 1.25vw;
     }
+  .game_text {
+    font-size: 3vw;
+  }
 
 @media (max-width: 990px) {
   .player-name {
@@ -114,6 +120,11 @@ it was done by trial and error and needs to be abstracted/refactored*/
   .player-name {
     font-size: 2vw;
     }
+  .game_text {
+    font-size: 3.5vw;
+  }
+
+
 @media (max-width: 500px) {
   .player-name {
     font-size: 2.5vw;
