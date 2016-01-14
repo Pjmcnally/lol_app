@@ -71,7 +71,7 @@
                 <h4 class="mode_text">{{ player.name }}</h4>
               </div>  
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
-              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
+              <img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" {% if player.keystone %} src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="No Keystone Mastery" {% endif %} />
             </div>
           </div>
         {% endfor %}

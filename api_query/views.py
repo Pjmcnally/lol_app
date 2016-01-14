@@ -8,7 +8,9 @@ import requests
 from datetime import timedelta
 from random import choice
 
-pre_url = 'https://na.api.pvp.net/'
+base_url = 'https://na.api.pvp.net/'
+region = 'na'
+platform = 'NA1'
 payload = {'api_key': API_KEY}
 
 
@@ -53,17 +55,12 @@ def get_game(request):
 
 def get_id(sum_name):
     """ Makes API call to get player ID from summoner name and returns it """
-    name_to_id_url = 'api/lol/{region}/v1.4/summoner/by-name/{summonerNames}'
-    region = 'na'
+    id_url = '{b}api/lol/{r}/v1.4/summoner/by-name/{n}'
 
     sum_name = sum_name.replace(" ", "")
 
-    full_url = pre_url + name_to_id_url
-
-    full_url = full_url.replace('{region}', region)
-    full_url = full_url.replace('{summonerNames}', sum_name)
-
-    r = requests.get(full_url, params=payload)
+    r = requests.get(id_url.format(b=base_url, r=region, n=sum_name), 
+        params=payload)
 
     if r.status_code == 200:
         return r.json()[sum_name.lower()]['id']
@@ -75,22 +72,19 @@ def dashboard(request):
     """ renders dashboard """
     sum_id = request.GET.get('sum_id', '')
 
-    game_url = '/observer-mode/rest/consumer/getSpectatorGameInfo/{platformId}/{summonerId}'
-    platform = 'NA1'
+    game_url = '{b}observer-mode/rest/consumer/getSpectatorGameInfo/{p}/{s_id}'
+    rank_url = '{b}api/lol/{r}/v2.5/league/by-summoner/{ids}/entry'            
 
-    full_url = pre_url + game_url
-
-    # switch to format (not replace)
-    full_url = full_url.replace('{platformId}', platform)
-    full_url = full_url.replace('{summonerId}', sum_id)
-
-    r = requests.get(full_url, params=payload)
+    r = requests.get(game_url.format(b=base_url, p=platform, s_id=sum_id), 
+        params=payload)
 
     if r.status_code != 200:
         messages.error(request, 'That summoner is not currently playing a game. Please try again', extra_tags='search')
         return redirect('/')
     else:
         info = r.json()
+
+        p_id_list = [summ['summonerId'] for summ in info['participants']]
 
         this_game = Game(info)
 
@@ -111,7 +105,7 @@ class Game():
         self.start_time = game_json['gameStartTime']
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
-        self.bans = []
+        self.bans = [] # place holder for future feature. 
         self.players = [Player(summ) for summ in game_json['participants']]
 
     def __str__(self):
@@ -155,7 +149,7 @@ class Player():
     def find_keystone(self, raw_mast):
         for mast in raw_mast:
             if 6160 <= mast['masteryId'] <= 6169 or 6260 <= mast['masteryId'] <= 6269 or 6360 <= mast['masteryId'] <= 6369:
-                return  Mastery(mast['masteryId'], mast['rank'])
+                return Mastery(mast['masteryId'], mast['rank'])
 
 
     def masteries_func(self, raw_mast):
