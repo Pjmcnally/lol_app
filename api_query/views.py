@@ -82,11 +82,18 @@ def dashboard(request):
         messages.error(request, 'That summoner is not currently playing a game. Please try again', extra_tags='search')
         return redirect('/')
     else:
-        info = r.json()
+        game_info = r.json()
 
-        p_id_list = [summ['summonerId'] for summ in info['participants']]
+        p_id_list = [summ['summonerId'] for summ in game_info['participants']]
+        r = requests.get(rank_url.format(b=base_url, r=region, 
+            ids=", ".join(map(str, p_id_list))), params=payload)
 
-        this_game = Game(info)
+        rank_info = r.json()
+
+        this_game = Game(game_info, rank_info)
+
+        for x in this_game.players:
+            print(x.rank)
 
     return render(request, 'dashboard.html', {
         'id_searched': int(sum_id),
@@ -99,14 +106,14 @@ def dashboard(request):
 
 
 class Game():
-    def __init__(self, game_json):
+    def __init__(self, game_json, rank_json):
         self.length = game_json['gameLength']
         self.id = game_json['gameId']
         self.start_time = game_json['gameStartTime']
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
         self.bans = [] # place holder for future feature. 
-        self.players = [Player(summ) for summ in game_json['participants']]
+        self.players = [Player(summ, rank_json) for summ in game_json['participants']]
 
     def __str__(self):
         return "Game length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
@@ -132,7 +139,7 @@ class Game():
         
 
 class Player():
-    def __init__(self, summ):
+    def __init__(self, summ, rank_info):
         self.id = summ['summonerId']
         self.name = summ['summonerName']
         self.team = self.team_func(summ['teamId'])
@@ -142,6 +149,7 @@ class Player():
         self.runes = self.runes_func(summ['runes'])
         self.masteries = self.masteries_func(summ['masteries'])
         self.keystone = self.find_keystone(summ['masteries'])
+        self.rank = self.parse_rank_info(self.id, rank_info)
         
     def __str__(self):
         return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
@@ -150,7 +158,15 @@ class Player():
         for mast in raw_mast:
             if 6160 <= mast['masteryId'] <= 6169 or 6260 <= mast['masteryId'] <= 6269 or 6360 <= mast['masteryId'] <= 6369:
                 return Mastery(mast['masteryId'], mast['rank'])
+        return None
 
+    def parse_rank_info(self, s_id, rank_info):
+        for x in rank_info[str(s_id)]:
+            if x["queue"] == "RANKED_SOLO_5x5":
+                league = x["tier"]
+                division = x["entries"][0]['division']
+                return Rank(league, division)
+        return None
 
     def masteries_func(self, raw_mast):
         masteries = {'ferocity': 0, 'cunning': 0, 'resolve': 0}
@@ -224,4 +240,14 @@ class Mastery():
         self.version = MastStatic.objects.get(id=mast_id).version
         self.image_link = self.dd_link.format(v=self.version, n=self.image)
         self.rank = rank
+
+class Rank():
+    local_link = "/static/icons/{n}"
+
+    def __init__(self, league, tier):
+        self.name = "{} {}".format(league.capitalize(), tier)
+        self.descript = "" # Placeholder
+        self.link = "{}_{}.png".format(league.lower(), tier.lower())
+        self.image_link = self.local_link.format(n=self.link)
+
 
