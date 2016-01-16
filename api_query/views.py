@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from api_query.models import ChampStatic, SpellStatic, MastStatic, RuneStatic, Game, Player, Champion, Rune, Mastery, Spell, Rank
+from api_query.models import ChampStatic, SpellStatic, MastStatic, \
+    RuneStatic, Game, Player, Champion, Rune, Mastery, Spell, Rank
 
 from secrets import API_KEY
 
