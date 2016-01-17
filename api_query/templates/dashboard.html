@@ -18,7 +18,6 @@
     <!-- Slide in panel CSS -->
     <link href="/static/slide_in_panel.css" rel="stylesheet">
     <!-- <link href="/static/reset.css" rel="stylesheet">  -->
-    <!-- not using at the moment. <script src="js/modernizr.js"></script>  -->
 
     <!-- Custom styles for this template -->
     <link href="/static/base.css" rel="stylesheet"> <!-- Shared styling -->
@@ -51,11 +50,9 @@
       <div class="row placeholders">
         <div class="col-md-1"></div> <!-- empty column to center --> 
         {% for player in red_team %}
-          <div class="col-md-2 col-sm-4 col-xs-4 cd-btnr{{forloop.counter}} placeholder">
-            <div class="wrapper {% if player.id == id_searched %} searched {% else %} red {% endif %}">
-              <div class="player-name">
-                <h4 class="mode_text">{{ player.name }}</h4>
-              </div>  
+          <div class="col-md-2 col-sm-4 col-xs-4 placeholder">
+            <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} red {% endif %}" id="red{{forloop.counter}}">
+              <h4 class="player-name mode_text">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
               <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
@@ -65,11 +62,9 @@
       <div class="row placeholders">
         <div class="col-md-1"></div> <!-- empty column to center --> 
         {% for player in blue_team %}
-          <div class="col-md-2 col-sm-4 col-xs-4 cd-btnb{{forloop.counter}} placeholder">
-            <div class="wrapper {% if player.id == id_searched %} searched {% else %} blue {% endif %}">
-              <div class="player-name">
-                <h4 class="mode_text">{{ player.name }}</h4>
-              </div>  
+          <div class="col-md-2 col-sm-4 col-xs-4 placeholder">
+            <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} blue {% endif %}" id="blue{{forloop.counter}}">
+              <h4 class="player-name mode_text">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
               <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
@@ -85,7 +80,7 @@
     </div> <!-- /container -->
 
     {% for player in red_team %}
-      <div class="cd-panel cd-panelr{{forloop.counter}} from-right">
+      <div class="cd-panel red{{forloop.counter}} from-right">
         <header class="cd-panel-header">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
           <a href="#0" class="cd-panel-close">Close</a>
@@ -96,7 +91,7 @@
             <h3>Runes:</h3>
             <ul>
               {% for rune in player.runes %}
-              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
+              <li>{{rune.num}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
               {% endfor %}
             </ul>
           </div> <!-- cd-panel-content -->
@@ -104,7 +99,7 @@
       </div> <!-- cd-panel -->
     {% endfor %}
     {% for player in blue_team %}
-      <div class="cd-panel cd-panelb{{forloop.counter}} from-right">
+      <div class="cd-panel blue{{forloop.counter}} from-right">
         <header class="cd-panel-header">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
           <a href="#0" class="cd-panel-close">Close</a>
@@ -115,15 +110,16 @@
             <h3>Runes:</h3>
             <ul>
               {% for rune in player.runes %}
-              <li>{{rune.count}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
+              <li>{{rune.num}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
               {% endfor %}
             </ul>
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
     {% endfor %} 
-    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/jquery-2.2.0.min.js"></script>
     <script src="/static/js/main.js"></script>
+    <script src="js/modernizr.js"></script> 
     <!-- Resource jQuery -->
 
 </html>
