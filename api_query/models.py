@@ -1,4 +1,5 @@
 from django.db import models
+from abc import ABCMeta, abstractmethod
 
 # Create your models here.
 class ChampStatic(models.Model):
@@ -30,6 +31,7 @@ class SpellStatic(models.Model):
     descript = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
+
 
 class Game():
     def __init__(self, game_json, rank_json):
@@ -118,61 +120,79 @@ class Player():
         elif team == 200:
             return "red"
 
+class Asset(object):
+    """A base asset class for all Riot game assets"""
 
-class Champion():
-    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{n}.png"
+    __metaclass__ = ABCMeta
 
-    def __init__(self, champ_id):
-        self.name = ChampStatic.objects.get(id=champ_id).name
-        self.descript = ChampStatic.objects.get(id=champ_id).descript
-        self.image = ChampStatic.objects.get(id=champ_id).image
-        self.version = ChampStatic.objects.get(id=champ_id).version
-        self.image_link = self.dd_link.format(v=self.version, n=self.image)
+    link = None
+    db_location = None
 
-    def __str__(self):
-        return "Name = {}\nImage = {}\nDescript = {}\n{}".format(self.name, self.image, self.descript, self.image_link)
-
-
-class Spell():
-    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/spell/{n}"
-
-    def __init__(self, spell_id):
-        self.name = SpellStatic.objects.get(id=spell_id).name
-        self.descript = SpellStatic.objects.get(id=spell_id).descript
-        self.image = SpellStatic.objects.get(id=spell_id).image
-        self.version = SpellStatic.objects.get(id=spell_id).version
-        self.image_link = self.dd_link.format(v=self.version, n=self.image)
+    def __init__(self, asset_id, num=1):
+        self.name = self.db_location.objects.get(id=asset_id).name
+        self.descript = self.db_location.objects.get(id=asset_id).descript
+        self.image = self.db_location.objects.get(id=asset_id).image
+        self.version = self.db_location.objects.get(id=asset_id).version
+        self.image_link = self.link.format(v=self.version, n=self.image)
+        self.num = num
 
     def __str__(self):
-        return "{n} : {d}".format(n=self.name, d=self.descript)
+        return "{n}: {d}".format(n=self.name, d=self.descript)
 
-class Rune():
-    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/rune/{n}"
+    @abstractmethod
+    def asset_type():
+        """"Return a string representing the type of asset this is."""
+        pass
 
-    def __init__(self, rune_id, count):
-        self.name = RuneStatic.objects.get(id=rune_id).name
-        self.descript = RuneStatic.objects.get(id=rune_id).descript
-        self.image = RuneStatic.objects.get(id=rune_id).image
-        self.version = RuneStatic.objects.get(id=rune_id).version
-        self.image_link = self.dd_link.format(v=self.version, n=self.image)
-        self.count = count
 
-class Mastery():
-    dd_link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/mastery/{n}"
 
-    def __init__(self, mast_id, rank):
-        self.name = MastStatic.objects.get(id=mast_id).name
-        self.descript = MastStatic.objects.get(id=mast_id).descript
-        self.image = MastStatic.objects.get(id=mast_id).image
-        self.version = MastStatic.objects.get(id=mast_id).version
-        self.image_link = self.dd_link.format(v=self.version, n=self.image)
-        self.rank = rank
+class Champion(Asset):
+    """ Docstring goes here """
 
-class Rank():
-    local_link = "/static/icons/{n}"
+    link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{n}.png"
+    db_location = ChampStatic
+
+    def asset_type(self):
+        return 'Champion'
+
+
+class Spell(Asset):
+    """ Docstring goes here """
+
+    link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/spell/{n}"
+    db_location = SpellStatic
+
+    def asset_type(self):
+        return 'Spell'
+
+
+class Rune(Asset):
+    """ Docstring goes here """
+
+    link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/rune/{n}"
+    db_location = RuneStatic
+
+    def asset_type(self):
+        return 'Rune'
+
+
+class Mastery(Asset):
+    """ Docstring goes here """
+
+    link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/mastery/{n}"
+    db_location = MastStatic
+
+    def asset_type(self):
+        return 'Mastery'
+
+
+class Rank(object):
+    """ Docstring goes here """
+
+    link = "/static/icons/{n}"
 
     def __init__(self, league, tier):
         self.name = "{} {}".format(league.capitalize(), tier)
         self.descript = "" # Placeholder
-        self.link = "{}_{}.png".format(league.lower(), tier.lower())
-        self.image_link = self.local_link.format(n=self.link)
+        self.image = "{}_{}.png".format(league.lower(), tier.lower())
+        self.image_link = self.link.format(n=self.image)
