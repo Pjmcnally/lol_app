@@ -46,7 +46,9 @@
     </nav>
 
   <div class="container">  
-    <h1 class="game_text">{{mode}} - {{map}} - {{duration}}</h1>
+    <input type="hidden" id="clockVar" name="variable" value="{{duration}}"/>
+    <h1 class="game_text">{{mode}} - {{map}}</h1>
+    <h1 class="game_text" id="clock">: {{time}}</h1>
       <div class="row placeholders">
         <div class="col-md-1"></div> <!-- empty column to center --> 
         {% for player in red_team %}

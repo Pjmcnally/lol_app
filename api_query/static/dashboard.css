@@ -14,6 +14,7 @@
 
 .game_text {
   color: white;
+  display: inline-block;
 }
 
 /*
@@ -130,3 +131,4 @@ it was done by trial and error and needs to be abstracted/refactored*/
     font-size: 2.5vw;
     }
 }
+

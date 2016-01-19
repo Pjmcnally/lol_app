@@ -93,8 +93,7 @@ def dashboard(request):
 
         this_game = Game(game_info, rank_info)
 
-        for x in this_game.players:
-            print(x.rank)
+        print(this_game)
 
     return render(request, 'dashboard.html', {
         'id_searched': int(sum_id),
@@ -102,5 +101,6 @@ def dashboard(request):
         'red_team': [x for x in this_game.players if x.team == "red"],
         'map': this_game.map,
         'mode': this_game.mode,
-        'duration': timedelta(seconds=this_game.length),
+        'time': timedelta(seconds=this_game.length),
+        'duration': this_game.length,
     })

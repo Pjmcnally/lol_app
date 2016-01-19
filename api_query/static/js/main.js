@@ -13,4 +13,22 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 		}
 	});
+	var clock = document.getElementById("clock");
+	var myVar = document.getElementById("clockVar").value;
+	setInterval(function() {
+		myVar ++; 
+		seconds = Math.floor (myVar % 60);
+		minutes = Math.floor ((myVar/60) % 60);
+		hours = Math.floor (myVar/3600);
+		clock.innerHTML = ": " +  hours + ":" + checkNum(minutes) + ":" + 
+		    checkNum(seconds);
+	}, 1000);
+	function checkNum(num) {
+		if (num < 10) {
+			return "0" + num;
+		} else {
+			return num;
+		}
+	}
+	
 });

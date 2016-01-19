@@ -35,6 +35,7 @@ class SpellStatic(models.Model):
 
 class Game():
     def __init__(self, game_json, rank_json):
+        self.startTime = game_json['gameStartTime']
         self.length = game_json['gameLength']
         self.id = game_json['gameId']
         self.start_time = game_json['gameStartTime']
@@ -44,8 +45,8 @@ class Game():
         self.players = [Player(summ, rank_json) for summ in game_json['participants']]
 
     def __str__(self):
-        return "Game length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
-            self.length, self.id, self.start_time, self.mode, self.map)
+        return "Game start time = {}\nGame length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
+            self.startTime, self.length, self.id, self.start_time, self.mode, self.map)
 
     def mode_name(self, info):
         """ converts mode id into human readable string """
