@@ -95,6 +95,7 @@ def dashboard(request):
         this_game = Game(game_info, rank_info)
 
         print(this_game)
+        print(this_game.length)
 
     return render(request, 'dashboard.html', {
         'id_searched': int(sum_id),
@@ -105,3 +106,5 @@ def dashboard(request):
         'time': timedelta(seconds=this_game.length),
         'duration': this_game.length,
     })
+
+

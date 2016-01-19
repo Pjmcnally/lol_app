@@ -96,6 +96,7 @@
               <li>{{rune.num}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
               {% endfor %}
             </ul>
+            <h3>Rank: {% if player.rank %} <img src="{{player.rank.image_link}}" title="{{player.rank.name}}" height="42" width="42"/> {{player.rank.name}} {% else %} <img class="circle" src="http://static.lolskill.net/img/masteries/none.png" height="42" width="42" title="Not ranked" /> Unranked {% endif %} </h3>
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
@@ -115,6 +116,7 @@
               <li>{{rune.num}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
               {% endfor %}
             </ul>
+            <h3>Rank: {% if player.rank %} <img src="{{player.rank.image_link}}" title="{{player.rank.name}}" height="42" width="42"/> {{player.rank.name}} {% else %} <img class="circle" src="http://static.lolskill.net/img/masteries/none.png" height="42" width="42" title="Not ranked" /> Unranked {% endif %} </h3>
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
@@ -125,6 +127,3 @@
     <!-- Resource jQuery -->
 
 </html>
-
-
-<!-- {% if player.id == id_searched %} class="img-responsive searched" {% endif %}  -->

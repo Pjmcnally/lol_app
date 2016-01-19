@@ -14,14 +14,18 @@ jQuery(document).ready(function($){
 		}
 	});
 	var clock = document.getElementById("clock");
-	var myVar = document.getElementById("clockVar").value;
+	var time = document.getElementById("clockVar").value;
 	setInterval(function() {
-		myVar ++; 
-		seconds = Math.floor (myVar % 60);
-		minutes = Math.floor ((myVar/60) % 60);
-		hours = Math.floor (myVar/3600);
-		clock.innerHTML = ": " +  hours + ":" + checkNum(minutes) + ":" + 
-		    checkNum(seconds);
+		time ++;
+		if (time <= 0) {
+			clock.innerHTML = "Loading"
+		} else {
+			seconds = Math.floor(time % 60);
+			minutes = Math.floor((time/60) % 60);
+			hours = Math.floor(time/3600);
+			clock.innerHTML = ": " +  hours + ":" + checkNum(minutes) + ":" + 
+			    checkNum(seconds);
+		} 	
 	}, 1000);
 	function checkNum(num) {
 		if (num < 10) {
