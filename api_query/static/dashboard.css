@@ -2,12 +2,6 @@
  * Main content
  */
 
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
 .main .page-header {
   margin-top: 0;
 }
@@ -25,12 +19,15 @@
   margin-bottom: 30px;
   text-align: center;
 }
+
 .placeholders h4 {
   margin-bottom: 0;
 }
+
 .placeholder {
   margin-bottom: 20px;
 }
+
 .placeholder img {
   display: inline-block;
 }
@@ -40,27 +37,13 @@
   margin: 0;
   padding: 0;
 }
+
 .spell {
   width:25%;
   margin: 0;
   padding: 0;
   display: inline-block;
   border-radius: 50%;
-}
-
-.mode_text{
-  color: white;
-  font-size: 100%;
-  font-family: arial;
-  letter-spacing: 0px;
-}
-
-
-
-
-h4 {
-  font-weight: bold;
-  letter-spacing: 1.5px;
 }
 
 .blue {
@@ -75,42 +58,43 @@ h4 {
   box-shadow: 0px 0px 10px 3px gold;
 }
 
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:center;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
-
-
 .wrapper {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 1);
 }
 
+
+/* All of this below is to adjust the font size for player names
+it was done by trial and error and needs to be abstracted/refactored*/
 .game_text {
   font-size: 2.5vw;
 }
 
-/* All of this below is to adjust the font size for player names
-it was done by trial and error and needs to be abstracted/refactored*/
 .player-name {
   font-size: .95vw;
+  font-size: 100%;
+  color: white;
+  font-family: arial;
+  letter-spacing: 0px;
+  font-weight: bold;
   }
 
 @media (max-width: 1500px) {
   .player-name {
-    font-size: 1.25vw;
+    font-size: 1.2vw;
     }
   .game_text {
     font-size: 3vw;
   }
+
+@media (max-width: 1200px) {
+  .player-name {
+    font-size: 1.2vw;
+    }
+  .game_text {
+    font-size: 3vw;
+  }
+
 
 @media (max-width: 990px) {
   .player-name {
@@ -118,6 +102,10 @@ it was done by trial and error and needs to be abstracted/refactored*/
     }
 
 @media (max-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
   .player-name {
     font-size: 2.25vw;
     }
@@ -125,10 +113,8 @@ it was done by trial and error and needs to be abstracted/refactored*/
     font-size: 3.5vw;
   }
 
-
 @media (max-width: 500px) {
   .player-name {
     font-size: 2.5vw;
     }
 }
-

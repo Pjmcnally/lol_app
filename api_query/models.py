@@ -2,12 +2,15 @@ from django.db import models
 from abc import ABCMeta, abstractmethod
 
 # Create your models here.
+
+
 class ChampStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
+
 
 class MastStatic(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -18,12 +21,14 @@ class MastStatic(models.Model):
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
 
+
 class RuneStatic(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
     image = models.CharField(max_length=500, default='')
     version = models.CharField(max_length=500, default='')
+
 
 class SpellStatic(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -41,12 +46,13 @@ class Game():
         self.start_time = game_json['gameStartTime']
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
-        self.bans = [] # place holder for future feature. 
+        self.bans = []  # place holder for future feature.
         self.players = [Player(summ, rank_json) for summ in game_json['participants']]
 
     def __str__(self):
-        return "Game start time = {}\nGame length = {}\nGame Id = {}\nGame start time = {}\n{}\n{}".format(
-            self.startTime, self.length, self.id, self.start_time, self.mode, self.map)
+        return "Game length = {}\nGame Id = {}\nGame start time = {}\
+                \n{}\n{}".format(self.startTime, self.length, self.id,
+                                 self.start_time, self.mode, self.map)
 
     def mode_name(self, info):
         """ converts mode id into human readable string """
@@ -65,7 +71,7 @@ class Game():
         map_dict = {10: "Twisted Treeline", 11: "Summoner's Rift",
                     12: "Howling Abyss"}
         return map_dict[info]
-        
+
 
 class Player():
     def __init__(self, summ, rank_info):
@@ -79,13 +85,17 @@ class Player():
         self.masteries = self.masteries_func(summ['masteries'])
         self.keystone = self.find_keystone(summ['masteries'])
         self.rank = self.parse_rank_info(self.id, rank_info)
-        
+
     def __str__(self):
-        return "{n} is playing {c}\nhe is on {t} team".format(n=self.name, c=self.champion.name, t=self.team)
+        return "{n} is playing {c}\n on {t} team".format(n=self.name,
+                                                         c=self.champion.name,
+                                                         t=self.team)
 
     def find_keystone(self, raw_mast):
         for mast in raw_mast:
-            if 6160 <= mast['masteryId'] <= 6169 or 6260 <= mast['masteryId'] <= 6269 or 6360 <= mast['masteryId'] <= 6369:
+            if 6160 <= mast['masteryId'] <= 6169 or\
+               6260 <= mast['masteryId'] <= 6269 or\
+               6360 <= mast['masteryId'] <= 6369:
                 return Mastery(mast['masteryId'], mast['rank'])
         return None
 
@@ -107,7 +117,9 @@ class Player():
                 masteries['cunning'] += mast['rank']
             elif MastStatic.objects.get(id=mast['masteryId']).tree == "Resolve":
                 masteries['resolve'] += mast['rank']
-        return "{f}/{c}/{r}".format(f=masteries['ferocity'], c=masteries['cunning'], r=masteries['resolve'])
+        return "{f}/{c}/{r}".format(f=masteries['ferocity'],
+                                    c=masteries['cunning'],
+                                    r=masteries['resolve'])
 
     def runes_func(self, raw_runes):
         runes = []
@@ -120,6 +132,7 @@ class Player():
             return "blue"
         elif team == 200:
             return "red"
+
 
 class Asset(object):
     """A base asset class for all Riot game assets"""
@@ -144,7 +157,6 @@ class Asset(object):
     def asset_type():
         """"Return a string representing the type of asset this is."""
         pass
-
 
 
 class Champion(Asset):
@@ -194,6 +206,6 @@ class Rank(object):
 
     def __init__(self, league, tier):
         self.name = "{} {}".format(league.capitalize(), tier)
-        self.descript = "" # Placeholder
+        self.descript = ""  # Placeholder
         self.image = "{}_{}.png".format(league.lower(), tier.lower())
         self.image_link = self.link.format(n=self.image)

@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from api_query.models import ChampStatic, SpellStatic, MastStatic, \
-    RuneStatic, Game, Player, Champion, Rune, Mastery, Spell, Rank
+from api_query.models import Game
 
 from secrets import API_KEY
 
@@ -29,10 +28,10 @@ def home_page(request, error_msg=""):
         for game in r.json()['gameList']:
             for summ in game['participants']:
                 player_list.append(summ['summonerName'])
-            player = choice(player_list)   
+            player = choice(player_list)
     else:
-        messages.error(request, 'Featured game API is down at the moment. Sorry.',
-            extra_tags='api_down')
+        messages.error(request, 'Featured game API is down at the moment.',
+                                extra_tags='api_down')
     return render(request, 'home.html', {
         'player': player,
         })
@@ -45,7 +44,8 @@ def get_game(request):
         sum_id = get_id(sum_name)
 
         if sum_id == "error":
-            messages.error(request, 'That does not appear to be a valid summoner name. Please try again', extra_tags='search')
+            messages.error(request, 'That does not appear to be a valid\
+                summoner name. Please try again', extra_tags='search')
             return redirect('/')
         else:
             return redirect('/dashboard?sum_id={sum_id}'.format(
@@ -60,8 +60,8 @@ def get_id(sum_name):
 
     sum_name = sum_name.replace(" ", "")
 
-    r = requests.get(id_url.format(b=base_url, r=region, n=sum_name), 
-        params=payload)
+    r = requests.get(id_url.format(b=base_url, r=region, n=sum_name),
+                     params=payload)
 
     if r.status_code == 200:
         return r.json()[sum_name.lower()]['id']
@@ -74,20 +74,21 @@ def dashboard(request):
     sum_id = request.GET.get('sum_id', '')
 
     game_url = '{b}observer-mode/rest/consumer/getSpectatorGameInfo/{p}/{s_id}'
-    rank_url = '{b}api/lol/{r}/v2.5/league/by-summoner/{ids}/entry'            
+    rank_url = '{b}api/lol/{r}/v2.5/league/by-summoner/{ids}/entry'
 
-    r = requests.get(game_url.format(b=base_url, p=platform, s_id=sum_id), 
-        params=payload)
+    r = requests.get(game_url.format(b=base_url, p=platform, s_id=sum_id),
+                     params=payload)
 
     if r.status_code != 200:
-        messages.error(request, 'That summoner is not currently playing a game. Please try again', extra_tags='search')
+        messages.error(request, 'That summoner is not currently playing a game.\
+            Please try again', extra_tags='search')
         return redirect('/')
     else:
         game_info = r.json()
 
         p_id_list = [summ['summonerId'] for summ in game_info['participants']]
-        r = requests.get(rank_url.format(b=base_url, r=region, 
-            ids=", ".join(map(str, p_id_list))), params=payload)
+        r = requests.get(rank_url.format(b=base_url, r=region,
+                         ids=", ".join(map(str, p_id_list))), params=payload)
 
         rank_info = r.json()
 

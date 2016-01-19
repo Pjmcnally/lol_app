@@ -54,7 +54,7 @@
         {% for player in red_team %}
           <div class="col-md-2 col-sm-4 col-xs-4 placeholder">
             <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} red {% endif %}" id="red{{forloop.counter}}">
-              <h4 class="player-name mode_text">{{ player.name }}</h4>
+              <h4 class="player-name">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
               <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
@@ -66,7 +66,7 @@
         {% for player in blue_team %}
           <div class="col-md-2 col-sm-4 col-xs-4 placeholder">
             <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} blue {% endif %}" id="blue{{forloop.counter}}">
-              <h4 class="player-name mode_text">{{ player.name }}</h4>
+              <h4 class="player-name">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
               <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
             </div>
