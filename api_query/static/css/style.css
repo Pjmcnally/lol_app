@@ -17,6 +17,7 @@ body {
 /* Custom page header */
 .header {
   padding-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -34,12 +35,45 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+/* Customize container */
+@media (min-width: 768px) {
+  .container.narrow{
+    max-width: 730px;
+  }
+}
+
+/* Jumbotron area */
+.jumbotron {
+  text-align: center;
+  border-bottom: 0;
+  box-shadow: -5px 5px 10px 0px #00B6DC, 5px -5px 10px 0px #D94A38;
+  color: white;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+}
+
+input[type="text"], textarea {
+  border-color: white;
+  border-width: 1px;
+  color: white;
+  background-color: black; 
+}
+
+
+/* ++++++++++++++++++++++++++ DASHBOARD STUFF +++++++++++++++++++ */
 
 /*
  * Main content
  */
 
 .main .page-header {
+  margin-top: 0;
+}
+
+h1.game_text {
   margin-top: 0;
 }
 
@@ -87,12 +121,20 @@ body {
   border-radius: 50%;
 }
 
+.b_text {
+  background-color: #00B6DC;
+}
+
+.r_text {
+  background-color: #D94A38;
+}
+
 .blue {
   box-shadow: 0px 0px 10px 3px #00B6DC;
 }
 
 .red {
-    box-shadow: 0px 0px 10px 3px #D94A38;
+  box-shadow: 0px 0px 10px 3px #D94A38;
 }
 
 .searched {
@@ -112,7 +154,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
 }
 
 .player-name {
-  font-size: 1vw;
+  font-size: .8vw;
   color: white;
   font-family: arial;
   letter-spacing: 0px;
@@ -121,7 +163,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
 
 @media (max-width: 1500px) {
   .player-name {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     }
   .game_text {
     font-size: 3vw;
@@ -129,7 +171,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
 
 @media (max-width: 1200px) {
   .player-name {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     }
   .game_text {
     font-size: 3vw;

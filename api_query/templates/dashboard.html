@@ -16,38 +16,35 @@
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Slide in panel CSS -->
-    <link href="/static/slide_in_panel.css" rel="stylesheet">
     <!-- <link href="/static/reset.css" rel="stylesheet">  -->
+    <link href="/static/css/slide.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/dashboard.css" rel="stylesheet"> <!-- Unique styling -->
-
+    <link href="/static/css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <nav>
-      <div class="container">
-        <div class="header clearfix">
-          <nav>
-            <ul class="nav nav-pills pull-right">
-              <li role="presentation"><a href="/">Home</a></li>
-              <li role="presentation"><a href="#">About</a></li>
-              <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
-              <form class="nav-form navbar-right" method='POST' action='/get/game' id='summonerName'>
-                <input type="text" class="form-control" name='summoner_name' id='sum_name_input' placeholder="Search again...">
-                {% csrf_token %}
-              </form>
-            </ul>
-          </nav>
-          <h3 class="text-muted">Patrick's LoL App</h3>
-        </div>
-      </div> 
-    </nav>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
+            <form class="nav-form navbar-right" method='POST' action='/get/game' id='summonerName'>
+              <input type="text" class="form-control" name='summoner_name' id='sum_name_input' placeholder="Search again...">
+              {% csrf_token %}
+            </form>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Patrick's LoL App</h3>
+      </div>
+    </div> 
 
-  <div class="container">  
-    <input type="hidden" id="clockVar" name="variable" value="{{duration}}"/>
-    <h1 class="game_text">{{mode}} - {{map}}</h1>
-    <h1 class="game_text" id="clock">: {{time}}</h1>
+    <div class="container">  
+      <input type="hidden" id="clockVar" name="variable" value="{{duration}}"/>
+      <h1 class="game_text">{{mode}} - {{map}}</h1>
+      <h1 class="game_text" id="clock">: {{time}}</h1>
       <div class="row placeholders">
         <div class="col-md-1"></div> <!-- empty column to center --> 
         {% for player in red_team %}
@@ -76,13 +73,11 @@
         <footer class="footer">
           <p>&copy; 2016 Patrick McNally</p>
         </footer>
-      </body>
-
     </div> <!-- /container -->
-
+  
     {% for player in red_team %}
       <div class="cd-panel red{{forloop.counter}} from-right">
-        <header class="cd-panel-header">
+        <header class="cd-panel-header r_text">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
           <a href="#0" class="cd-panel-close">Close</a>
         </header>
@@ -102,7 +97,7 @@
     {% endfor %}
     {% for player in blue_team %}
       <div class="cd-panel blue{{forloop.counter}} from-right">
-        <header class="cd-panel-header">
+        <header class="cd-panel-header b_text">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
           <a href="#0" class="cd-panel-close">Close</a>
         </header>
@@ -120,9 +115,11 @@
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
     {% endfor %} 
+    </body>
+
     <script src="/static/js/jquery-2.2.0.min.js"></script>
     <script src="/static/js/main.js"></script>
-    <script src="js/modernizr.js"></script> 
+    <script src="/static/js/modernizr.js"></script> 
     <!-- Resource jQuery -->
 
 </html>
