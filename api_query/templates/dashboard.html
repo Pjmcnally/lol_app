@@ -9,31 +9,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
     <title>Patrick's LoL App</title>
-
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Slide in panel CSS -->
     <!-- <link href="/static/reset.css" rel="stylesheet">  -->
     <link href="/static/css/slide.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="/static/css/style.css" rel="stylesheet">
-
+    <!-- Scritps -->
     <script src="/static/js/jquery-2.2.0.min.js" defer></script>
     <script src="/static/js/main.js" defer></script>
     <script src="/static/js/modernizr.js" defer></script>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container"> <!-- Header container -->
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation"><a href="/">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="https://github.com/codeguild2015/patricks_lol_app">About</a></li>
             <li role="presentation"><a href="mailto:patrick.j.mcnally@gmail.com">Contact</a></li> <!-- mailto bad, fix later -->
             <form class="nav-form navbar-right" method='POST' action='/get/game' id='summonerName'>
               <input type="text" class="form-control" name='summoner_name' id='sum_name_input' placeholder="Search again...">
@@ -43,9 +39,9 @@
         </nav>
         <h3 class="text-muted">Patrick's LoL App</h3>
       </div>
-    </div> 
+    </div> <!-- End header container -->
 
-    <div class="container">  
+    <div class="container">  <!-- Main container -->
       <input type="hidden" id="clockVar" name="variable" value="{{duration}}"/>
       <h1 class="game_text">{{mode}} - {{map}}</h1>
       <h1 class="game_text" id="clock">: {{time}}</h1>
@@ -77,9 +73,9 @@
         <footer class="footer">
           <p>&copy; 2016 Patrick McNally</p>
         </footer>
-    </div> <!-- /container -->
+    </div> <!-- End main container -->
   
-    {% for player in red_team %}
+    {% for player in red_team %} <!-- Red team side panels -->
       <div class="cd-panel red{{forloop.counter}} from-right">
         <header class="cd-panel-header r_text">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
@@ -98,8 +94,8 @@
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
-    {% endfor %}
-    {% for player in blue_team %}
+    {% endfor %} <!-- End red team side panels -->
+    {% for player in blue_team %} <!-- Blue team side panels -->
       <div class="cd-panel blue{{forloop.counter}} from-right">
         <header class="cd-panel-header b_text">
           <h1>{{player.champion.name}}: {{player.champion.descript}}</h1>
@@ -118,6 +114,6 @@
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
-    {% endfor %} 
+    {% endfor %} <!-- End blue team side panels -->
     </body>
 </html>

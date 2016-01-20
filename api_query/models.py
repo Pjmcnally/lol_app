@@ -1,10 +1,10 @@
 from django.db import models
 from abc import ABCMeta, abstractmethod
 
-# Create your models here.
-
 
 class ChampStatic(models.Model):
+    """ Class to store Riot static champion data in database"""
+
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
@@ -13,6 +13,8 @@ class ChampStatic(models.Model):
 
 
 class MastStatic(models.Model):
+    """ Class to store Riot static mastery data in database"""
+
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
@@ -23,6 +25,8 @@ class MastStatic(models.Model):
 
 
 class RuneStatic(models.Model):
+    """ Class to store Riot static rune data in database"""
+
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
@@ -31,6 +35,8 @@ class RuneStatic(models.Model):
 
 
 class SpellStatic(models.Model):
+    """ Class to store Riot static summoner spell data in database"""
+
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=500, default='')
     descript = models.CharField(max_length=500, default='')
@@ -39,6 +45,11 @@ class SpellStatic(models.Model):
 
 
 class Game():
+    """ Class to store and process all game data
+
+    Game class takes in a Current Game JSON object and a rank JSON object
+    both of which are requested from Riots API.
+    """
     def __init__(self, game_json, rank_json):
         self.startTime = game_json['gameStartTime']
         self.length = game_json['gameLength']
@@ -74,6 +85,11 @@ class Game():
 
 
 class Player():
+    """ Class to store and process player data
+
+    Player class takes in a portion of Current Game JSON object and a rank JSON object
+    both of which are requested from Riots API.
+    """
     def __init__(self, summ, rank_info):
         self.id = summ['summonerId']
         self.name = summ['summonerName']
@@ -92,6 +108,11 @@ class Player():
                                                          t=self.team)
 
     def find_keystone(self, raw_mast):
+        """ Identifies and returns keystone masteries 
+
+        The numbers below are magic numbers they are the range in which
+        keystone masteries occur.
+        """
         for mast in raw_mast:
             if 6160 <= mast['masteryId'] <= 6169 or\
                6260 <= mast['masteryId'] <= 6269 or\
@@ -100,6 +121,13 @@ class Player():
         return None
 
     def parse_rank_info(self, s_id, rank_info):
+        """ Parses player and rank info and returns Rank object
+
+        Takes in a player ID and rank JSON object and indetifies the rank of 
+        the player with the given ID and returns that as a rank object.
+
+        If the player is not ranked None is returned. 
+        """
         if str(s_id) in rank_info:
             for x in rank_info[str(s_id)]:
                 if x["queue"] == "RANKED_SOLO_5x5":
@@ -109,6 +137,7 @@ class Player():
         return None
 
     def masteries_func(self, raw_mast):
+        """ Counts and returns the number of each mastery per type """
         masteries = {'ferocity': 0, 'cunning': 0, 'resolve': 0}
         for mast in raw_mast:
             if MastStatic.objects.get(id=mast['masteryId']).tree == "Ferocity":
@@ -122,6 +151,10 @@ class Player():
                                     r=masteries['resolve'])
 
     def runes_func(self, raw_runes):
+        """ Takes in runes as part of a JSON object and returns a list of Rune 
+        objects
+        """
+
         runes = []
         for rune in raw_runes:
             runes.append(Rune(rune["runeId"], rune["count"]))
@@ -160,7 +193,7 @@ class Asset(object):
 
 
 class Champion(Asset):
-    """ Docstring goes here """
+    """ Champion asset class """
 
     link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{n}.png"
     db_location = ChampStatic
@@ -170,7 +203,7 @@ class Champion(Asset):
 
 
 class Spell(Asset):
-    """ Docstring goes here """
+    """ Spell asset class """
 
     link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/spell/{n}"
     db_location = SpellStatic
@@ -180,7 +213,7 @@ class Spell(Asset):
 
 
 class Rune(Asset):
-    """ Docstring goes here """
+    """ Rune  asset class """
 
     link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/rune/{n}"
     db_location = RuneStatic
@@ -190,7 +223,7 @@ class Rune(Asset):
 
 
 class Mastery(Asset):
-    """ Docstring goes here """
+    """ Mastery asset class """
 
     link = "https://ddragon.leagueoflegends.com/cdn/{v}/img/mastery/{n}"
     db_location = MastStatic
@@ -200,7 +233,7 @@ class Mastery(Asset):
 
 
 class Rank(object):
-    """ Docstring goes here """
+    """ Rank asset class """
 
     link = "/static/icons/{n}"
 
