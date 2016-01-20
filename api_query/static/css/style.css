@@ -150,7 +150,7 @@ h1.game_text {
 /* All of this below is to adjust the font size for player names
 it was done by trial and error and needs to be abstracted/refactored*/
 .game_text {
-  font-size: 2.5vw;
+  font-size: 2.25vw;
 }
 
 .player-name {
