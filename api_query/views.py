@@ -90,12 +90,12 @@ def dashboard(request):
         r = requests.get(rank_url.format(b=base_url, r=region,
                          ids=", ".join(map(str, p_id_list))), params=payload)
 
-        rank_info = r.json()
+        if r.status_code == 200:
+            rank_info = r.json()
+        else:
+            rank_info = {}
 
         this_game = Game(game_info, rank_info)
-
-        print(this_game)
-        print(this_game.length)
 
     return render(request, 'dashboard.html', {
         'id_searched': int(sum_id),
@@ -106,5 +106,3 @@ def dashboard(request):
         'time': timedelta(seconds=this_game.length),
         'duration': this_game.length,
     })
-
-
