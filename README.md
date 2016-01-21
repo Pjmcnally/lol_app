@@ -1,8 +1,8 @@
-Welcome to my capstone project.  The code is finished.  The documentation is still in development.  I will add more here shortly.  This is currently a placeholder.
 
 # Patrick's LoL App
+__Welcome to my PDX CodeGuild capstone project.__
 
-#### __Patrick's LoL App is a web app which provides information about a League of Legends game currently being played.__
+__Patrick's LoL App is a web app which provides information about a League of Legends game currently being played.__
 
 Built with:
 -----
