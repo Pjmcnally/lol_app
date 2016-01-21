@@ -56,3 +56,9 @@ $ python manage.py loaddata all_fix.json
 From the repo's root directory (lolapp) run the following command to lauch this web app.
 
 $ python3 manage.py runserver
+
+Screenshots
+-----
+[Home page](https://github.com/Pjmcnally/lolapp/blob/master/screenshots/Patricks%20LoL%20App%20Home.png)  
+[Dashboard](https://github.com/Pjmcnally/lolapp/blob/master/screenshots/Patricks%20lol%20app%20dashboard.png)
+[Slide in panel](https://github.com/Pjmcnally/lolapp/blob/master/screenshots/Patricks%20LoL%20app%20slide%20in.png)
