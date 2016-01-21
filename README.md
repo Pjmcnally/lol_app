@@ -25,10 +25,10 @@ Installation
 
 This repository contains two "Requirements files" pip_req.txt and conda_req.txt.
 
-To set up the enviroment required to run this app use the following commands.  
+To set up the enviroment required to run this app first [Install Conda](http://conda.pydata.org/docs/install/quick.html) then use the following terminal commands.  
 
-$ conda create --name \<env> --file conda_req.txt    
-$ source activate \<env>
+$ conda create --name \<env> --file conda_req.txt  
+$ source activate \<env>  
 $ pip install -r pip_req.txt
 
 
