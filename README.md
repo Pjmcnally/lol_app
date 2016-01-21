@@ -34,7 +34,13 @@ $ pip install -r pip_req.txt
 
 ##### Fork the repository to your computer
 
-On GitHub, navigate to the [project repo](https://github.com/Pjmcnally/lolapp), click fork to create a personal copy, and then use (this guide)[https://help.github.com/articles/fork-a-repo/] to pull your forked copy to your local computer.
+On GitHub, navigate to the [project repo](https://github.com/Pjmcnally/lolapp), click fork to create a personal copy, and then use [this guide](https://help.github.com/articles/fork-a-repo/) to pull your forked copy to your local computer.
+
+##### Create a League of Legends account and create secrets file with your API key.
+
+Go to the [Riot API Getting Started page](https://developer.riotgames.com/docs/getting-started) and follow the instructions to create an account and to get your API key.
+
+Then create a file called secrets.py.  The only line in this file should be API_KEY = 'Put your API Key here (leave the quotes)'.  Copy the secrets file into the repos root (lolapp/) and into lolapp/api_query/fixtures.
 
 ##### Establish and populate the database
 
@@ -44,3 +50,9 @@ Once the database has been established run the following terminal commands from 
 
 $ python api_query/fixtures/generate_fixtures.py  
 $ python manage.py loaddata all_fix.json
+
+##### You are now good to go.
+
+From the repo's root directory (lolapp) run the following command to lauch this web app.
+
+$ python3 manage.py runserver
