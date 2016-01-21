@@ -23,13 +23,29 @@ Built with:
 Installation
 -----
 
+##### Establish the environment
 This repository contains two "Requirements files" pip_req.txt and conda_req.txt.
 
-To set up the enviroment required to run this app first [Install Conda](http://conda.pydata.org/docs/install/quick.html) then use the following terminal commands.  
+To set up the enviroment required to run this app first [install Conda](http://conda.pydata.org/docs/install/quick.html) then use the following terminal commands.  
 
 $ conda create --name \<env> --file conda_req.txt  
 $ source activate \<env>  
 $ pip install -r pip_req.txt
+
+##### Fork the repository to your computer
+
+instructions go here.
+
+##### Establish and populate the database
+
+Create a postgres user and a database name for the app (lolappdb).  If you use a name other than lolappdb change the database section of lolapp/lolapp/settings.txt.
+
+Once the database has been established the following terminal commands from the root of directory of your fork.  
+
+$ python api_query/fixtures/generate_fixtures.py  
+$ python manage.py loaddata all_fix.json
+
+
 
 
 ++++++++++++++++++++++++++++++
