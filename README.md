@@ -34,22 +34,13 @@ $ pip install -r pip_req.txt
 
 ##### Fork the repository to your computer
 
-instructions go here.
+On GitHub, navigate to the [project repo](https://github.com/Pjmcnally/lolapp), click fork to create a personal copy, and then use (this guide)[https://help.github.com/articles/fork-a-repo/] to pull your forked copy to your local computer.
 
 ##### Establish and populate the database
 
 Create a postgres user and a database name for the app (lolappdb).  If you use a name other than lolappdb change the database section of lolapp/lolapp/settings.txt.
 
-Once the database has been established the following terminal commands from the root of directory of your fork.  
+Once the database has been established run the following terminal commands from the root of directory of your fork to populate the databse.  
 
 $ python api_query/fixtures/generate_fixtures.py  
 $ python manage.py loaddata all_fix.json
-
-
-
-
-++++++++++++++++++++++++++++++
-
-A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
-
-On GitHub, navigate to the [https://github.com/rvarley/capstone) repository. See this guide for guidance to fork the repository.
