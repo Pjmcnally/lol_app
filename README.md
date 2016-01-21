@@ -12,7 +12,7 @@ Built with:
 * JavaScript
 * jQuery
 * Bootstrap 3.3.6
-* requests 2.8.1
+* requests 2.9.1
 * simplejson 3.3.1
 * selenium 2.48.0
 * Conda 3.18.6
@@ -27,7 +27,8 @@ This repository contains two "Requirements files" pip_req.txt and conda_req.txt.
 
 To set up the enviroment required to run this app use the following commands.  
 
-$ conda create --name \<env> --file conda_req.txt  
+$ conda create --name \<env> --file conda_req.txt    
+$ source activate \<env>
 $ pip install -r pip_req.txt
 
 
