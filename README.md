@@ -18,7 +18,7 @@ Built with:
 * Conda 3.18.6
 * pip 7.1.2
 * Sublime Text 3
-* Slide-in_Panel jQuery plugin (https://codyhouse.co/gem/css-slide-in-panel/)
+* [Slide-in_Panel jQuery plugin](https://codyhouse.co/gem/css-slide-in-panel/)
 
 Installation
 -----
@@ -27,7 +27,7 @@ This repository contains two "Requirements files" pip_req.txt and conda_req.txt.
 
 To set up the enviroment required to run this app use the following commands.  
 
-$ conda create --name <env> --file conda_req.txt  
+$ conda create --name \<env> --file conda_req.txt  
 $ pip install -r pip_req.txt
 
 
