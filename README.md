@@ -34,9 +34,9 @@ The root directory of this repository contains two "Requirements files" pip_req.
 To set up the environment required to run this web app first [install Conda](http://conda.pydata.org/docs/install/quick.html) then run the following terminal commands.  
 
 
-$ conda create --name \<env> --file conda_req.txt  
+$ conda create --name \<env> --file conda_requirements.txt  
 $ source activate \<env>  
-$ pip install -r pip_req.txt
+$ pip install -r requirements.txt
 
 These commands (in respective order):  
 * Create a Conda environment with the required packages installed.  
