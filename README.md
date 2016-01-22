@@ -2,11 +2,16 @@
 # Patrick's LoL App
 __Welcome to my PDX CodeGuild capstone project.__
 
-__Patrick's LoL App is a web app which provides information about a League of Legends game currently being played.__
+League of Legends is a video game played, typically, between two teams of 5 people.  The goal of the game is to fight the other team and to destroy their base.  There are over 120 champions (playable characters) in the game and each of them can be configured many, many different ways.  Knowing more about your opponents and your team can help you to play better and win more games.
+
+My app provides current game information about both the skill level of your opponents and the champions they playing as well as how that champion is configured.
+
+Use
+-----
+To use Patrick's LoL App simply enter a League of Legends summoner name into the box on the home page.  If that player is currently playing a game you will be taken to the dashboard.
 
 Built with:
 -----
-* Python 3.5
 * Django 1.8.4
 * PostgresSQL
 * JavaScript
