@@ -50,16 +50,16 @@ Create a file called secrets.py.  The only line in this file should be:
  API_KEY = 'Put your API Key here (leave the quotes)'
 
  Copy the secrets file into the the two directories below:
- * /lolapp/
- * /lolapp/api_query/fixtures
+ * lolapp/
+ * lolapp/api_query/fixtures
 
 #### Establish and populate the database
 
-Create a postgres user and a database for the app.  The default database name is lolappdb.  If you use a name other than lolappdb change the database section of /lolapp/lolapp/settings.txt.
+Create a postgres user and a database for the app.  The default database name is lolappdb.  If you use a name other than lolappdb change the database section of lolapp/lolapp/settings.txt.
 
 Once the database has been established run the following terminal commands from the root of directory of your fork to populate the database.  
 
-$ python /api_query/fixtures/generate_fixtures.py  
+$ python api_query/fixtures/generate_fixtures.py  
 $ python manage.py loaddata all_fix.json
 
 #### You are now good to go.
