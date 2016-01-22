@@ -24,36 +24,47 @@ Installation
 -----
 
 #### Establish the environment
-This repository contains two "Requirements files" pip_req.txt and conda_req.txt.
+The root directory of this repository contains two "Requirements files" pip_req.txt and conda_req.txt.
 
-To set up the enviroment required to run this app first [install Conda](http://conda.pydata.org/docs/install/quick.html) then use the following terminal commands.  
+To set up the environment required to run this web app first [install Conda](http://conda.pydata.org/docs/install/quick.html) then run the following terminal commands.  
+
 
 $ conda create --name \<env> --file conda_req.txt  
 $ source activate \<env>  
 $ pip install -r pip_req.txt
 
-#### Fork the repository to your computer
+These commands (in respective order):  
+* Create a Conda environment with the required packages installed.  
+* Activate that environment.  
+* Use pip to install any remaining required packages.  
 
-On GitHub, navigate to the [project repo](https://github.com/Pjmcnally/lolapp), click fork to create a personal copy, and then use [this guide](https://help.github.com/articles/fork-a-repo/) to pull your forked copy to your local computer.
+#### Fork the repository and clone it to your computer
+
+On GitHub, navigate to the [project repo](https://github.com/Pjmcnally/lolapp), click fork to create a personal copy, and then use [this guide](https://help.github.com/articles/fork-a-repo/) to clone your forked copy to your local computer.
 
 #### Create a League of Legends account and create secrets file with your API key.
 
 Go to the [Riot API Getting Started page](https://developer.riotgames.com/docs/getting-started) and follow the instructions to create an account and to get your API key.
 
-Then create a file called secrets.py.  The only line in this file should be API_KEY = 'Put your API Key here (leave the quotes)'.  Copy the secrets file into the repos root (lolapp/) and into lolapp/api_query/fixtures.
+Create a file called secrets.py.  The only line in this file should be:  
+ API_KEY = 'Put your API Key here (leave the quotes)'
+
+ Copy the secrets file into the the two directories below:
+ * /lolapp/
+ * /lolapp/api_query/fixtures
 
 #### Establish and populate the database
 
-Create a postgres user and a database name for the app (lolappdb).  If you use a name other than lolappdb change the database section of lolapp/lolapp/settings.txt.
+Create a postgres user and a database for the app.  The default database name is lolappdb.  If you use a name other than lolappdb change the database section of /lolapp/lolapp/settings.txt.
 
-Once the database has been established run the following terminal commands from the root of directory of your fork to populate the databse.  
+Once the database has been established run the following terminal commands from the root of directory of your fork to populate the database.  
 
-$ python api_query/fixtures/generate_fixtures.py  
+$ python /api_query/fixtures/generate_fixtures.py  
 $ python manage.py loaddata all_fix.json
 
 #### You are now good to go.
 
-From the repo's root directory (lolapp) run the following command to lauch this web app.
+From the repo's root directory (/lolapp/) run the following command to lauch this web app.
 
 $ python3 manage.py runserver
 
