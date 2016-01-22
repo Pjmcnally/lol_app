@@ -8,7 +8,7 @@ My app provides current game information about both the skill level of your oppo
 
 Use
 -----
-To use Patrick's LoL App simply enter a League of Legends summoner name into the box on the home page.  If that player is currently playing a game you will be taken to the dashboard.
+To use Patrick's LoL App simply enter a League of Legends summoner name into the box on the home page.  If that player is currently playing a game you will be taken to the dashboard where game data is displayed.  Click any player to get more detailed info.  
 
 Built with:
 -----
@@ -72,6 +72,23 @@ $ python manage.py loaddata all_fix.json
 From the repo's root directory (/lolapp/) run the following command to lauch this web app.
 
 $ python3 manage.py runserver
+
+To-Do
+-----
+### Refactors & Minor improvements
+* Add input validation and sanitization
+* Refactor to add template inheritance
+* Add nav menu collapse
+* Refactor secrets file from two to opponents
+
+### New features
+* Include ranked data for previous season
+* Add much more robust history data
+    * Games played/won/lost
+    * Average Kills/Deaths/Assists per game
+* Build new database with average stats per rank tier
+* Compare player stats to their ranked tier.  
+
 
 Screenshots
 -----
