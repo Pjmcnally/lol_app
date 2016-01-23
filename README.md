@@ -29,19 +29,18 @@ Installation
 -----
 
 #### Establish the environment
-The root directory of this repository contains two "Requirements files" pip_req.txt and conda_req.txt.
+The root directory of this repository contains a "Requirements file", requirements.txt.
 
-To set up the environment required to run this web app first [install Conda](http://conda.pydata.org/docs/install/quick.html) then run the following terminal commands.  
+To set up the environment required to run this web app first install [python](https://www.python.org/downloads/), [virtualenv and virtualenv wrapper](http://docs.python-guide.org/en/latest/dev/virtualenvs/).  
 
+Type the following command to create a virtual environment using python 3.4:  
+$ mkvirtualenv \<env name> -ppython3.4
 
-$ conda create --name \<env> --file conda_requirements.txt  
-$ source activate \<env>  
-$ pip install -r requirements.txt
+Activate the virtual environment.  
+$ workon \<env name>
 
-These commands (in respective order):  
-* Create a Conda environment with the required packages installed.  
-* Activate that environment.  
-* Use pip to install any remaining required packages.  
+Install all of the required packages.  
+$ pip3 install -r requirements.txt
 
 #### Fork the repository and clone it to your computer
 
