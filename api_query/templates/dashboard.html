@@ -52,7 +52,7 @@
             <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} red {% endif %}" id="red{{forloop.counter}}">
               <h4 class="player-name">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
-              <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
+              <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" {% if player.keystone %} src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="No Keystone" {% endif %}/>
             </div>
           </div>
         {% endfor %}
@@ -64,7 +64,7 @@
             <div class="cd-btn wrapper {% if player.id == id_searched %} searched {% else %} blue {% endif %}" id="blue{{forloop.counter}}">
               <h4 class="player-name">{{ player.name }}</h4>
               <img class="char" src="{{player.champion.image_link}}" alt="{{player.champion.name}}" title="{{player.champion.name}}: {{player.champion.descript}}"/>
-              <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}"/>
+              <img class="spell" {% if player.rank %} src="{{player.rank.image_link}}" title="{{player.rank.name}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="Not ranked" {% endif %} /><img class="spell" src="{{player.spell1.image_link}}" title="{{player.spell1.name}}: {{player.spell1.descript}}"/><img class="spell" src="{{player.spell2.image_link}}" title="{{player.spell2.name}}: {{player.spell2.descript}}"/><img class="spell" {% if player.keystone %} src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}" {% else %} src="http://static.lolskill.net/img/masteries/none.png" title="No Keystone" {% endif %}/>
             </div>
           </div>
         {% endfor %}
@@ -84,13 +84,14 @@
         <div class="cd-panel-container">
           <div class="cd-panel-content">
             <h3>Masteries: {{ player.masteries }}</h3>
+            <h3>Keystone: <img class="circle" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}" height="42" width="42"/> {{player.keystone.name}}</h3>
             <h3>Runes:</h3>
             <ul>
               {% for rune in player.runes %}
               <li>{{rune.num}} x <img src="{{rune.image_link}}" title="{{rune.name}}: {{rune.descript}}" height="42" width="42" />{{rune.name}}: {{rune.descript}}</li>
               {% endfor %}
             </ul>
-            <h3>Rank: {% if player.rank %} <img src="{{player.rank.image_link}}" title="{{player.rank.name}}" height="42" width="42"/> {{player.rank.name}} {% else %} <img class="circle" src="http://static.lolskill.net/img/masteries/none.png" height="42" width="42" title="Not ranked" /> Unranked {% endif %} </h3>
+            <h3>Rank: {% if player.rank %} <img src="{{player.rank.image_link}}" title="{{player.rank.name}}" height="42" width="42"/> {{player.rank.name}} {% else %} <img class="circle" src="http://static.lolskill.net/img/masteries/none.png"  title="Not ranked" /> Unranked {% endif %} </h3>
           </div> <!-- cd-panel-content -->
         </div> <!-- cd-panel-container -->
       </div> <!-- cd-panel -->
@@ -104,6 +105,7 @@
         <div class="cd-panel-container">
           <div class="cd-panel-content">
             <h3>Masteries: {{ player.masteries }}</h3>
+            <h3>Keystone: <img class="circle" src="{{player.keystone.image_link}}" title="{{player.keystone.name}}: {{player.keystone.descript}}" height="42" width="42"/> {{player.keystone.name}}</h3>
             <h3>Runes:</h3>
             <ul>
               {% for rune in player.runes %}
