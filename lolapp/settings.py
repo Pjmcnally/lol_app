@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lolappdb',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'USER': 'capstone',
+        'PASSWORD': 'capstone',
         'HOST': 'localhost',
         'PORT': '5432',
     }
