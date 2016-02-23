@@ -115,7 +115,7 @@ def get_all_data():
     get_spell_data()
 
     with open('all_fix.json', "w") as f:
-        json.dump(output, f)
+        json.dump(output, f, indent=2)
 
 if __name__ == '__main__':
     get_all_data()
