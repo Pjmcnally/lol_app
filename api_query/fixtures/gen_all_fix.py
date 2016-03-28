@@ -20,7 +20,6 @@ def get_all_data():
         r = requests.get(url, params=payload)
         data = r.json()
         version = data["version"]
-        # output = []
 
         for val in data["data"].values():
             champ = {}
@@ -33,10 +32,6 @@ def get_all_data():
             champ["fields"]["version"] = version
             output.append(champ)
 
-        # with open('champions_fix.json', "w") as f:
-        #     json.dump(output, f)
-
-
     def get_mast_data():
         url = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/mastery"
         payload = {'masteryListData':'all', 'api_key': API_KEY}
@@ -44,7 +39,6 @@ def get_all_data():
         r = requests.get(url, params=payload)
         data = r.json()
         version = data["version"]
-        # output = []
 
         for val in data["data"].values():
             mast = {}
@@ -59,10 +53,6 @@ def get_all_data():
             mast["fields"]["version"] = version
             output.append(mast)
 
-        # with open('masteries_fix.json', "w") as f:
-        #     json.dump(output, f)
-
-
     def get_rune_data():
         url = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/rune"
         payload = {'runeListData':'all', 'api_key': API_KEY}
@@ -70,7 +60,6 @@ def get_all_data():
         r = requests.get(url, params=payload)
         data = r.json()
         version = data["version"]
-        # output = []
 
         for val in data["data"].values():
             rune = {}
@@ -83,9 +72,6 @@ def get_all_data():
             rune["fields"]["version"] = version
             output.append(rune)
 
-        # with open('runes_fix.json', "w") as f:
-        #     json.dump(output, f)
-
     def get_spell_data():
         url = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/summoner-spell"
         payload = {'spellData':'all', 'api_key': API_KEY}
@@ -93,7 +79,6 @@ def get_all_data():
         r = requests.get(url, params=payload)
         data = r.json()
         version = data["version"]
-        # output = []
 
         for val in data["data"].values():
             spell = {}
@@ -105,9 +90,6 @@ def get_all_data():
             spell["fields"]["image"] = val["image"]["full"]
             spell["fields"]["version"] = version
             output.append(spell)
-
-        # with open('spells_fix.json', "w") as f:
-        #     json.dump(output, f)
 
     get_champ_data()
     get_mast_data()
