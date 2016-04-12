@@ -67,14 +67,44 @@ class Game():
 
     def mode_name(self, info):
         """ converts mode id into human readable string """
-        mode_dict = {2: "Normal 5v5 (Blind Pick)",
-                     4: "Ranked 5v5 (Solo Queue)",
-                     8: "Normal 3v3 (Draft Pick)",
-                     14: "Normal 5v5 (Draft Pick)",
-                     41: "Ranked Team 3v3",
-                     42: "Ranked Team 5v5",
-                     61: "Team Builder Game",
-                     65: "ARAM"}
+        mode_dict = {
+            0: "Custom game",
+            2: "Normal 5v5 (Blind Pick)",
+            4: "Ranked 5v5 (Solo Queue)",
+            6: "Ranked 5v5 (Premade)",
+            7: "Coop vs AI",
+            8: "Normal 3v3 (Draft Pick)",
+            9: "Ranked 3v3 (Premade)",
+            14: "Normal 5v5 (Draft Pick)",
+            16: "Dominion 5v5 (Blind Pick)",
+            17: "Dominion 5v5 (Draft Pick)",
+            25: "Dominion Coop vs AI",
+            31: "Coop vs AI (Intro Bots)",
+            32: "Coop vs AI (Beginner Bots)",
+            33: "Coop vs AI (Intermediate Bots)",
+            41: "Ranked Team 3v3",
+            42: "Ranked Team 5v5",
+            52: "Coop vs AI",
+            61: "Team Builder Game",
+            65: "ARAM",
+            70: "One for All",
+            72: "Snowdown 1v1",
+            73: "Snowdown 2v2",
+            75: "Hexakill (6v6)",
+            76: "Ultra Rapid Fire",
+            83: "Ultra Rapid Fire (Bots)",
+            91: "Doom Bots Rank 1",
+            92: "Doom Bots Rank 2",
+            93: "Doom Bots Rank 5",
+            96: "Ascension",
+            98: "Hexakill",
+            100: "Butcher's Bridge",
+            300: "Poro King",
+            310: "Nemesis",
+            313: "Black Market Brawlers",
+            400: "Normal 5v5 (Draft Pick)",
+            410: "Ranked 5v5 (Draft Pick)"
+        }
         return mode_dict[info]
 
     def map_name(self, info):
