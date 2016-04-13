@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 	setInterval(function() {
 		time ++;
 		if (time <= 0) {
-			clock.innerHTML = "Loading"
+			clock.innerHTML = "Loading";
 		} else {
 			seconds = Math.floor(time % 60);
 			minutes = Math.floor((time/60) % 60);

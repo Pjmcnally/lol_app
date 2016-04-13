@@ -130,15 +130,15 @@ h1.game_text {
 }
 
 .blue {
-  box-shadow: 0px 0px 10px 3px #00B6DC;
+  box-shadow: 0 0 10px 3px #00B6DC;
 }
 
 .red {
-  box-shadow: 0px 0px 10px 3px #D94A38;
+  box-shadow: 0 0 10px 3px #D94A38;
 }
 
 .searched {
-  box-shadow: 0px 0px 10px 3px gold;
+  box-shadow: 0 0 10px 3px gold;
 }
 
 .wrapper {
@@ -157,7 +157,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
   font-size: .8vw;
   color: white;
   font-family: arial;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-weight: bold;
   }
 
@@ -168,6 +168,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
   .game_text {
     font-size: 3vw;
   }
+}
 
 @media (max-width: 1200px) {
   .player-name {
@@ -176,12 +177,13 @@ it was done by trial and error and needs to be abstracted/refactored*/
   .game_text {
     font-size: 3vw;
   }
-
+}
 
 @media (max-width: 990px) {
   .player-name {
     font-size: 2vw;
-    }
+  }
+}
 
 @media (max-width: 768px) {
   .main {
@@ -194,6 +196,7 @@ it was done by trial and error and needs to be abstracted/refactored*/
   .game_text {
     font-size: 3.5vw;
   }
+}
 
 @media (max-width: 500px) {
   .player-name {

@@ -58,7 +58,10 @@ class Game():
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
         self.bans = []  # place holder for future feature.
-        self.players = [Player(summ, rank_json) for summ in game_json['participants']]
+        self.players = [
+                        Player(summ, rank_json)
+                        for summ in game_json['participants']
+                       ]
 
     def __str__(self):
         return "Game length = {}\nGame Id = {}\nGame start time = {}\
@@ -67,14 +70,44 @@ class Game():
 
     def mode_name(self, info):
         """ converts mode id into human readable string """
-        mode_dict = {2: "Normal 5v5 (Blind Pick)",
-                     4: "Ranked 5v5 (Solo Queue)",
-                     8: "Normal 3v3 (Draft Pick)",
-                     14: "Normal 5v5 (Draft Pick)",
-                     41: "Ranked Team 3v3",
-                     42: "Ranked Team 5v5",
-                     61: "Team Builder Game",
-                     65: "ARAM"}
+        mode_dict = {
+            0: "Custom game",
+            2: "Normal 5v5 (Blind Pick)",
+            4: "Ranked 5v5 (Solo Queue)",
+            6: "Ranked 5v5 (Premade)",
+            7: "Coop vs AI",
+            8: "Normal 3v3 (Draft Pick)",
+            9: "Ranked 3v3 (Premade)",
+            14: "Normal 5v5 (Draft Pick)",
+            16: "Dominion 5v5 (Blind Pick)",
+            17: "Dominion 5v5 (Draft Pick)",
+            25: "Dominion Coop vs AI",
+            31: "Coop vs AI (Intro Bots)",
+            32: "Coop vs AI (Beginner Bots)",
+            33: "Coop vs AI (Intermediate Bots)",
+            41: "Ranked Team 3v3",
+            42: "Ranked Team 5v5",
+            52: "Coop vs AI",
+            61: "Team Builder Game",
+            65: "ARAM",
+            70: "One for All",
+            72: "Snowdown 1v1",
+            73: "Snowdown 2v2",
+            75: "Hexakill (6v6)",
+            76: "Ultra Rapid Fire",
+            83: "Ultra Rapid Fire (Bots)",
+            91: "Doom Bots Rank 1",
+            92: "Doom Bots Rank 2",
+            93: "Doom Bots Rank 5",
+            96: "Ascension",
+            98: "Hexakill",
+            100: "Butcher's Bridge",
+            300: "Poro King",
+            310: "Nemesis",
+            313: "Black Market Brawlers",
+            400: "Normal 5v5 (Draft Pick)",
+            410: "Ranked 5v5 (Draft Pick)"
+        }
         return mode_dict[info]
 
     def map_name(self, info):
@@ -87,8 +120,8 @@ class Game():
 class Player():
     """ Class to store and process player data
 
-    Player class takes in a portion of Current Game JSON object and a rank JSON object
-    both of which are requested from Riots API.
+    Player class takes in a portion of Current Game JSON object and a rank JSON
+    object both of which are requested from Riots API.
     """
     def __init__(self, summ, rank_info):
         self.id = summ['summonerId']
@@ -108,7 +141,7 @@ class Player():
                                                          t=self.team)
 
     def find_keystone(self, raw_mast):
-        """ Identifies and returns keystone masteries 
+        """ Identifies and returns keystone masteries
 
         The numbers below are magic numbers they are the range in which
         keystone masteries occur.
@@ -123,10 +156,10 @@ class Player():
     def parse_rank_info(self, s_id, rank_info):
         """ Parses player and rank info and returns Rank object
 
-        Takes in a player ID and rank JSON object and indetifies the rank of 
+        Takes in a player ID and rank JSON object and indetifies the rank of
         the player with the given ID and returns that as a rank object.
 
-        If the player is not ranked None is returned. 
+        If the player is not ranked None is returned.
         """
         if str(s_id) in rank_info:
             for x in rank_info[str(s_id)]:
@@ -151,7 +184,7 @@ class Player():
                                     r=masteries['resolve'])
 
     def runes_func(self, raw_runes):
-        """ Takes in runes as part of a JSON object and returns a list of Rune 
+        """ Takes in runes as part of a JSON object and returns a list of Rune
         objects
         """
 
