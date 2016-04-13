@@ -32,7 +32,7 @@ class NewVisitorTest(TestCase):
         expected_html = render_to_string(
             'home.html',
             {'sum_name': 'Pjmcnally',
-             'sum_id': '45764164',}
+             'sum_id': '45764164'}
         )
 
         self.assertEqual(expected_html, response.content.decode())

@@ -58,7 +58,10 @@ class Game():
         self.mode = self.mode_name(game_json['gameQueueConfigId'])
         self.map = self.map_name(game_json['mapId'])
         self.bans = []  # place holder for future feature.
-        self.players = [Player(summ, rank_json) for summ in game_json['participants']]
+        self.players = [
+                        Player(summ, rank_json)
+                        for summ in game_json['participants']
+                       ]
 
     def __str__(self):
         return "Game length = {}\nGame Id = {}\nGame start time = {}\
@@ -117,8 +120,8 @@ class Game():
 class Player():
     """ Class to store and process player data
 
-    Player class takes in a portion of Current Game JSON object and a rank JSON object
-    both of which are requested from Riots API.
+    Player class takes in a portion of Current Game JSON object and a rank JSON
+    object both of which are requested from Riots API.
     """
     def __init__(self, summ, rank_info):
         self.id = summ['summonerId']
@@ -138,7 +141,7 @@ class Player():
                                                          t=self.team)
 
     def find_keystone(self, raw_mast):
-        """ Identifies and returns keystone masteries 
+        """ Identifies and returns keystone masteries
 
         The numbers below are magic numbers they are the range in which
         keystone masteries occur.
@@ -153,10 +156,10 @@ class Player():
     def parse_rank_info(self, s_id, rank_info):
         """ Parses player and rank info and returns Rank object
 
-        Takes in a player ID and rank JSON object and indetifies the rank of 
+        Takes in a player ID and rank JSON object and indetifies the rank of
         the player with the given ID and returns that as a rank object.
 
-        If the player is not ranked None is returned. 
+        If the player is not ranked None is returned.
         """
         if str(s_id) in rank_info:
             for x in rank_info[str(s_id)]:
@@ -181,7 +184,7 @@ class Player():
                                     r=masteries['resolve'])
 
     def runes_func(self, raw_runes):
-        """ Takes in runes as part of a JSON object and returns a list of Rune 
+        """ Takes in runes as part of a JSON object and returns a list of Rune
         objects
         """
 
