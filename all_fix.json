@@ -1,0 +1,4962 @@
+[
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Jax",
+      "image": "Jax",
+      "descript": "Grandmaster at Arms",
+      "version": "6.22.1"
+    },
+    "pk": 24
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Gangplank",
+      "image": "Gangplank",
+      "descript": "the Saltwater Scourge",
+      "version": "6.22.1"
+    },
+    "pk": 41
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Morgana",
+      "image": "Morgana",
+      "descript": "Fallen Angel",
+      "version": "6.22.1"
+    },
+    "pk": 25
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Gnar",
+      "image": "Gnar",
+      "descript": "the Missing Link",
+      "version": "6.22.1"
+    },
+    "pk": 150
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Bard",
+      "image": "Bard",
+      "descript": "the Wandering Caretaker",
+      "version": "6.22.1"
+    },
+    "pk": 432
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Leona",
+      "image": "Leona",
+      "descript": "the Radiant Dawn",
+      "version": "6.22.1"
+    },
+    "pk": 89
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kindred",
+      "image": "Kindred",
+      "descript": "The Eternal Hunters",
+      "version": "6.22.1"
+    },
+    "pk": 203
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kalista",
+      "image": "Kalista",
+      "descript": "the Spear of Vengeance",
+      "version": "6.22.1"
+    },
+    "pk": 429
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Zed",
+      "image": "Zed",
+      "descript": "the Master of Shadows",
+      "version": "6.22.1"
+    },
+    "pk": 238
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Karthus",
+      "image": "Karthus",
+      "descript": "the Deathsinger",
+      "version": "6.22.1"
+    },
+    "pk": 30
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Fiddlesticks",
+      "image": "FiddleSticks",
+      "descript": "the Harbinger of Doom",
+      "version": "6.22.1"
+    },
+    "pk": 9
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Jarvan IV",
+      "image": "JarvanIV",
+      "descript": "the Exemplar of Demacia",
+      "version": "6.22.1"
+    },
+    "pk": 59
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Sejuani",
+      "image": "Sejuani",
+      "descript": "the Winter's Wrath",
+      "version": "6.22.1"
+    },
+    "pk": 113
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kayle",
+      "image": "Kayle",
+      "descript": "The Judicator",
+      "version": "6.22.1"
+    },
+    "pk": 10
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Garen",
+      "image": "Garen",
+      "descript": "The Might of Demacia",
+      "version": "6.22.1"
+    },
+    "pk": 86
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Zilean",
+      "image": "Zilean",
+      "descript": "the Chronokeeper",
+      "version": "6.22.1"
+    },
+    "pk": 26
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Tristana",
+      "image": "Tristana",
+      "descript": "the Yordle Gunner",
+      "version": "6.22.1"
+    },
+    "pk": 18
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Maokai",
+      "image": "Maokai",
+      "descript": "the Twisted Treant",
+      "version": "6.22.1"
+    },
+    "pk": 57
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Illaoi",
+      "image": "Illaoi",
+      "descript": "the Kraken Priestess",
+      "version": "6.22.1"
+    },
+    "pk": 420
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Vayne",
+      "image": "Vayne",
+      "descript": "the Night Hunter",
+      "version": "6.22.1"
+    },
+    "pk": 67
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ziggs",
+      "image": "Ziggs",
+      "descript": "the Hexplosives Expert",
+      "version": "6.22.1"
+    },
+    "pk": 115
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Master Yi",
+      "image": "MasterYi",
+      "descript": "the Wuju Bladesman",
+      "version": "6.22.1"
+    },
+    "pk": 11
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ekko",
+      "image": "Ekko",
+      "descript": "the Boy Who Shattered Time",
+      "version": "6.22.1"
+    },
+    "pk": 245
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Yasuo",
+      "image": "Yasuo",
+      "descript": "the Unforgiven",
+      "version": "6.22.1"
+    },
+    "pk": 157
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Wukong",
+      "image": "MonkeyKing",
+      "descript": "the Monkey King",
+      "version": "6.22.1"
+    },
+    "pk": 62
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Veigar",
+      "image": "Veigar",
+      "descript": "the Tiny Master of Evil",
+      "version": "6.22.1"
+    },
+    "pk": 45
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Twisted Fate",
+      "image": "TwistedFate",
+      "descript": "the Card Master",
+      "version": "6.22.1"
+    },
+    "pk": 4
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Orianna",
+      "image": "Orianna",
+      "descript": "the Lady of Clockwork",
+      "version": "6.22.1"
+    },
+    "pk": 61
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Jhin",
+      "image": "Jhin",
+      "descript": "the Virtuoso",
+      "version": "6.22.1"
+    },
+    "pk": 202
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Xerath",
+      "image": "Xerath",
+      "descript": "the Magus Ascendant",
+      "version": "6.22.1"
+    },
+    "pk": 101
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kha'Zix",
+      "image": "Khazix",
+      "descript": "the Voidreaver",
+      "version": "6.22.1"
+    },
+    "pk": 121
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kog'Maw",
+      "image": "KogMaw",
+      "descript": "the Mouth of the Abyss",
+      "version": "6.22.1"
+    },
+    "pk": 96
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ezreal",
+      "image": "Ezreal",
+      "descript": "the Prodigal Explorer",
+      "version": "6.22.1"
+    },
+    "pk": 81
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Shaco",
+      "image": "Shaco",
+      "descript": "the Demon Jester",
+      "version": "6.22.1"
+    },
+    "pk": 35
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Tryndamere",
+      "image": "Tryndamere",
+      "descript": "the Barbarian King",
+      "version": "6.22.1"
+    },
+    "pk": 23
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Yorick",
+      "image": "Yorick",
+      "descript": "Shepherd of Souls",
+      "version": "6.22.1"
+    },
+    "pk": 83
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Caitlyn",
+      "image": "Caitlyn",
+      "descript": "the Sheriff of Piltover",
+      "version": "6.22.1"
+    },
+    "pk": 51
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Anivia",
+      "image": "Anivia",
+      "descript": "the Cryophoenix",
+      "version": "6.22.1"
+    },
+    "pk": 34
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Amumu",
+      "image": "Amumu",
+      "descript": "the Sad Mummy",
+      "version": "6.22.1"
+    },
+    "pk": 32
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Lee Sin",
+      "image": "LeeSin",
+      "descript": "the Blind Monk",
+      "version": "6.22.1"
+    },
+    "pk": 64
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Rammus",
+      "image": "Rammus",
+      "descript": "the Armordillo",
+      "version": "6.22.1"
+    },
+    "pk": 33
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Braum",
+      "image": "Braum",
+      "descript": "the Heart of the Freljord",
+      "version": "6.22.1"
+    },
+    "pk": 201
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Gragas",
+      "image": "Gragas",
+      "descript": "the Rabble Rouser",
+      "version": "6.22.1"
+    },
+    "pk": 79
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Elise",
+      "image": "Elise",
+      "descript": "the Spider Queen",
+      "version": "6.22.1"
+    },
+    "pk": 60
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nautilus",
+      "image": "Nautilus",
+      "descript": "the Titan of the Depths",
+      "version": "6.22.1"
+    },
+    "pk": 111
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Udyr",
+      "image": "Udyr",
+      "descript": "the Spirit Walker",
+      "version": "6.22.1"
+    },
+    "pk": 77
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Aatrox",
+      "image": "Aatrox",
+      "descript": "the Darkin Blade",
+      "version": "6.22.1"
+    },
+    "pk": 266
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kled",
+      "image": "Kled",
+      "descript": "the Cantankerous Cavalier",
+      "version": "6.22.1"
+    },
+    "pk": 240
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "LeBlanc",
+      "image": "Leblanc",
+      "descript": "the Deceiver",
+      "version": "6.22.1"
+    },
+    "pk": 7
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Singed",
+      "image": "Singed",
+      "descript": "the Mad Chemist",
+      "version": "6.22.1"
+    },
+    "pk": 27
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Aurelion Sol",
+      "image": "AurelionSol",
+      "descript": "The Star Forger",
+      "version": "6.22.1"
+    },
+    "pk": 136
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Draven",
+      "image": "Draven",
+      "descript": "the Glorious Executioner",
+      "version": "6.22.1"
+    },
+    "pk": 119
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Brand",
+      "image": "Brand",
+      "descript": "the Burning Vengeance",
+      "version": "6.22.1"
+    },
+    "pk": 63
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Quinn",
+      "image": "Quinn",
+      "descript": "Demacia's Wings",
+      "version": "6.22.1"
+    },
+    "pk": 133
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Janna",
+      "image": "Janna",
+      "descript": "the Storm's Fury",
+      "version": "6.22.1"
+    },
+    "pk": 40
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Taric",
+      "image": "Taric",
+      "descript": "the Shield of Valoran",
+      "version": "6.22.1"
+    },
+    "pk": 44
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Azir",
+      "image": "Azir",
+      "descript": "the Emperor of the Sands",
+      "version": "6.22.1"
+    },
+    "pk": 268
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Pantheon",
+      "image": "Pantheon",
+      "descript": "the Artisan of War",
+      "version": "6.22.1"
+    },
+    "pk": 80
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Shen",
+      "image": "Shen",
+      "descript": "the Eye of Twilight",
+      "version": "6.22.1"
+    },
+    "pk": 98
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Blitzcrank",
+      "image": "Blitzcrank",
+      "descript": "the Great Steam Golem",
+      "version": "6.22.1"
+    },
+    "pk": 53
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Dr. Mundo",
+      "image": "DrMundo",
+      "descript": "the Madman of Zaun",
+      "version": "6.22.1"
+    },
+    "pk": 36
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Fizz",
+      "image": "Fizz",
+      "descript": "the Tidal Trickster",
+      "version": "6.22.1"
+    },
+    "pk": 105
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Zyra",
+      "image": "Zyra",
+      "descript": "Rise of the Thorns",
+      "version": "6.22.1"
+    },
+    "pk": 143
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Thresh",
+      "image": "Thresh",
+      "descript": "the Chain Warden",
+      "version": "6.22.1"
+    },
+    "pk": 412
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Xin Zhao",
+      "image": "XinZhao",
+      "descript": "the Seneschal of Demacia",
+      "version": "6.22.1"
+    },
+    "pk": 5
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Karma",
+      "image": "Karma",
+      "descript": "the Enlightened One",
+      "version": "6.22.1"
+    },
+    "pk": 43
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Evelynn",
+      "image": "Evelynn",
+      "descript": "the Widowmaker",
+      "version": "6.22.1"
+    },
+    "pk": 28
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Cho'Gath",
+      "image": "Chogath",
+      "descript": "the Terror of the Void",
+      "version": "6.22.1"
+    },
+    "pk": 31
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nasus",
+      "image": "Nasus",
+      "descript": "the Curator of the Sands",
+      "version": "6.22.1"
+    },
+    "pk": 75
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Viktor",
+      "image": "Viktor",
+      "descript": "the Machine Herald",
+      "version": "6.22.1"
+    },
+    "pk": 112
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Lulu",
+      "image": "Lulu",
+      "descript": "the Fae Sorceress",
+      "version": "6.22.1"
+    },
+    "pk": 117
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kassadin",
+      "image": "Kassadin",
+      "descript": "the Void Walker",
+      "version": "6.22.1"
+    },
+    "pk": 38
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Syndra",
+      "image": "Syndra",
+      "descript": "the Dark Sovereign",
+      "version": "6.22.1"
+    },
+    "pk": 134
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Annie",
+      "image": "Annie",
+      "descript": "the Dark Child",
+      "version": "6.22.1"
+    },
+    "pk": 1
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Rek'Sai",
+      "image": "RekSai",
+      "descript": "the Void Burrower",
+      "version": "6.22.1"
+    },
+    "pk": 421
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Hecarim",
+      "image": "Hecarim",
+      "descript": "the Shadow of War",
+      "version": "6.22.1"
+    },
+    "pk": 120
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Kennen",
+      "image": "Kennen",
+      "descript": "the Heart of the Tempest",
+      "version": "6.22.1"
+    },
+    "pk": 85
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Warwick",
+      "image": "Warwick",
+      "descript": "the Blood Hunter",
+      "version": "6.22.1"
+    },
+    "pk": 19
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Lissandra",
+      "image": "Lissandra",
+      "descript": "the Ice Witch",
+      "version": "6.22.1"
+    },
+    "pk": 127
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Diana",
+      "image": "Diana",
+      "descript": "Scorn of the Moon",
+      "version": "6.22.1"
+    },
+    "pk": 131
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Rengar",
+      "image": "Rengar",
+      "descript": "the Pridestalker",
+      "version": "6.22.1"
+    },
+    "pk": 107
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Mordekaiser",
+      "image": "Mordekaiser",
+      "descript": "the Iron Revenant",
+      "version": "6.22.1"
+    },
+    "pk": 82
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nami",
+      "image": "Nami",
+      "descript": "the Tidecaller",
+      "version": "6.22.1"
+    },
+    "pk": 267
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Skarner",
+      "image": "Skarner",
+      "descript": "the Crystal Vanguard",
+      "version": "6.22.1"
+    },
+    "pk": 72
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Jayce",
+      "image": "Jayce",
+      "descript": "the Defender of Tomorrow",
+      "version": "6.22.1"
+    },
+    "pk": 126
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Soraka",
+      "image": "Soraka",
+      "descript": "the Starchild",
+      "version": "6.22.1"
+    },
+    "pk": 16
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Cassiopeia",
+      "image": "Cassiopeia",
+      "descript": "the Serpent's Embrace",
+      "version": "6.22.1"
+    },
+    "pk": 69
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ryze",
+      "image": "Ryze",
+      "descript": "the Rune Mage",
+      "version": "6.22.1"
+    },
+    "pk": 13
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Miss Fortune",
+      "image": "MissFortune",
+      "descript": "the Bounty Hunter",
+      "version": "6.22.1"
+    },
+    "pk": 21
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Katarina",
+      "image": "Katarina",
+      "descript": "the Sinister Blade",
+      "version": "6.22.1"
+    },
+    "pk": 55
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Galio",
+      "image": "Galio",
+      "descript": "the Sentinel's Sorrow",
+      "version": "6.22.1"
+    },
+    "pk": 3
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Lux",
+      "image": "Lux",
+      "descript": "the Lady of Luminosity",
+      "version": "6.22.1"
+    },
+    "pk": 99
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Sion",
+      "image": "Sion",
+      "descript": "The Undead Juggernaut",
+      "version": "6.22.1"
+    },
+    "pk": 14
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nocturne",
+      "image": "Nocturne",
+      "descript": "the Eternal Nightmare",
+      "version": "6.22.1"
+    },
+    "pk": 56
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Sona",
+      "image": "Sona",
+      "descript": "Maven of the Strings",
+      "version": "6.22.1"
+    },
+    "pk": 37
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Teemo",
+      "image": "Teemo",
+      "descript": "the Swift Scout",
+      "version": "6.22.1"
+    },
+    "pk": 17
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Volibear",
+      "image": "Volibear",
+      "descript": "the Thunder's Roar",
+      "version": "6.22.1"
+    },
+    "pk": 106
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Swain",
+      "image": "Swain",
+      "descript": "the Master Tactician",
+      "version": "6.22.1"
+    },
+    "pk": 50
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ashe",
+      "image": "Ashe",
+      "descript": "the Frost Archer",
+      "version": "6.22.1"
+    },
+    "pk": 22
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Fiora",
+      "image": "Fiora",
+      "descript": "the Grand Duelist",
+      "version": "6.22.1"
+    },
+    "pk": 114
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Poppy",
+      "image": "Poppy",
+      "descript": "Keeper of the Hammer",
+      "version": "6.22.1"
+    },
+    "pk": 78
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Malzahar",
+      "image": "Malzahar",
+      "descript": "the Prophet of the Void",
+      "version": "6.22.1"
+    },
+    "pk": 90
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Akali",
+      "image": "Akali",
+      "descript": "the Fist of Shadow",
+      "version": "6.22.1"
+    },
+    "pk": 84
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Varus",
+      "image": "Varus",
+      "descript": "the Arrow of Retribution",
+      "version": "6.22.1"
+    },
+    "pk": 110
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Tahm Kench",
+      "image": "TahmKench",
+      "descript": "the River King",
+      "version": "6.22.1"
+    },
+    "pk": 223
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Jinx",
+      "image": "Jinx",
+      "descript": "the Loose Cannon",
+      "version": "6.22.1"
+    },
+    "pk": 222
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Talon",
+      "image": "Talon",
+      "descript": "the Blade's Shadow",
+      "version": "6.22.1"
+    },
+    "pk": 91
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Corki",
+      "image": "Corki",
+      "descript": "the Daring Bombardier",
+      "version": "6.22.1"
+    },
+    "pk": 42
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Renekton",
+      "image": "Renekton",
+      "descript": "the Butcher of the Sands",
+      "version": "6.22.1"
+    },
+    "pk": 58
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Trundle",
+      "image": "Trundle",
+      "descript": "the Troll King",
+      "version": "6.22.1"
+    },
+    "pk": 48
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Alistar",
+      "image": "Alistar",
+      "descript": "the Minotaur",
+      "version": "6.22.1"
+    },
+    "pk": 12
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Vi",
+      "image": "Vi",
+      "descript": "the Piltover Enforcer",
+      "version": "6.22.1"
+    },
+    "pk": 254
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Shyvana",
+      "image": "Shyvana",
+      "descript": "the Half-Dragon",
+      "version": "6.22.1"
+    },
+    "pk": 102
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ivern",
+      "image": "Ivern",
+      "descript": "the Green Father",
+      "version": "6.22.1"
+    },
+    "pk": 427
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Sivir",
+      "image": "Sivir",
+      "descript": "the Battle Mistress",
+      "version": "6.22.1"
+    },
+    "pk": 15
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Rumble",
+      "image": "Rumble",
+      "descript": "the Mechanized Menace",
+      "version": "6.22.1"
+    },
+    "pk": 68
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nunu",
+      "image": "Nunu",
+      "descript": "the Yeti Rider",
+      "version": "6.22.1"
+    },
+    "pk": 20
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Ahri",
+      "image": "Ahri",
+      "descript": "the Nine-Tailed Fox",
+      "version": "6.22.1"
+    },
+    "pk": 103
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Darius",
+      "image": "Darius",
+      "descript": "the Hand of Noxus",
+      "version": "6.22.1"
+    },
+    "pk": 122
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Malphite",
+      "image": "Malphite",
+      "descript": "Shard of the Monolith",
+      "version": "6.22.1"
+    },
+    "pk": 54
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Heimerdinger",
+      "image": "Heimerdinger",
+      "descript": "the Revered Inventor",
+      "version": "6.22.1"
+    },
+    "pk": 74
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Irelia",
+      "image": "Irelia",
+      "descript": "the Will of the Blades",
+      "version": "6.22.1"
+    },
+    "pk": 39
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Taliyah",
+      "image": "Taliyah",
+      "descript": "the Stoneweaver",
+      "version": "6.22.1"
+    },
+    "pk": 163
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Riven",
+      "image": "Riven",
+      "descript": "the Exile",
+      "version": "6.22.1"
+    },
+    "pk": 92
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Twitch",
+      "image": "Twitch",
+      "descript": "the Plague Rat",
+      "version": "6.22.1"
+    },
+    "pk": 29
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Vel'Koz",
+      "image": "Velkoz",
+      "descript": "the Eye of the Void",
+      "version": "6.22.1"
+    },
+    "pk": 161
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Olaf",
+      "image": "Olaf",
+      "descript": "the Berserker",
+      "version": "6.22.1"
+    },
+    "pk": 2
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Lucian",
+      "image": "Lucian",
+      "descript": "the Purifier",
+      "version": "6.22.1"
+    },
+    "pk": 236
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Vladimir",
+      "image": "Vladimir",
+      "descript": "the Crimson Reaper",
+      "version": "6.22.1"
+    },
+    "pk": 8
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Zac",
+      "image": "Zac",
+      "descript": "the Secret Weapon",
+      "version": "6.22.1"
+    },
+    "pk": 154
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Nidalee",
+      "image": "Nidalee",
+      "descript": "the Bestial Huntress",
+      "version": "6.22.1"
+    },
+    "pk": 76
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Urgot",
+      "image": "Urgot",
+      "descript": "the Headsman's Pride",
+      "version": "6.22.1"
+    },
+    "pk": 6
+  },
+  {
+    "model": "api_query.ChampStatic",
+    "fields": {
+      "name": "Graves",
+      "image": "Graves",
+      "descript": "the Outlaw",
+      "version": "6.22.1"
+    },
+    "pk": 104
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Unyielding",
+      "ranks": 5,
+      "descript": "+5% Bonus Armor and Magic Resist",
+      "tree": "Resolve",
+      "image": "6212.png",
+      "version": "6.22.1"
+    },
+    "pk": 6212
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Natural Talent",
+      "ranks": 5,
+      "descript": "Gain 2 + 0.44 per level Attack Damage, and 3 + 0.67 per level Ability Power (+10 Attack Damage and 15 Ability Power at level 18)",
+      "tree": "Ferocity",
+      "image": "6134.png",
+      "version": "6.22.1"
+    },
+    "pk": 6134
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Fearless",
+      "ranks": 1,
+      "descript": "Gain 10% +2 per level bonus Armor and Magic Resist when damaged by an enemy champion for 2 seconds (9s Cooldown)",
+      "tree": "Resolve",
+      "image": "6243.png",
+      "version": "6.22.1"
+    },
+    "pk": 6243
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Explorer",
+      "ranks": 1,
+      "descript": "+15 Movement Speed in Brush and River",
+      "tree": "Resolve",
+      "image": "6221.png",
+      "version": "6.22.1"
+    },
+    "pk": 6221
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Windspeaker's Blessing",
+      "ranks": 1,
+      "descript": "Your heals and shields are 10% stronger. Additionally, your shields and heals on other allies increase their armor by 5-22 (based on level) and their magic resistance by half that amount for 3 seconds.",
+      "tree": "Cunning",
+      "image": "6363.png",
+      "version": "6.22.1"
+    },
+    "pk": 6363
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Siegemaster",
+      "ranks": 1,
+      "descript": "Gain 8 Armor and Magic Resistance when near an allied tower",
+      "tree": "Resolve",
+      "image": "6222.png",
+      "version": "6.22.1"
+    },
+    "pk": 6222
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Assassin",
+      "ranks": 1,
+      "descript": "Deal 2% increased damage to champions when no allied champions are nearby",
+      "tree": "Cunning",
+      "image": "6323.png",
+      "version": "6.22.1"
+    },
+    "pk": 6323
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Swiftness",
+      "ranks": 5,
+      "descript": "+15% Tenacity and Slow Resist",
+      "tree": "Resolve",
+      "image": "6251.png",
+      "version": "6.22.1"
+    },
+    "pk": 6251
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Insight",
+      "ranks": 1,
+      "descript": "Reduces the cooldown of Summoner Spells by 15%",
+      "tree": "Resolve",
+      "image": "6241.png",
+      "version": "6.22.1"
+    },
+    "pk": 6241
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Expose Weakness",
+      "ranks": 1,
+      "descript": "Damaging enemy champions causes them to take 3% more damage from your allies",
+      "tree": "Ferocity",
+      "image": "6123.png",
+      "version": "6.22.1"
+    },
+    "pk": 6123
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Veteran's Scars",
+      "ranks": 5,
+      "descript": "+50 Health",
+      "tree": "Resolve",
+      "image": "6232.png",
+      "version": "6.22.1"
+    },
+    "pk": 6232
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Stormraider's Surge",
+      "ranks": 1,
+      "descript": "Dealing 30% of a champion's max Health within 2.5 seconds grants you 40% Movement Speed and 75% Slow Resistance for 3 seconds (10 second cooldown).",
+      "tree": "Cunning",
+      "image": "6361.png",
+      "version": "6.22.1"
+    },
+    "pk": 6361
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Greenfather's Gift",
+      "ranks": 1,
+      "descript": "Stepping into brush causes your next damaging attack or ability to deal 3% of your target's current health as bonus magic damage (9s Cooldown)",
+      "tree": "Cunning",
+      "image": "6341.png",
+      "version": "6.22.1"
+    },
+    "pk": 6341
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Feast",
+      "ranks": 1,
+      "descript": "Killing a unit restores 20 Health (30 second cooldown)",
+      "tree": "Ferocity",
+      "image": "6122.png",
+      "version": "6.22.1"
+    },
+    "pk": 6122
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Sorcery",
+      "ranks": 5,
+      "descript": "+2.0% increased Ability damage",
+      "tree": "Ferocity",
+      "image": "6114.png",
+      "version": "6.22.1"
+    },
+    "pk": 6114
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Deathfire Touch",
+      "ranks": 1,
+      "descript": "Your damaging abilities cause enemy champions to take magic damage over 4 seconds. Damage: 8 + 60% Bonus Attack Damage and 25% Ability Power Deathfire Touch's duration is reduced for: - Area of Effect: 2 second duration. - Damage over Time: 1 second duration.",
+      "tree": "Ferocity",
+      "image": "6164.png",
+      "version": "6.22.1"
+    },
+    "pk": 6164
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Courage of the Colossus",
+      "ranks": 1,
+      "descript": "Gain a shield for 10 +10 per level + 7% of your maximum health for each nearby enemy champion for 4 seconds after hitting an enemy champion with hard CC (30 second cooldown).",
+      "tree": "Resolve",
+      "image": "6262.png",
+      "version": "6.22.1"
+    },
+    "pk": 6262
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Dangerous Game",
+      "ranks": 1,
+      "descript": "Champion kills and assists restore 5% of your missing Health and Mana",
+      "tree": "Cunning",
+      "image": "6343.png",
+      "version": "6.22.1"
+    },
+    "pk": 6343
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Wanderer",
+      "ranks": 5,
+      "descript": "+3% Movement Speed out of combat",
+      "tree": "Cunning",
+      "image": "6311.png",
+      "version": "6.22.1"
+    },
+    "pk": 6311
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Legendary Guardian",
+      "ranks": 5,
+      "descript": "+3 Armor and Magic Resist for each nearby enemy champion",
+      "tree": "Resolve",
+      "image": "6252.png",
+      "version": "6.22.1"
+    },
+    "pk": 6252
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Thunderlord's Decree",
+      "ranks": 1,
+      "descript": "Your 3rd attack or damaging spell against the same enemy champion calls down a lightning strike, dealing magic damage in the area. Damage: 10 per level, plus 30% of your Bonus Attack Damage, and 10% of your Ability Power (25-15 second cooldown, based on level).",
+      "tree": "Cunning",
+      "image": "6362.png",
+      "version": "6.22.1"
+    },
+    "pk": 6362
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Meditation",
+      "ranks": 5,
+      "descript": "Regenerate 1.5% of your missing Mana every 5 seconds",
+      "tree": "Cunning",
+      "image": "6332.png",
+      "version": "6.22.1"
+    },
+    "pk": 6332
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Runic Armor",
+      "ranks": 5,
+      "descript": "Shields, healing, regeneration, and lifesteal on you are 8% stronger",
+      "tree": "Resolve",
+      "image": "6231.png",
+      "version": "6.22.1"
+    },
+    "pk": 6231
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Piercing Thoughts",
+      "ranks": 5,
+      "descript": "+7% Magic Penetration",
+      "tree": "Ferocity",
+      "image": "6154.png",
+      "version": "6.22.1"
+    },
+    "pk": 6154
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Bond of Stone",
+      "ranks": 1,
+      "descript": "+4% Damage Reduction. 6% of the damage from enemy champions taken by the nearest allied champion is dealt to you instead. Damage is not redirected if you are below 5% of your maximum health.",
+      "tree": "Resolve",
+      "image": "6263.png",
+      "version": "6.22.1"
+    },
+    "pk": 6263
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Precision",
+      "ranks": 5,
+      "descript": "Gain 8.5 Lethality and 3 + 0.3 per level Magic Penetration",
+      "tree": "Cunning",
+      "image": "6351.png",
+      "version": "6.22.1"
+    },
+    "pk": 6351
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Recovery",
+      "ranks": 5,
+      "descript": "+2.0 Health per 5 seconds",
+      "tree": "Resolve",
+      "image": "6211.png",
+      "version": "6.22.1"
+    },
+    "pk": 6211
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Grasp of the Undying",
+      "ranks": 1,
+      "descript": "Every 4 seconds in combat, your next attack against an enemy champion deals damage equal to 3% of your max Health and heals you for 1.5% of your max Health (halved for ranged champions, deals magic damage)",
+      "tree": "Resolve",
+      "image": "6261.png",
+      "version": "6.22.1"
+    },
+    "pk": 6261
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Intelligence",
+      "ranks": 5,
+      "descript": "Your Cooldown Reduction cap is increased to 45% and you gain 5% Cooldown Reduction",
+      "tree": "Cunning",
+      "image": "6352.png",
+      "version": "6.22.1"
+    },
+    "pk": 6352
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Perseverance",
+      "ranks": 1,
+      "descript": "+50% Base Health Regen, increased to +200% when below 25% Health",
+      "tree": "Resolve",
+      "image": "6242.png",
+      "version": "6.22.1"
+    },
+    "pk": 6242
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Fresh Blood",
+      "ranks": 1,
+      "descript": "Your first basic attack against a champion deals an additional 10 +1 per level damage (6 second cooldown)",
+      "tree": "Ferocity",
+      "image": "6121.png",
+      "version": "6.22.1"
+    },
+    "pk": 6121
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Vampirism",
+      "ranks": 5,
+      "descript": "+2.0% Lifesteal and Spell Vamp",
+      "tree": "Ferocity",
+      "image": "6131.png",
+      "version": "6.22.1"
+    },
+    "pk": 6131
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Runic Affinity",
+      "ranks": 1,
+      "descript": "Buffs from neutral monsters last 15% longer",
+      "tree": "Cunning",
+      "image": "6321.png",
+      "version": "6.22.1"
+    },
+    "pk": 6321
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Fury",
+      "ranks": 5,
+      "descript": "+4% Attack Speed",
+      "tree": "Ferocity",
+      "image": "6111.png",
+      "version": "6.22.1"
+    },
+    "pk": 6111
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Bandit",
+      "ranks": 1,
+      "descript": "Gain 1 gold for each nearby minion killed by an ally. Gain 3 gold (10 if melee) when hitting an enemy champion with a basic attack (5 second cooldown)",
+      "tree": "Cunning",
+      "image": "6342.png",
+      "version": "6.22.1"
+    },
+    "pk": 6342
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Bounty Hunter",
+      "ranks": 1,
+      "descript": "Deal 1.5% increased damage for each unique enemy champion you have killed",
+      "tree": "Ferocity",
+      "image": "6141.png",
+      "version": "6.22.1"
+    },
+    "pk": 6141
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Battle Trance",
+      "ranks": 1,
+      "descript": "Gain up to 5% increased damage over 5 seconds when in combat with enemy Champions",
+      "tree": "Ferocity",
+      "image": "6143.png",
+      "version": "6.22.1"
+    },
+    "pk": 6143
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Secret Stash",
+      "ranks": 1,
+      "descript": "Your Potions and Elixirs last 10% longer. Your Health Potions are replaced with Biscuits that restore 15 Health and Mana instantly on use",
+      "tree": "Cunning",
+      "image": "6322.png",
+      "version": "6.22.1"
+    },
+    "pk": 6322
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Battering Blows",
+      "ranks": 5,
+      "descript": "+7% Armor Penetration",
+      "tree": "Ferocity",
+      "image": "6151.png",
+      "version": "6.22.1"
+    },
+    "pk": 6151
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Double Edged Sword",
+      "ranks": 1,
+      "descript": "Deal 5% additional damage, take 2.5% additional damage.",
+      "tree": "Ferocity",
+      "image": "6142.png",
+      "version": "6.22.1"
+    },
+    "pk": 6142
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Warlord's Bloodlust",
+      "ranks": 1,
+      "descript": "Gain increasingly more Life Steal based on your missing health against champions (up to 20%). Against minions gain 50% benefit (25% for ranged champions).",
+      "tree": "Ferocity",
+      "image": "6161.png",
+      "version": "6.22.1"
+    },
+    "pk": 6161
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Savagery",
+      "ranks": 5,
+      "descript": "Single target attacks and spells deal 5 bonus damage to minions and monsters",
+      "tree": "Cunning",
+      "image": "6312.png",
+      "version": "6.22.1"
+    },
+    "pk": 6312
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Merciless",
+      "ranks": 5,
+      "descript": "Deal 5% increased damage to champions below 40% Health",
+      "tree": "Cunning",
+      "image": "6331.png",
+      "version": "6.22.1"
+    },
+    "pk": 6331
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Fervor of Battle",
+      "ranks": 1,
+      "descript": "Hitting champions with basic attacks generates a Fervor stack (2 for melee attacks). Stacks of Fervor last 4 seconds (max 10 stacks)and increase your AD by 1-6 for each stack.",
+      "tree": "Ferocity",
+      "image": "6162.png",
+      "version": "6.22.1"
+    },
+    "pk": 6162
+  },
+  {
+    "model": "api_query.MastStatic",
+    "fields": {
+      "name": "Tough Skin",
+      "ranks": 1,
+      "descript": "You take 2 less damage from champion and neutral monster basic attacks",
+      "tree": "Resolve",
+      "image": "6223.png",
+      "version": "6.22.1"
+    },
+    "pk": 6223
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Health",
+      "image": "bl_4_1.png",
+      "descript": "+1.5 health per level (+27 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5102
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Magic Resist",
+      "image": "bl_3_3.png",
+      "descript": "+4 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5349
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Energy Regeneration",
+      "image": "y_3_3.png",
+      "descript": "+0.064 Energy regen/5 sec per level (+1.15 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5370
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Razer Quintessence of Speed",
+      "image": "10002.png",
+      "descript": "+1.5% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 10002
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Magic Penetration",
+      "image": "r_1_3.png",
+      "descript": "+0.87 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5273
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Lethality",
+      "image": "bl_1_3.png",
+      "descript": "+3.20 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5343
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Mana",
+      "image": "b_1_3.png",
+      "descript": "+11.25 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5299
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Energy",
+      "image": "bl_3_3.png",
+      "descript": "+5.4 Energy",
+      "version": "6.22.1"
+    },
+    "pk": 5374
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Armor",
+      "image": "r_1_3.png",
+      "descript": "+0.91 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5257
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Mana",
+      "image": "y_1_1.png",
+      "descript": "+3.83 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5085
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Magic Resist",
+      "image": "b_4_2.png",
+      "descript": "+0.13 magic resist per level (+2.34 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5168
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Critical Chance",
+      "image": "bl_3_3.png",
+      "descript": "+1.86% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5341
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Ability Power",
+      "image": "y_4_3.png",
+      "descript": "+0.1 ability power per level (+1.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5328
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Percent Health",
+      "image": "bl_3_3.png",
+      "descript": "+1.5% increased health.",
+      "version": "6.22.1"
+    },
+    "pk": 5406
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Armor",
+      "image": "y_1_1.png",
+      "descript": "+0.56 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5073
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Life Steal",
+      "image": "bl_1_1.png",
+      "descript": "+0.84% Life Steal",
+      "version": "6.22.1"
+    },
+    "pk": 5410
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Magic Resist",
+      "image": "b_3_1.png",
+      "descript": "+0.74 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5045
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Ability Power",
+      "image": "b_4_1.png",
+      "descript": "+0.1 ability power per level (+1.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5054
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Attack Damage",
+      "image": "y_2_3.png",
+      "descript": "+0.06 attack damage per level (+1.09 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5306
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Mana Regeneration",
+      "image": "bl_3_3.png",
+      "descript": "+1.25 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5361
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Mana",
+      "image": "r_1_1.png",
+      "descript": "+3.28 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5025
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Cooldown Reduction",
+      "image": "r_1_1.png",
+      "descript": "-0.11% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5021
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Health Regeneration",
+      "image": "y_2_1.png",
+      "descript": "+0.06 health regen / 5 sec. per level (+1.08 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5078
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Mana",
+      "image": "bl_1_2.png",
+      "descript": "+29.17 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5237
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Critical Chance",
+      "image": "y_3_1.png",
+      "descript": "+0.23% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5067
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Magic Resist",
+      "image": "y_3_1.png",
+      "descript": "+0.41 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5075
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Critical Damage",
+      "image": "bl_1_3.png",
+      "descript": "+4.46% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5339
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Experience",
+      "image": "bl_2_3.png",
+      "descript": "+2% experience gained",
+      "version": "6.22.1"
+    },
+    "pk": 5368
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Critical Chance",
+      "image": "y_3_3.png",
+      "descript": "+0.42% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5311
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Mana",
+      "image": "y_2_1.png",
+      "descript": "+0.65 mana per level (+11.7 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5086
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Attack Damage",
+      "image": "y_1_3.png",
+      "descript": "+0.43 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5305
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Critical Damage",
+      "image": "r_1_3.png",
+      "descript": "+2.23% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5249
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Spell Vamp",
+      "image": "bl_4_1.png",
+      "descript": "+1.12% Spellvamp.",
+      "version": "6.22.1"
+    },
+    "pk": 5407
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Magic Resist",
+      "image": "bl_3_2.png",
+      "descript": "+3.11 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5227
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Attack Speed",
+      "image": "r_3_2.png",
+      "descript": "+1.32% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5125
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Percent Health",
+      "image": "y_2_1.png",
+      "descript": "+0.28% Health.",
+      "version": "6.22.1"
+    },
+    "pk": 5413
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Ability Power",
+      "image": "b_4_3.png",
+      "descript": "+0.17 ability power per level (+3.06 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5298
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Movement Speed",
+      "image": "bl_3_1.png",
+      "descript": "+0.83% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 5121
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Percent Health",
+      "image": "y_2_2.png",
+      "descript": "+0.39% Health.",
+      "version": "6.22.1"
+    },
+    "pk": 5414
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Cooldown Reduction",
+      "image": "b_2_3.png",
+      "descript": "-0.09% cooldowns per level (-1.67% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5296
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Mana",
+      "image": "r_1_3.png",
+      "descript": "+5.91 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5269
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Health",
+      "image": "y_3_1.png",
+      "descript": "+4.48 health",
+      "version": "6.22.1"
+    },
+    "pk": 5071
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Health Regeneration",
+      "image": "b_1_2.png",
+      "descript": "+0.21 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5169
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Mana Regeneration",
+      "image": "bl_3_1.png",
+      "descript": "+0.69 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5117
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Ability Power",
+      "image": "y_4_2.png",
+      "descript": "+0.08 ability power per level (+1.44 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5206
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Magic Penetration",
+      "image": "bl_1_2.png",
+      "descript": "+1.56 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5241
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Cooldown Reduction",
+      "image": "bl_2_3.png",
+      "descript": "-0.28% cooldowns per level (-5% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5356
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Percent Health",
+      "image": "bl_2_2.png",
+      "descript": "+1.17% increased health.",
+      "version": "6.22.1"
+    },
+    "pk": 5405
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of the Piercing Present",
+      "image": "8019.png",
+      "descript": "+2.01 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 8019
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Armor",
+      "image": "y_2_3.png",
+      "descript": "+0.16 armor per level (+3 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5318
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Attack Damage",
+      "image": "r_1_3.png",
+      "descript": "+0.95 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5245
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Ability Power",
+      "image": "b_3_1.png",
+      "descript": "+0.66 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5053
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of the Deadly Wreath",
+      "image": "8020.png",
+      "descript": "+3.20 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 8020
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Critical Chance",
+      "image": "r_3_3.png",
+      "descript": "+0.93% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5251
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Attack Damage",
+      "image": "b_2_3.png",
+      "descript": "+0.04 attack damage per level (+0.73 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5276
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Scaling Magic Resist",
+      "image": "r_4_2.png",
+      "descript": "+0.06 magic resist per level (+1.08 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5138
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Magic Penetration",
+      "image": "r_1_1.png",
+      "descript": "+0.49 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5029
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Health Regeneration",
+      "image": "bl_1_3.png",
+      "descript": "+2.7 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5351
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Scaling Health",
+      "image": "r_4_2.png",
+      "descript": "+0.42 health per level (+7.56 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5134
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Attack Damage",
+      "image": "bl_1_2.png",
+      "descript": "+1.75 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5213
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of the Crippling Candy Cane",
+      "image": "8001.png",
+      "descript": "+2% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 8001
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Scaling Mana",
+      "image": "r_2_2.png",
+      "descript": "+0.91 mana per level (+16.38 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5148
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Cooldown Reduction",
+      "image": "bl_1_2.png",
+      "descript": "-1.95% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5233
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Armor",
+      "image": "r_1_1.png",
+      "descript": "+0.51 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5013
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Spell Vamp",
+      "image": "bl_4_2.png",
+      "descript": "+1.56% Spellvamp.",
+      "version": "6.22.1"
+    },
+    "pk": 5408
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Critical Damage",
+      "image": "bl_1_1.png",
+      "descript": "+2.48% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5095
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Magic Resist",
+      "image": "b_4_1.png",
+      "descript": "+0.09 magic resist per level (+1.68 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5046
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Critical Damage",
+      "image": "b_1_3.png",
+      "descript": "+0.56% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5279
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Gold",
+      "image": "bl_4_3.png",
+      "descript": "+1 gold / 10 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5367
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Magic Penetration",
+      "image": "b_1_2.png",
+      "descript": "+0.49 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5181
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Critical Damage",
+      "image": "y_1_2.png",
+      "descript": "+0.61% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5187
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Health",
+      "image": "y_4_1.png",
+      "descript": "+0.75 health per level (+13.44 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5072
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Health",
+      "image": "y_4_3.png",
+      "descript": "+1.33 health per level (+24 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5316
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Revival",
+      "image": "bl_1_3.png",
+      "descript": "-5% time dead",
+      "version": "6.22.1"
+    },
+    "pk": 5366
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Magic Resist",
+      "image": "y_4_3.png",
+      "descript": "+0.1 magic resist per level (+1.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5320
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Precision",
+      "image": "bl_4_1.png",
+      "descript": "+1.24 Lethality / +0.78 Magic Penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5416
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Alpine Attack Speed",
+      "image": "8007.png",
+      "descript": "+1.13% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 8007
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Armor",
+      "image": "b_1_1.png",
+      "descript": "+0.39 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5043
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of the Medalist",
+      "image": "8009.png",
+      "descript": "+3.56 health",
+      "version": "6.22.1"
+    },
+    "pk": 8009
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Mana Regeneration",
+      "image": "b_4_1.png",
+      "descript": "+0.04 mana regen / 5 sec. per level (+0.67 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5058
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Attack Damage",
+      "image": "bl_2_1.png",
+      "descript": "+0.14 attack damage per level (+2.52 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5092
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Armor",
+      "image": "y_2_2.png",
+      "descript": "+0.13 armor per level (+2.34 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5196
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Attack Damage",
+      "image": "b_1_1.png",
+      "descript": "+0.16 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5031
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Magic Resist",
+      "image": "bl_4_3.png",
+      "descript": "+0.37 magic resist per level (+6.66 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5350
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Attack Damage",
+      "image": "b_2_2.png",
+      "descript": "+0.03 attack damage per level (+0.57 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5154
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Mana Regeneration",
+      "image": "y_4_3.png",
+      "descript": "+0.065 mana regen / 5 sec. per level (+1.17 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5332
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Magic Resist",
+      "image": "y_4_2.png",
+      "descript": "+0.08 magic resist per level (+1.44 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5198
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Health Regeneration",
+      "image": "bl_1_1.png",
+      "descript": "+1.5 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5107
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Critical Chance",
+      "image": "r_3_2.png",
+      "descript": "+0.72% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5129
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Scaling Attack Damage",
+      "image": "r_2_3.png",
+      "descript": "+0.13 attack damage per level (+2.43 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5246
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Lethality",
+      "image": "bl_1_2.png",
+      "descript": "+2.49 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5221
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Ability Power",
+      "image": "bl_4_3.png",
+      "descript": "+0.43 ability power per level (+7.74 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5358
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Attack Damage",
+      "image": "y_2_1.png",
+      "descript": "+0.03 attack damage per level (+0.61 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5062
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Energy",
+      "image": "b_3_3.png",
+      "descript": "+2.2 Energy",
+      "version": "6.22.1"
+    },
+    "pk": 5371
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Magic Resist",
+      "image": "y_3_2.png",
+      "descript": "+0.58 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5197
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Ability Power",
+      "image": "bl_3_2.png",
+      "descript": "+3.85 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5235
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of the Yuletide Tannenbaum ",
+      "image": "8002.png",
+      "descript": "+0.62% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 8002
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Mana Regeneration",
+      "image": "bl_3_2.png",
+      "descript": "+0.97 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5239
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Gold",
+      "image": "y_3_3.png",
+      "descript": "+0.25 gold / 10 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5403
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Health",
+      "image": "y_3_2.png",
+      "descript": "+6.24 health",
+      "version": "6.22.1"
+    },
+    "pk": 5193
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Scaling Ability Power",
+      "image": "r_4_1.png",
+      "descript": "+0.06 ability power per level (+1.08 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5024
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Critical Damage",
+      "image": "b_1_1.png",
+      "descript": "+0.31% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5035
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Mana",
+      "image": "bl_2_2.png",
+      "descript": "+3.24 mana per level (+58.32 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5238
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Ability Power",
+      "image": "b_3_3.png",
+      "descript": "+1.19 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5297
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Critical Chance",
+      "image": "b_3_2.png",
+      "descript": "+0.22% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5159
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Ability Power",
+      "image": "b_4_2.png",
+      "descript": "+0.13 ability power per level (+2.34 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5176
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Health",
+      "image": "y_4_2.png",
+      "descript": "+1.04 health per level (+18.72 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5194
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Scaling Mana",
+      "image": "r_2_3.png",
+      "descript": "+1.17 mana per level (+21.06 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5270
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Mana Regeneration",
+      "image": "bl_4_2.png",
+      "descript": "+0.19 mana regen / 5 sec. per level (+3.42 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5240
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Armor",
+      "image": "y_2_1.png",
+      "descript": "+0.09 armor per level (+1.68 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5074
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Cooldown Reduction",
+      "image": "r_1_2.png",
+      "descript": "-0.16% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5143
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Movement Speed",
+      "image": "bl_3_3.png",
+      "descript": "+1.5% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 5365
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Health Regeneration",
+      "image": "b_1_1.png",
+      "descript": "+0.15 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5047
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Magic Penetration",
+      "image": "bl_1_3.png",
+      "descript": "+2.01 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5363
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Mana",
+      "image": "b_2_2.png",
+      "descript": "+1.1 mana per level (+19.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5178
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Attack Speed",
+      "image": "b_3_2.png",
+      "descript": "+0.5% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5155
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Armor",
+      "image": "bl_2_2.png",
+      "descript": "+0.29 armor per level (+5.22 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5226
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Lethality",
+      "image": "r_1_1.png",
+      "descript": "+0.90 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5009
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Critical Damage",
+      "image": "r_1_1.png",
+      "descript": "+1.24% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5005
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Critical Damage",
+      "image": "bl_1_2.png",
+      "descript": "+3.47% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5217
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Attack Damage",
+      "image": "b_1_3.png",
+      "descript": "+0.28 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5275
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Attack Speed",
+      "image": "y_3_2.png",
+      "descript": "+0.59% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5185
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of the Speedy Specter",
+      "image": "8016.png",
+      "descript": "+1.39% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 8016
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Ability Power",
+      "image": "y_3_3.png",
+      "descript": "+0.59 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5327
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Magic Penetration",
+      "image": "bl_1_1.png",
+      "descript": "+1.11 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5119
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Health",
+      "image": "bl_3_3.png",
+      "descript": "+26 health",
+      "version": "6.22.1"
+    },
+    "pk": 5345
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Magic Resist",
+      "image": "b_3_2.png",
+      "descript": "+1.04 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5167
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Mana Regeneration",
+      "image": "bl_4_1.png",
+      "descript": "+0.14 mana regen / 5 sec. per level (+2.52 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5118
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Ability Power",
+      "image": "r_3_3.png",
+      "descript": "+0.59 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5267
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Scaling Ability Power",
+      "image": "r_4_2.png",
+      "descript": "+0.08 ability power per level (+1.44 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5146
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Ability Power",
+      "image": "bl_4_2.png",
+      "descript": "+0.34 ability power per level (+6.12 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5236
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Critical Chance",
+      "image": "bl_3_2.png",
+      "descript": "+1.44% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5219
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Mana",
+      "image": "bl_1_1.png",
+      "descript": "+20.83 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5115
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Attack Damage",
+      "image": "y_1_1.png",
+      "descript": "+0.24 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5061
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Attack Speed",
+      "image": "y_3_1.png",
+      "descript": "+0.42% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5063
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Attack Damage",
+      "image": "bl_2_2.png",
+      "descript": "+0.19 attack damage per level (+3.42 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5214
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Attack Damage",
+      "image": "bl_2_3.png",
+      "descript": "+0.25 attack damage per level (+4.5 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5336
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Cooldown Reduction",
+      "image": "y_1_2.png",
+      "descript": "-0.29% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5203
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Ability Power",
+      "image": "bl_3_1.png",
+      "descript": "+2.75 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5113
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Cooldown Reduction",
+      "image": "y_1_3.png",
+      "descript": "-0.36% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5325
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Scaling Mana",
+      "image": "r_2_1.png",
+      "descript": "+0.65 mana per level (+11.7 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5026
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Ability Power",
+      "image": "y_3_2.png",
+      "descript": "+0.46 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5205
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Cooldown Reduction",
+      "image": "b_1_3.png",
+      "descript": "-0.83% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5295
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Cooldown Reduction",
+      "image": "bl_2_1.png",
+      "descript": "-0.15% cooldowns per level (-2.8% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5112
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Armor",
+      "image": "bl_2_3.png",
+      "descript": "+0.38 armor per level (+6.84 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5348
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Sugar Rush",
+      "image": "8022.png",
+      "descript": "+1.5% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 8022
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Critical Damage",
+      "image": "y_1_1.png",
+      "descript": "+0.43% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5065
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of the Special Stocking",
+      "image": "8003.png",
+      "descript": "-0.75% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 8003
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Health",
+      "image": "bl_4_2.png",
+      "descript": "+2.1 health per level (+37.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5224
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Percent Health",
+      "image": "bl_2_1.png",
+      "descript": "+0.84% increased health.",
+      "version": "6.22.1"
+    },
+    "pk": 5404
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Armor",
+      "image": "bl_1_3.png",
+      "descript": "+4.26 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5347
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Attack Damage",
+      "image": "r_1_2.png",
+      "descript": "+0.74 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5123
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Armor",
+      "image": "y_1_2.png",
+      "descript": "+0.78 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5195
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Bountiful Treats",
+      "image": "8015.png",
+      "descript": "+24 health",
+      "version": "6.22.1"
+    },
+    "pk": 8015
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Critical Damage",
+      "image": "b_1_2.png",
+      "descript": "+0.43% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5157
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Health Regeneration",
+      "image": "bl_2_1.png",
+      "descript": "+0.16 health regen / 5 sec. per level (+2.88 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5108
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Armor",
+      "image": "b_1_2.png",
+      "descript": "+0.55 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5165
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Energy",
+      "image": "b_2_3.png",
+      "descript": "+0.161 Energy/level (+2.89 at level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5372
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Precision",
+      "image": "bl_4_2.png",
+      "descript": "+1.74 Lethality / +1.09 Magic Penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5417
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Magic Resist",
+      "image": "r_3_3.png",
+      "descript": "+0.77 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5259
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Studio Rumble",
+      "image": "8035.png",
+      "descript": "+1.5% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 8035
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Armor",
+      "image": "bl_1_1.png",
+      "descript": "+2.37 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5103
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Mana Regeneration",
+      "image": "y_3_2.png",
+      "descript": "+0.32 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5209
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Precision",
+      "image": "r_1_2.png",
+      "descript": "+0.7 Leth / +0.48 M.Pen",
+      "version": "6.22.1"
+    },
+    "pk": 5401
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of the Headless Horseman",
+      "image": "8013.png",
+      "descript": "+2.96 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 8013
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Critical Chance",
+      "image": "y_3_2.png",
+      "descript": "+0.32% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5189
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Magic Resist",
+      "image": "y_3_3.png",
+      "descript": "+0.74 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5319
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Percent Health",
+      "image": "y_3_3.png",
+      "descript": "+0.5% Health.",
+      "version": "6.22.1"
+    },
+    "pk": 5415
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Mana Regeneration",
+      "image": "r_3_1.png",
+      "descript": "+0.15 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5027
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Health",
+      "image": "b_3_3.png",
+      "descript": "+2.67 health",
+      "version": "6.22.1"
+    },
+    "pk": 5285
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Critical Chance",
+      "image": "r_3_1.png",
+      "descript": "+0.52% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5007
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Health Regeneration",
+      "image": "y_2_3.png",
+      "descript": "+0.11 health regen / 5 sec. per level (+1.98 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5322
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Critical Damage",
+      "image": "y_1_3.png",
+      "descript": "+0.78% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5309
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Health Regeneration",
+      "image": "bl_2_2.png",
+      "descript": "+0.22 health regen / 5 sec. per level (+3.96 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5230
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Magic Penetration",
+      "image": "b_1_1.png",
+      "descript": "+0.35 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5059
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Armor",
+      "image": "bl_2_1.png",
+      "descript": "+0.21 armor per level (+3.78 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5104
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Cooldown Reduction",
+      "image": "b_2_1.png",
+      "descript": "-0.05% cooldowns per level (-0.93% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5052
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Mana Regeneration",
+      "image": "r_3_3.png",
+      "descript": "+0.26 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5271
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Cooldown Reduction",
+      "image": "r_1_3.png",
+      "descript": "-0.2% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5265
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Razer Mark of Precision",
+      "image": "10001.png",
+      "descript": "+2.23% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 10001
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Energy Regeneration",
+      "image": "bl_2_3.png",
+      "descript": "+1.575 Energy regen/5 sec",
+      "version": "6.22.1"
+    },
+    "pk": 5373
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Critical Chance",
+      "image": "b_3_3.png",
+      "descript": "+0.28% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5281
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Health Regeneration",
+      "image": "y_1_1.png",
+      "descript": "+0.31 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5077
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Mana Regeneration",
+      "image": "y_4_2.png",
+      "descript": "+0.05 mana regen / 5 sec. per level (+0.9 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5210
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of the Gracious Gift",
+      "image": "8005.png",
+      "descript": "+0.12 ability power per level (+2.16 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 8005
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Attack Damage",
+      "image": "b_1_2.png",
+      "descript": "+0.22 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5153
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Attack Damage",
+      "image": "bl_1_1.png",
+      "descript": "+1.25 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5091
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Magic Resist",
+      "image": "y_4_1.png",
+      "descript": "+0.05 magic resist per level (+0.9 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5076
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Ability Power",
+      "image": "bl_3_3.png",
+      "descript": "+4.95 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5357
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Magic Penetration",
+      "image": "b_1_3.png",
+      "descript": "+0.63 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5303
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Attack Speed",
+      "image": "bl_3_2.png",
+      "descript": "+3.51% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5215
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Health Regeneration",
+      "image": "bl_1_2.png",
+      "descript": "+2.1 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5229
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Attack Damage",
+      "image": "y_2_2.png",
+      "descript": "+0.05 attack damage per level (+0.85 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5184
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Attack Speed",
+      "image": "bl_3_3.png",
+      "descript": "+4.5% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5337
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Scaling Mana",
+      "image": "y_2_3.png",
+      "descript": "+1.17 mana per level (+21.06 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5330
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Precision",
+      "image": "r_1_3.png",
+      "descript": "+1.13 Lethality / +0.62 Magic Penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5402
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Armor",
+      "image": "y_1_3.png",
+      "descript": "+1 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5317
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Health",
+      "image": "b_3_2.png",
+      "descript": "+2.08 health",
+      "version": "6.22.1"
+    },
+    "pk": 5163
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Scaling Attack Damage",
+      "image": "r_2_1.png",
+      "descript": "+0.08 attack damage per level (+1.35 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5002
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Health",
+      "image": "b_4_3.png",
+      "descript": "+0.54 health per level (+9.72 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5286
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Ability Power",
+      "image": "y_3_1.png",
+      "descript": "+0.33 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5083
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Armor",
+      "image": "bl_1_2.png",
+      "descript": "+3.32 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5225
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Attack Speed",
+      "image": "r_3_1.png",
+      "descript": "+0.94% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5003
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Mana Regeneration",
+      "image": "b_4_2.png",
+      "descript": "+0.05 mana regen / 5 sec. per level (+0.94 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5180
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Mana",
+      "image": "bl_2_1.png",
+      "descript": "+2.31 mana per level (+41.58 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5116
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Ability Power",
+      "image": "y_4_1.png",
+      "descript": "+0.06 ability power per level (+1.08 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5084
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Magic Resist",
+      "image": "bl_3_1.png",
+      "descript": "+2.22 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5105
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Mana",
+      "image": "b_1_1.png",
+      "descript": "+6.25 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5055
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Health",
+      "image": "b_3_1.png",
+      "descript": "+1.49 health",
+      "version": "6.22.1"
+    },
+    "pk": 5041
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Mana Regeneration",
+      "image": "y_3_3.png",
+      "descript": "+0.41 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5331
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Lethality",
+      "image": "r_1_2.png",
+      "descript": "+1.25 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5131
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Magic Resist",
+      "image": "b_3_3.png",
+      "descript": "+1.34 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5289
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Health Regeneration",
+      "image": "y_1_2.png",
+      "descript": "+0.43 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5199
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Attack Damage",
+      "image": "y_1_2.png",
+      "descript": "+0.33 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5183
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Magic Resist",
+      "image": "b_4_3.png",
+      "descript": "+0.16 magic resist per level (+3 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5290
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Health",
+      "image": "b_4_1.png",
+      "descript": "+0.3 health per level (+5.4 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5042
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Mana",
+      "image": "bl_2_3.png",
+      "descript": "+4.17 mana per level (+75.06 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5360
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Cooldown Reduction",
+      "image": "bl_1_3.png",
+      "descript": "-2.5% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5355
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Mana",
+      "image": "y_1_2.png",
+      "descript": "+5.36 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5207
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Health Regeneration",
+      "image": "b_1_3.png",
+      "descript": "+0.27 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5291
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Cooldown Reduction",
+      "image": "b_2_2.png",
+      "descript": "-0.07% cooldowns per level (-1.3% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5174
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Magic Resist",
+      "image": "bl_4_2.png",
+      "descript": "+0.29 magic resist per level (+5.22 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5228
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Mana",
+      "image": "b_1_2.png",
+      "descript": "+8.75 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5177
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Mana",
+      "image": "b_2_3.png",
+      "descript": "+1.42 mana per level (+25.56 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5300
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Lethality",
+      "image": "r_1_3.png",
+      "descript": "+1.60 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5253
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Health",
+      "image": "y_3_3.png",
+      "descript": "+8 health",
+      "version": "6.22.1"
+    },
+    "pk": 5315
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Scaling Mana Regeneration",
+      "image": "y_4_1.png",
+      "descript": "+0.036 mana regen / 5 sec. per level (+0.65 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5088
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Scaling Ability Power",
+      "image": "r_4_3.png",
+      "descript": "+0.1 ability power per level (+1.8 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5268
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Critical Chance",
+      "image": "bl_3_1.png",
+      "descript": "+1.03% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5097
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Armor",
+      "image": "r_1_2.png",
+      "descript": "+0.71 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5135
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Mana Regeneration",
+      "image": "b_3_1.png",
+      "descript": "+0.19 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5057
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Armor",
+      "image": "b_1_3.png",
+      "descript": "+0.7 armor",
+      "version": "6.22.1"
+    },
+    "pk": 5287
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Scaling Health",
+      "image": "r_4_3.png",
+      "descript": "+0.54 health per level (+9.72 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5256
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Mana Regeneration",
+      "image": "bl_4_3.png",
+      "descript": "+0.24 mana regen / 5 sec. per level (+4.32 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5362
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Precision",
+      "image": "r_1_1.png",
+      "descript": "+0.63 Lethality / +0.34 Magic Penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5400
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Scaling Mana Regeneration",
+      "image": "b_4_3.png",
+      "descript": "+0.06 mana regen / 5 sec. per level (+1.2 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5302
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Attack Speed",
+      "image": "y_3_3.png",
+      "descript": "+0.76% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5307
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Scaling Magic Resist",
+      "image": "r_4_1.png",
+      "descript": "+0.04 magic resist per level (+0.72 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5016
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Cooldown Reduction",
+      "image": "bl_1_1.png",
+      "descript": "-1.4% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5111
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Mana",
+      "image": "b_2_1.png",
+      "descript": "+0.79 mana per level (+14.22 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5056
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Ability Power",
+      "image": "r_3_2.png",
+      "descript": "+0.46 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5145
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Magic Resist",
+      "image": "r_3_2.png",
+      "descript": "+0.6 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5137
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Health Regeneration",
+      "image": "y_1_3.png",
+      "descript": "+0.56 health regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5321
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Health Regeneration",
+      "image": "y_2_2.png",
+      "descript": "+0.09 health regen / 5 sec. per level (+1.62 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5200
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Mana Regeneration",
+      "image": "r_3_2.png",
+      "descript": "+0.2 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5149
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Ability Power",
+      "image": "r_3_1.png",
+      "descript": "+0.33 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5023
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Mana Regeneration",
+      "image": "b_3_3.png",
+      "descript": "+0.33 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5301
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Life Steal",
+      "image": "bl_1_2.png",
+      "descript": "+1.17% Life Steal",
+      "version": "6.22.1"
+    },
+    "pk": 5411
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Health",
+      "image": "bl_3_2.png",
+      "descript": "+20 health",
+      "version": "6.22.1"
+    },
+    "pk": 5223
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Health",
+      "image": "r_3_2.png",
+      "descript": "+2.7 health",
+      "version": "6.22.1"
+    },
+    "pk": 5133
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of the Challenger",
+      "image": "8011.png",
+      "descript": "+0.66 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 8011
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Frosty Health",
+      "image": "8021.png",
+      "descript": "+26 health",
+      "version": "6.22.1"
+    },
+    "pk": 8021
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of the Witches Brew",
+      "image": "8017.png",
+      "descript": "+4.56 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 8017
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Ability Power",
+      "image": "bl_4_1.png",
+      "descript": "+0.24 ability power per level (+4.32 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5114
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Cooldown Reduction",
+      "image": "y_1_1.png",
+      "descript": "-0.2% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5081
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Health",
+      "image": "r_3_3.png",
+      "descript": "+3.47 health",
+      "version": "6.22.1"
+    },
+    "pk": 5255
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Life Steal",
+      "image": "bl_1_3.png",
+      "descript": "+1.5% Life Steal.",
+      "version": "6.22.1"
+    },
+    "pk": 5412
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Cooldown Reduction",
+      "image": "b_1_2.png",
+      "descript": "-0.67% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5173
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Glyph of Attack Speed",
+      "image": "b_3_3.png",
+      "descript": "+0.64% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5277
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Scaling Magic Resist",
+      "image": "bl_4_1.png",
+      "descript": "+0.21 magic resist per level (+3.78 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5106
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Attack Damage",
+      "image": "bl_1_3.png",
+      "descript": "+2.25 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5335
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Attack Speed",
+      "image": "b_3_1.png",
+      "descript": "+0.35% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5033
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Attack Speed",
+      "image": "bl_3_1.png",
+      "descript": "+2.52% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5093
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Seal of Scaling Mana",
+      "image": "y_2_2.png",
+      "descript": "+0.91 mana per level (+16.38 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5208
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Health Regeneration",
+      "image": "bl_2_3.png",
+      "descript": "+0.28 health regen / 5 sec. per level (+5.04 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5352
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Scaling Cooldown Reduction",
+      "image": "bl_2_2.png",
+      "descript": "-0.21% cooldowns per level (-3.9% at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5234
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of the Piercing Screech",
+      "image": "8014.png",
+      "descript": "+1.85 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 8014
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of the Stout Snowman",
+      "image": "8006.png",
+      "descript": "+0.72 health per level (+12.96 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 8006
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Scaling Health",
+      "image": "r_4_1.png",
+      "descript": "+0.3 health per level (+5.4 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5012
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Scaling Health",
+      "image": "bl_4_3.png",
+      "descript": "+2.7 health per level (+48.6 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5346
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of the Soaring Slalom",
+      "image": "8012.png",
+      "descript": "-0.75% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 8012
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Lethality",
+      "image": "bl_1_1.png",
+      "descript": "+1.78 lethality",
+      "version": "6.22.1"
+    },
+    "pk": 5099
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Mana",
+      "image": "y_1_3.png",
+      "descript": "+6.89 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5329
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Scaling Magic Resist",
+      "image": "r_4_3.png",
+      "descript": "+0.07 magic resist per level (+1.26 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5260
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Magic Penetration",
+      "image": "r_1_2.png",
+      "descript": "+0.68 magic penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5151
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Health",
+      "image": "r_3_1.png",
+      "descript": "+1.93 health",
+      "version": "6.22.1"
+    },
+    "pk": 5011
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Critical Damage",
+      "image": "r_1_2.png",
+      "descript": "+1.74% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 5127
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Seal of Energy Regeneration",
+      "image": "y_1_3.png",
+      "descript": "+0.63 Energy regen/5 sec",
+      "version": "6.22.1"
+    },
+    "pk": 5369
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Seal of Mana Regeneration",
+      "image": "y_3_1.png",
+      "descript": "+0.23 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5087
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Mana",
+      "image": "bl_1_3.png",
+      "descript": "+37.5 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5359
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Spell Vamp",
+      "image": "bl_4_3.png",
+      "descript": "+2% Spellvamp.",
+      "version": "6.22.1"
+    },
+    "pk": 5409
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Scaling Attack Damage",
+      "image": "r_2_2.png",
+      "descript": "+0.1 attack damage per level (+1.89 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5124
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Ability Power",
+      "image": "b_3_2.png",
+      "descript": "+0.92 ability power",
+      "version": "6.22.1"
+    },
+    "pk": 5175
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Scaling Health",
+      "image": "b_4_2.png",
+      "descript": "+0.42 health per level (+7.56 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5164
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Critical Chance",
+      "image": "b_3_1.png",
+      "descript": "+0.15% critical chance",
+      "version": "6.22.1"
+    },
+    "pk": 5037
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Attack Damage",
+      "image": "r_1_1.png",
+      "descript": "+0.53 attack damage",
+      "version": "6.22.1"
+    },
+    "pk": 5001
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Scaling Attack Damage",
+      "image": "b_2_1.png",
+      "descript": "+0.02 attack damage per level (+0.36 at champion level 18)",
+      "version": "6.22.1"
+    },
+    "pk": 5032
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Quintessence of Movement Speed",
+      "image": "bl_3_2.png",
+      "descript": "+1.17% movement speed",
+      "version": "6.22.1"
+    },
+    "pk": 5243
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Glyph of Mana Regeneration",
+      "image": "b_3_2.png",
+      "descript": "+0.26 mana regen / 5 sec.",
+      "version": "6.22.1"
+    },
+    "pk": 5179
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Quintessence of Precision",
+      "image": "bl_4_3.png",
+      "descript": "+2.24 Lethality / +1.4 Magic Penetration",
+      "version": "6.22.1"
+    },
+    "pk": 5418
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Glyph of Cooldown Reduction",
+      "image": "b_1_1.png",
+      "descript": "-0.47% cooldowns",
+      "version": "6.22.1"
+    },
+    "pk": 5051
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Mark of Magic Resist",
+      "image": "r_3_1.png",
+      "descript": "+0.43 magic resist",
+      "version": "6.22.1"
+    },
+    "pk": 5015
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Lesser Quintessence of Health",
+      "image": "bl_3_1.png",
+      "descript": "+14.5 health",
+      "version": "6.22.1"
+    },
+    "pk": 5101
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Greater Mark of Attack Speed",
+      "image": "r_3_3.png",
+      "descript": "+1.7% attack speed",
+      "version": "6.22.1"
+    },
+    "pk": 5247
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of the Combatant",
+      "image": "8008.png",
+      "descript": "+2% critical damage",
+      "version": "6.22.1"
+    },
+    "pk": 8008
+  },
+  {
+    "model": "api_query.RuneStatic",
+    "fields": {
+      "name": "Mark of Mana",
+      "image": "r_1_2.png",
+      "descript": "+4.59 mana",
+      "version": "6.22.1"
+    },
+    "pk": 5147
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "To the King!",
+      "image": "SummonerPoroRecall.png",
+      "descript": "Quickly travel to the Poro King's side.",
+      "version": "6.22.1"
+    },
+    "pk": 30
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Smite",
+      "image": "SummonerSmite.png",
+      "descript": "Deals 390-1000 true damage (depending on champion level) to target epic or large monster or enemy minion. Restores Health based on your maximum life when used against monsters.",
+      "version": "6.22.1"
+    },
+    "pk": 11
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Heal",
+      "image": "SummonerHeal.png",
+      "descript": "Restores 90-345 Health (depending on champion level) and grants 30% Movement Speed for 1 second to you and target allied champion. This healing is halved for units recently affected by Summoner Heal.",
+      "version": "6.22.1"
+    },
+    "pk": 7
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Poro Toss",
+      "image": "SummonerPoroThrow.png",
+      "descript": "Toss a Poro at your enemies. If it hits, you can quickly travel to your target as a follow up.",
+      "version": "6.22.1"
+    },
+    "pk": 31
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Ignite",
+      "image": "SummonerDot.png",
+      "descript": "Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration.",
+      "version": "6.22.1"
+    },
+    "pk": 14
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Mark",
+      "image": "SummonerSnowball.png",
+      "descript": "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked and your champion can quickly travel to the marked target as a follow up.",
+      "version": "6.22.1"
+    },
+    "pk": 32
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Flash",
+      "image": "SummonerFlash.png",
+      "descript": "Teleports your champion a short distance toward your cursor's location.",
+      "version": "6.22.1"
+    },
+    "pk": 4
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Teleport",
+      "image": "SummonerTeleport.png",
+      "descript": "After channeling for 4.5 seconds, teleports your champion to target allied structure, minion, or ward.",
+      "version": "6.22.1"
+    },
+    "pk": 12
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Barrier",
+      "image": "SummonerBarrier.png",
+      "descript": "Shields your champion from 115-455 damage (depending on champion level) for 2 seconds.",
+      "version": "6.22.1"
+    },
+    "pk": 21
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Cleanse",
+      "image": "SummonerBoost.png",
+      "descript": "Removes all disables and summoner spell debuffs affecting your champion and lowers the duration of incoming disables by 65% for 3 seconds.",
+      "version": "6.22.1"
+    },
+    "pk": 1
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Ghost",
+      "image": "SummonerHaste.png",
+      "descript": "Your champion can move through units and has 28-45% (depending on champion level) increased Movement Speed for 10 seconds.",
+      "version": "6.22.1"
+    },
+    "pk": 6
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Exhaust",
+      "image": "SummonerExhaust.png",
+      "descript": "Exhausts target enemy champion, reducing their Movement Speed and Attack Speed by 30%, their Armor and Magic Resist by 10, and their damage dealt by 40% for 2.5 seconds.",
+      "version": "6.22.1"
+    },
+    "pk": 3
+  },
+  {
+    "model": "api_query.SpellStatic",
+    "fields": {
+      "name": "Clarity",
+      "image": "SummonerMana.png",
+      "descript": "Restores 50% of your champion's maximum Mana. Also restores allies for 25% of their maximum Mana.",
+      "version": "6.22.1"
+    },
+    "pk": 13
+  }
+]
