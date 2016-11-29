@@ -47,17 +47,33 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
 
-# Database file
+# Django stuff:
+*.log
+
+# Secrets files
+secrets.py
+
+# Migrations    
+migrations/
+
+
+# Database
 db.sqlite3
 
-# Secrets file
-secrets.py
+
+# OS files
+.DS_Store
+
+
+# static files
+/static
+
+
+# Virtualenv
+/myvenv
