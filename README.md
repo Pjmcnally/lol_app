@@ -1,5 +1,9 @@
 
 # Patrick's LoL App
+
+This project will soon be cleaned up and incorperated into my portfolio page.
+
+
 __Welcome to my PDX CodeGuild capstone project.__
 
 This project needs to be modernized to work with new game modes and champions added by Riot.  I also need to make it work as part of my portfolio.
