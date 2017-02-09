@@ -1,7 +1,7 @@
 
 # Patrick's LoL App
 
-This project will soon be cleaned up and incorperated into my portfolio page.
+This project will soon be cleaned up and incorperated into my portfolio page.  When that occurs future development will happen in that repo.
 
 
 __Welcome to my PDX CodeGuild capstone project.__
