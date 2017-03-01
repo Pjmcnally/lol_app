@@ -1,20 +1,18 @@
 
 # Patrick's LoL App
 
-This project will soon be cleaned up and incorperated into my portfolio page.  When that occurs future development will happen in that repo.
+This project will soon be cleaned up and incorperated into my portfolio page.  When that occurs future development will happen in that repo. This project also needs to be modernized to work with new game modes and champions added by Riot.
 
 
 __Welcome to my PDX CodeGuild capstone project.__
 
-This project needs to be modernized to work with new game modes and champions added by Riot.  I also need to make it work as part of my portfolio.
-
-League of Legends is a video game played, typically, between two teams of 5 people.  The goal of the game is to fight the other team and to destroy their base.  There are over 120 champions (playable characters) in the game and each of them can be configured many, many different ways.  Knowing more about your opponents and your team can help you to play better and win more games.
+League of Legends is a video game played, typically, between two teams of 5 people. The goal of the game is to fight the other team and to destroy their base. There are over 120 champions (playable characters) in the game and each of them can be configured many, many different ways. Knowing more about your opponents and your team can help you to play better and win more games.
 
 My app provides current game information about both the skill level of your opponents and the champions they playing as well as how that champion is configured.
 
 Use
 -----
-To use Patrick's LoL App simply enter a League of Legends summoner name into the box on the home page.  If that player is currently playing a game you will be taken to the dashboard where game data is displayed.  Click any player to get more detailed info.  
+To use Patrick's LoL App simply enter a League of Legends summoner name into the box on the home page. If that player is currently playing a game you will be taken to the dashboard where game data is displayed. Click any player to get more detailed info. 
 
 Built with:
 -----
