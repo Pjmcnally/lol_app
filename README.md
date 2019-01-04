@@ -16,7 +16,7 @@ To use Patrick's LoL App simply enter a League of Legends summoner name into the
 
 Built with:
 -----
-* Django 1.8.4
+* Django 1.9.13
 * PostgresSQL
 * JavaScript
 * jQuery
