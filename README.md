@@ -1,10 +1,10 @@
-
 # Patrick's LoL App
 
 __Note__
-This site is unfortunatley now obsolete. Ongoing changes to the League of Legends API have made my site no longer work. Since this was create as a learning project I have not takeng the time to update the project to keep it in line with the current LoL API.  
 
-If I chose to continue work on this the goald would be to up this project as well as clean it up and incorperat into my portfolio page.  When that occurs future development will happen in that repo. This project also needs to be modernized to work with new game modes and champions added by Riot.
+This site is unfortunately now obsolete. Ongoing changes to the League of Legends API have made my site no longer work. Since this was create as a learning project I have not taken the time to update the project to keep it in line with the current LoL API.  
+
+If I chose to continue work on this the goal would be to update, clean up, and incorporate this project into my portfolio page. If that occurs future development will happen in that repo. This project also needs to be modernized to work with new game modes and champions added by Riot.
 
 __Welcome to my PDX CodeGuild capstone project.__
 
@@ -74,7 +74,7 @@ $ python manage.py loaddata all_fix.json
 
 #### You are now good to go.
 
-From the repo's root directory (/lolapp/) run the following command to lauch this web app.
+From the repo's root directory (/lolapp/) run the following command to launch this web app.
 
 $ python3 manage.py runserver
 
